@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>앱 설치 안내 | 우리동네 입시연구소</title>
+<meta name="description" content="우리동네 입시연구소 앱 설치 안내 — 안드로이드는 플레이스토어, 아이폰은 Safari에서 홈 화면에 추가">
+<meta property="og:title" content="우리동네 입시연구소 앱 설치 안내">
+<meta property="og:description" content="내신 계산·한 줄 진단·1:1 질문·자료함을 앱 하나로">
+<meta property="og:image" content="https://uridongne-ipsi.co.kr/webapp/icon-512.png">
+<meta name="theme-color" content="#F6F2E9">
+<link rel="icon" type="image/png" href="/webapp/icon-192.png">
+<link rel="apple-touch-icon" href="/webapp/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F6F2E9; --grid:rgba(22,35,63,.045); --surface:#FFFDF8; --sunk:#F8F4EB; --ink:#16233F; --muted:#55607A; --line:#E3DCCC;
+  --accent:#A84D1F; --accent-ink:#ffffff; --accent-soft:#F4E4D8; --navy:#16233F; --navy-ink:#F6F2E9;
+  --warn:#93580f; --warn-soft:#f6ead2;
+  --f-title:"Gowun Batang","Nanum Myeongjo","AppleMyungjo",serif;
+  --f-ui:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --r:14px; color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#0F1729; --grid:rgba(241,236,225,.035); --surface:#16233F; --sunk:#132038; --ink:#F1ECE1; --muted:#A3ACC0; --line:#283859;
+  --accent:#DB8656; --accent-ink:#1b0f07; --accent-soft:#3a2518; --navy:#F1ECE1; --navy-ink:#16233F;
+  --warn:#e3a95a; --warn-soft:#3a2c17; color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background-color:var(--bg);background-image:repeating-linear-gradient(0deg,var(--grid) 0 1px,transparent 1px 52px),repeating-linear-gradient(90deg,var(--grid) 0 1px,transparent 1px 52px);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.6;border-bottom:8px solid var(--accent);min-height:100vh}
+.wrap{max-width:560px;margin:0 auto;padding:calc(20px + env(safe-area-inset-top,0px)) 16px calc(48px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:18px}
+.brandrow{display:flex;align-items:center;gap:10px;font-family:var(--f-title);font-weight:700;font-size:1.02rem}
+.mark{display:block;flex:none}.mark .frame{fill:var(--surface);stroke:var(--navy);stroke-opacity:.34}.mark .gl{stroke:var(--navy);stroke-opacity:.15}.mark .cv{stroke:var(--navy)}.mark .dot{fill:var(--accent)}
+.themebtn{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:.82rem;font-weight:600;cursor:pointer;flex:none}
+h1{margin:6px 0 0;font-family:var(--f-title);font-size:1.7rem;line-height:1.3;letter-spacing:-.01em;text-wrap:balance}
+.lead{margin:6px 0 0;color:var(--muted)}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;background:var(--sunk);border:1px solid var(--line);border-radius:999px}
+.tabs button{border:0;background:transparent;color:var(--muted);font:inherit;font-weight:600;padding:9px 0;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--navy);color:var(--navy-ink)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:14px}
+.card h2{margin:0;font-family:var(--f-title);font-size:1.2rem}
+.card p{margin:0}
+.muted{color:var(--muted);font-size:.9rem}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px 16px;border-radius:12px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer}
+.btn.line{background:var(--surface);color:var(--accent)}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn-row .btn{font-size:.92rem;padding:11px 10px}
+.warn{border-color:var(--accent);background:var(--accent-soft)}
+.warn h2{font-size:1.08rem;color:var(--accent)}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;counter-increment:s}
+.steps li::before{content:counter(s);width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--navy-ink);display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.steps b{color:var(--ink)}
+.steps .sub{display:block;margin-top:3px;color:var(--muted);font-size:.88rem}
+.ico{display:inline-grid;place-items:center;vertical-align:-6px;width:26px;height:26px;margin:0 2px;border:1px solid var(--line);border-radius:7px;background:var(--sunk)}
+.ico svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.chip{display:inline-block;padding:1px 8px;border-radius:6px;background:var(--sunk);border:1px solid var(--line);font-weight:600;font-size:.88rem;white-space:nowrap}
+.note{font-size:.88rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.note p{margin:0}
+.copied{font-size:.86rem;color:var(--accent);margin:-6px 0 0}.copied:empty{display:none}
+footer{text-align:center;color:var(--muted);font-size:.82rem}
+footer a{color:inherit}
+@media (max-width:360px){.btn-row{grid-template-columns:1fr}}
+</style>
+<script>
+try{var t=localStorage.getItem('uridongne-theme');document.documentElement.setAttribute('data-theme',t==='dark'?'dark':'light');}catch(e){document.documentElement.setAttribute('data-theme','light');}
+</script>
+</head>
+<body>
+<main class="wrap">
+  <div class="brandrow">
+    <svg class="mark" width="30" height="30" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg>
+    <span>우리동네 입시연구소</span>
+    <button type="button" class="themebtn" id="themebtn" aria-label="화면 밝기 바꾸기"><span id="themeico">🌙</span><span id="themetxt">어둡게</span></button>
+  </div>
+
+  <header>
+    <h1>우리동네 입시연구소 앱 설치</h1>
+    <p class="lead">내신 계산과 한 줄 진단, 입시 궁금한 점 1:1 질문, 자료함을 앱 하나로 쓸 수 있어요. 휴대폰 종류를 골라 주세요.</p>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="휴대폰 종류">
+    <button type="button" role="tab" id="tab-android" aria-controls="p-android" aria-selected="false">안드로이드</button>
+    <button type="button" role="tab" id="tab-ios" aria-controls="p-ios" aria-selected="false">아이폰</button>
+  </div>
+
+  <!-- 안드로이드 -->
+  <section id="p-android" role="tabpanel" aria-labelledby="tab-android" hidden>
+    <div class="card">
+      <h2>플레이스토어에서 받기</h2>
+      <p>삼성 갤럭시 등 안드로이드 휴대폰은 플레이스토어에서 「우리동네 입시연구소」를 설치하면 됩니다.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=kr.co.uridongneipsi">플레이스토어에서 설치하기</a>
+      <p class="muted">버튼이 열리지 않으면 플레이스토어에서 <b>우리동네 입시연구소</b>를 검색해 주세요.</p>
+    </div>
+  </section>
+
+  <!-- 아이폰 -->
+  <section id="p-ios" role="tabpanel" aria-labelledby="tab-ios" hidden>
+    <div style="display:flex;flex-direction:column;gap:18px">
+
+      <div class="card warn" id="inapp" hidden>
+        <h2>지금은 카톡·네이버 앱 안에서 열려 있어요</h2>
+        <p>앱 안의 화면에서는 홈 화면에 추가할 수 없어요. <b>Safari로 이 페이지를 다시 열어</b> 주세요.</p>
+        <a class="btn" id="open-safari" href="#" hidden>Safari로 열기</a>
+        <div id="inapp-naver" hidden>
+          <p>오른쪽 아래(또는 위)의 <span class="ico" aria-label="더보기"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg></span> 버튼을 누르고 <span class="chip">다른 브라우저로 열기</span> 또는 <span class="chip">Safari로 열기</span>를 고르세요.</p>
+        </div>
+        <button type="button" class="btn line" id="copy-url">이 페이지 주소 복사</button>
+        <p class="copied" id="copied" role="status"></p>
+        <p class="muted">메뉴가 안 보이면 주소를 복사한 뒤 Safari를 열어 주소창에 붙여넣으세요.</p>
+      </div>
+
+      <div class="card">
+        <h2>아이폰은 홈 화면에 추가해서 써요</h2>
+        <p>아이폰은 앱스토어 대신 Safari에서 <b>홈 화면에 추가</b>하면, 안드로이드 앱과 같은 화면이 아이콘으로 생깁니다. 설치는 1분이면 끝나요.</p>
+        <ol class="steps">
+          <li><span><b>Safari</b>에서 이 페이지를 연 상태인지 확인하세요.<span class="sub">카톡·네이버 앱 안이라면 위 안내대로 Safari로 다시 열어 주세요.</span></span></li>
+          <li><span>아래 <b>「앱 화면 열기」</b> 버튼을 누르세요.<span class="sub">앱 첫 화면이 Safari에서 열립니다.</span></span></li>
+          <li><span>화면 아래쪽 <span class="ico" aria-label="더보기"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/></svg></span> 버튼을 누르고 <span class="ico" aria-label="공유"><svg viewBox="0 0 24 24"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg></span> <b>공유</b>를 누르세요.<span class="sub">공유 버튼 <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg></span>가 바로 보이면 그 버튼을 누르면 됩니다.</span></span></li>
+          <li><span>목록을 아래로 내려 <span class="chip">홈 화면에 추가</span>를 누르세요.<span class="sub">안 보이면 <span class="chip">더 보기</span>를 누르면 나옵니다.</span></span></li>
+          <li><span><span class="chip">웹 앱으로 열기</span>가 보이면 켜 둔 채로 오른쪽 위 <b>「추가」</b>를 누르세요.</span></li>
+          <li><span>홈 화면에 생긴 <b>우리동네 입시연구소</b> 아이콘으로 열면 끝!</span></li>
+        </ol>
+        <a class="btn" id="open-app" href="/webapp/">앱 화면 열기</a>
+        <div class="note">
+          <p>· 앞으로는 Safari가 아니라 <b>홈 화면 아이콘</b>으로 열어 주세요. 입력한 성적은 그 아이폰 안에만 저장돼서, Safari로 열면 따로 보입니다.</p>
+          <p>· 회원가입·로그인 없이 바로 쓸 수 있고, 내용이 바뀌어도 다시 설치할 필요 없이 저절로 새 화면으로 열립니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>우리동네 입시연구소 · <a href="https://blog.naver.com/kwon_th">블로그</a> · <a href="https://www.youtube.com/@uridongne_ipsi">유튜브</a></p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var ua=navigator.userAgent||'';
+  var ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var android=/Android/i.test(ua);
+  var kakao=/KAKAOTALK/i.test(ua);
+  var naver=/NAVER\(inapp|NAVER\//i.test(ua);
+  var inapp=kakao||naver||/Instagram|FBAN|FBAV|Line\/|DaumApps|BAND\/|everytimeApp/i.test(ua);
+  var here=location.href.split('#')[0];
+
+  /* 탭: 안드로이드면 안드로이드, 그 밖(아이폰·PC)은 아이폰을 먼저 */
+  var tabs={android:document.getElementById('tab-android'),ios:document.getElementById('tab-ios')};
+  var panes={android:document.getElementById('p-android'),ios:document.getElementById('p-ios')};
+  function show(k){for(var x in tabs){var on=(x===k);tabs[x].setAttribute('aria-selected',on?'true':'false');panes[x].hidden=!on;}}
+  tabs.android.addEventListener('click',function(){show('android');});
+  tabs.ios.addEventListener('click',function(){show('ios');});
+  var hash=location.hash.replace('#','');
+  show(hash==='android'||hash==='ios'?hash:(android?'android':'ios'));
+
+  /* 카톡·네이버 등 앱 안에서 열렸을 때 */
+  if(inapp&&!android){
+    document.getElementById('inapp').hidden=false;
+    if(kakao){
+      var b=document.getElementById('open-safari');b.hidden=false;
+      var go=function(){location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(here);};
+      b.addEventListener('click',function(e){e.preventDefault();go();});
+      setTimeout(go,400);
+    }else{
+      document.getElementById('inapp-naver').hidden=false;
+    }
+  }
+  document.getElementById('copy-url').addEventListener('click',function(){
+    var msg=document.getElementById('copied');
+    function done(){msg.textContent='복사했어요. Safari 주소창을 길게 눌러 「붙여넣고 이동」을 누르세요.';}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(here).then(done,function(){window.prompt('주소를 길게 눌러 복사하세요',here);});}
+    else{window.prompt('주소를 길게 눌러 복사하세요',here);}
+  });
+
+  /* 밝은/어두운 화면 */
+  var root=document.documentElement,K='uridongne-theme';
+  function apply(t){root.setAttribute('data-theme',t);var d=t==='dark';document.getElementById('themeico').textContent=d?'☀️':'🌙';document.getElementById('themetxt').textContent=d?'밝게':'어둡게';}
+  apply(root.getAttribute('data-theme')==='dark'?'dark':'light');
+  document.getElementById('themebtn').addEventListener('click',function(){var n=root.getAttribute('data-theme')==='dark'?'light':'dark';apply(n);try{localStorage.setItem(K,n)}catch(e){}});
+})();
+</script>
+</body>
+</html>
