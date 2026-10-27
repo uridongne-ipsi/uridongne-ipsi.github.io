@@ -1,0 +1,187 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>수리논술 첨삭 맛보기</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: 모눈 답안지 위에 한 장짜리 안내 — 이번 주 문항 카드가 주인공, 아래로 참여 순서 → 받는 것 → 첨삭권 */
+:root{
+  --bg:#F6F2E9; --grid:rgba(22,35,63,.055); --paper:#FFFDF8; --line:#E2DCCD;
+  --fg:#16233F; --sub:#5F6A82; --clay:#A84D1F; --clay-soft:#F3E2D7; --navy:#16233F; --on-navy:#F6F2E9;
+  --f-display:'Gowun Batang','Nanum Myeongjo','AppleMyungjo',serif;
+  --f-body:'IBM Plex Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111829; --grid:rgba(236,231,218,.05); --paper:#19223A; --line:#2B3552;
+  --fg:#ECE7DA; --sub:#A3ABBE; --clay:#E39468; --clay-soft:#3B2A23; --navy:#ECE7DA; --on-navy:#111829;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111829; --grid:rgba(236,231,218,.05); --paper:#19223A; --line:#2B3552;
+  --fg:#ECE7DA; --sub:#A3ABBE; --clay:#E39468; --clay-soft:#3B2A23; --navy:#ECE7DA; --on-navy:#111829;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.65;
+  background-image:repeating-linear-gradient(0deg,var(--grid) 0 1px,transparent 1px 28px),repeating-linear-gradient(90deg,var(--grid) 0 1px,transparent 1px 28px)}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px;display:flex;flex-direction:column;gap:34px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--clay);outline-offset:3px;border-radius:4px}
+
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;letter-spacing:.02em;color:var(--sub)}
+.brand svg{width:30px;height:30px;flex:none}
+
+header{display:flex;flex-direction:column;gap:12px}
+.week{display:inline-flex;align-self:flex-start;gap:8px;align-items:center;font-size:13px;font-weight:600;color:var(--clay);background:var(--clay-soft);border-radius:999px;padding:4px 12px;font-variant-numeric:tabular-nums}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,7vw,42px);line-height:1.25;margin:0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--clay)}
+.lede{margin:0;color:var(--sub);max-width:60ch}
+
+/* 이번 주 문항: 답안지처럼 */
+.sheet{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.sheet-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline;padding:14px 18px;border-bottom:1px solid var(--line)}
+.sheet-head b{font-family:var(--f-display);font-size:20px}
+.meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--sub);font-variant-numeric:tabular-nums}
+.meta span strong{color:var(--fg);font-weight:600}
+.sheet-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:14px;
+  background-image:linear-gradient(transparent 31px,var(--line) 31px);background-size:100% 32px;line-height:32px}
+.q{margin:0;font-size:17px}
+.math{font-family:'Times New Roman',Georgia,serif;font-style:italic;font-size:1.06em;white-space:nowrap}
+.math .up{font-style:normal}
+.conds{list-style:none;margin:0;padding:0}
+.conds li{display:flex;gap:10px}
+.conds li::before{content:attr(data-n);color:var(--clay);font-weight:700;flex:none}
+.src{font-size:13px;color:var(--sub);line-height:1.6;padding:14px 18px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.src a{color:var(--clay);font-weight:600}
+
+h2{font-family:var(--f-display);font-size:23px;margin:0 0 14px}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;counter-increment:s}
+.steps li::before{content:counter(s);width:34px;height:34px;border-radius:50%;border:1.5px solid var(--clay);color:var(--clay);display:grid;place-items:center;font-weight:700;font-variant-numeric:tabular-nums}
+.steps h3{margin:4px 0 2px;font-size:16px}
+.steps p{margin:0;color:var(--sub);min-width:0}
+
+.cta{display:flex;flex-direction:column;gap:10px;margin-top:6px;padding:16px;border:1.5px dashed var(--clay);border-radius:8px}
+.cta a.btn{display:block;text-align:center;text-decoration:none;background:var(--navy);color:var(--on-navy);font-weight:700;font-size:17px;padding:14px 16px;border-radius:8px}
+.cta a.btn:hover{opacity:.92}
+.linkrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--sub)}
+.linkrow code{font-family:var(--f-body);color:var(--fg);user-select:all;overflow-wrap:anywhere}
+.linkrow button{font:inherit;font-size:13px;font-weight:600;color:var(--clay);background:transparent;border:1px solid var(--clay);border-radius:999px;padding:3px 12px;cursor:pointer}
+.say{font-size:14px;color:var(--sub);margin:0}
+.say b{color:var(--fg)}
+
+.get{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.get div{border-top:2px solid var(--clay);padding-top:10px;min-width:0}
+.get strong{display:block;margin-bottom:2px}
+.get p{margin:0;color:var(--sub);font-size:15px}
+.same{margin:14px 0 0;font-size:15px}
+
+.rules{margin:0;padding-left:1.1em;color:var(--sub);font-size:15px;display:flex;flex-direction:column;gap:4px}
+
+.more{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.more h2{margin:0;font-size:20px}
+.more p{margin:0;color:var(--sub);font-size:15px}
+.price{display:flex;flex-wrap:wrap;gap:6px 18px;font-variant-numeric:tabular-nums}
+.price span{font-weight:600}
+.more a{color:var(--clay);font-weight:600}
+
+footer{font-size:12px;color:var(--sub);border-top:1px solid var(--line);padding-top:14px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <div class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <rect x="4" y="4" width="56" height="56" rx="14" fill="var(--paper)" stroke="var(--sub)" stroke-width="3.5" opacity=".9"/>
+      <path d="M22 4v56M42 4v56M4 24h56M4 44h56" stroke="var(--line)" stroke-width="2"/>
+      <path d="M15 49c10-1 16-8 22-18 4-7 6-11 9-14" fill="none" stroke="var(--navy)" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="47" cy="16" r="7" fill="var(--clay)"/>
+    </svg>
+    우리동네 입시연구소
+  </div>
+
+  <header>
+    <span class="week">10월 23일(금) – 10월 30일(금) 14시 문항</span>
+    <h1>이번 주 수리논술<br><em>무료 첨삭</em> 맛보기</h1>
+    <p class="lede">매주 한 문항을 정해 두었습니다. 직접 쓴 답안을 사진으로 보내 주시면, 유료 첨삭과 똑같은 기준으로 빨간 펜 첨삭을 해 드립니다.</p>
+  </header>
+
+  <section class="sheet" aria-labelledby="qtitle">
+    <div class="sheet-head">
+      <b id="qtitle">숭실대 2026 자연 [문제 4]</b>
+      <div class="meta">
+        <span>배점 <strong>25점</strong></span>
+        <span>권장 시간 <strong>25분</strong></span>
+        <span>2027 시험일 <strong>11월 21일(토)</strong></span>
+      </div>
+    </div>
+    <div class="sheet-body">
+      <p class="q">집합 <span class="math">A <span class="up">=</span> {1, 2, 3, 4, 5, 6}</span>에서 자기 자신으로 가는 함수 <span class="math">f <span class="up">:</span> A <span class="up">→</span> A</span> 가운데, 아래 두 조건을 모두 만족하는 함수의 개수를 구하는 문제입니다.</p>
+      <ul class="conds">
+        <li data-n="①">모든 <span class="math">x</span>에 대해 <span class="math">f(f(x)) <span class="up">=</span> f(x)</span></li>
+        <li data-n="②">모든 <span class="math">x</span>에 대해 <span class="math">f(x) <span class="up">≤</span> 3</span></li>
+      </ul>
+      <p class="q">답만 맞히는 문제가 아닙니다. 왜 그렇게 나누어 세는지를 답안에 써야 점수가 나옵니다.</p>
+    </div>
+    <div class="src">
+      <span>문항은 조건만 요약해 소개했습니다. 제시문이 포함된 원문은 숭실대 입학처 → 입학전형안내 → 수시 → 기출문제의 2026학년도 자료에서 받으세요. <a href="https://admission.ssu.ac.kr" target="_blank" rel="noopener">숭실대 입학처 열기</a></span>
+      <span>문항 원문의 저작권은 숭실대학교에 있습니다.</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="how">
+    <h2 id="how">이렇게 참여하세요</h2>
+    <ol class="steps">
+      <li><div><h3>25분을 재고 직접 써 보세요</h3><p>해설이나 답을 보지 않고, 시험장처럼 풀이 과정을 처음부터 끝까지 답안지에 써 주세요.</p></div></li>
+      <li><div><h3>답안을 사진으로 찍어 주세요</h3><p>답안지 한 면이 사진 한 장에 다 들어가게, 위에서 똑바로 찍어 주세요(그림자·기울어짐 없이). 여러 장이면 순서대로 보내 주세요.</p></div></li>
+      <li><div><h3>1:1 문의로 보내 주세요</h3><p>아래 버튼을 누르면 우리동네 입시연구소와 1:1 대화가 열립니다.</p></div></li>
+      <li><div><h3>첨삭을 받아 보세요</h3><p>답안 위에 빨간 펜으로 표시한 첨삭본을 같은 대화방으로 보내 드립니다. 보통 하루 안에 돌려드립니다.</p></div></li>
+    </ol>
+    <div class="cta">
+      <a class="btn" href="https://open.kakao.com/o/sMOPxKTi" target="_blank" rel="noopener">카카오톡 1:1 문의 열기</a>
+      <div class="linkrow">
+        <span>버튼이 안 열리면</span>
+        <code id="kakao">https://open.kakao.com/o/sMOPxKTi</code>
+        <button type="button" id="copy">주소 복사</button>
+      </div>
+      <p class="say">사진과 함께 <b>"숭실대 맛보기 답안입니다"</b> 한 줄만 남겨 주세요.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="get">
+    <h2 id="get">돌려받는 것</h2>
+    <div class="get">
+      <div><strong>빨간 펜 첨삭본</strong><p>감점되는 줄과 보완할 줄을 답안 위에 직접 표시합니다.</p></div>
+      <div><strong>점수와 깎인 이유</strong><p>대학이 공개한 채점 기준에 맞춰 몇 점이 나오는지, 어디서 깎였는지 알려 드립니다.</p></div>
+      <div><strong>다시 쓰는 방향</strong><p>같은 풀이를 점수가 되게 쓰려면 어떤 문장이 필요한지 보여 드립니다.</p></div>
+    </div>
+    <p class="same">무료라고 덜 보지 않습니다. 유료 첨삭권과 같은 사람이, 같은 기준으로 봅니다.</p>
+  </section>
+
+  <section aria-labelledby="rules">
+    <h2 id="rules">알아 두실 것</h2>
+    <ul class="rules">
+      <li>문항은 매주 금요일 14시에 바뀝니다. 한 문항에 한 사람당 한 번 받을 수 있습니다.</li>
+      <li>고1·고2 학생도 참여할 수 있습니다.</li>
+      <li>보내 주신 답안은 허락 없이 어디에도 공개하지 않습니다.</li>
+    </ul>
+  </section>
+
+  <aside class="more" aria-labelledby="moreh">
+    <h2 id="moreh">원하는 대학 문제로 받고 싶다면</h2>
+    <p>첨삭권으로 어느 대학, 어느 문항이든 받을 수 있습니다. 고쳐 쓴 답안을 한 번 더 확인해 드리는 것까지 포함입니다. 이용 방법은 같은 1:1 문의로 물어봐 주세요.</p>
+    <p>이번 문항과 같은 계열인 2024 [문제 4]의 해설은 숭실대 해설 파일에 실려 있습니다. <a href="https://blog.naver.com/kwon_th/224448090448" target="_blank" rel="noopener">해설 파일 안내 보기</a></p>
+  </aside>
+
+  <footer>우리동네 입시연구소 · 입시 수학 18년 · 문항은 매주 금요일 14시에 이 페이지에서 바뀝니다.</footer>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var btn=this, text=document.getElementById('kakao').textContent;
+  function done(){btn.textContent='복사했어요';setTimeout(function(){btn.textContent='주소 복사'},1800)}
+  function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('kakao'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='길게 눌러 복사하세요'}
+  try{navigator.clipboard.writeText(text).then(done,fallback)}catch(e){fallback()}
+});
+</script>
+
+</body></html>
