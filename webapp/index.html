@@ -248,6 +248,7 @@ tr:last-child td{border-bottom:0}
 .home-big b{font-family:var(--f-title);font-size:1.08rem;line-height:1.35;color:var(--navy)}
 .home-big span{font-size:.8rem;color:var(--muted);line-height:1.45}
 .home-big small{margin-top:auto;font-size:.76rem;color:var(--accent);font-weight:600}
+.home-big b,.home-big span,.home-big small{word-break:keep-all}
 button.home-feature{width:100%;font:inherit;color:inherit;text-align:left;cursor:pointer}
 .home-split{align-items:flex-start}
 .split-body{display:grid;flex:1;min-width:0}
@@ -320,6 +321,17 @@ button.home-feature{width:100%;font:inherit;color:inherit;text-align:left;cursor
 .big-choice b{font-family:var(--f-title);font-size:1.15rem;color:var(--navy)}
 .big-choice span{font-size:.84rem;color:var(--muted);line-height:1.5}
 .big-choice small{font-size:.8rem;color:var(--accent);font-weight:700}
+.ask-card{display:grid;gap:8px;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.ask-card .ask-step{font-family:var(--f-num);font-weight:700;color:var(--accent);font-size:.8rem;letter-spacing:.04em}
+.ask-card h2{margin:0;font-family:var(--f-title);font-size:1.12rem;color:var(--navy)}
+.ask-card p{margin:0;font-size:.88rem;line-height:1.6}
+.ask-card ul{margin:0;padding:10px 12px;list-style:none;display:grid;gap:4px;background:var(--bg);border-radius:10px;font-size:.84rem;color:var(--muted)}
+.ask-card ul li::before{content:"“";color:var(--accent);font-weight:700;margin-right:2px}
+.ask-card .ask-promise{font-size:.8rem;color:var(--muted)}
+.ask-card .btn{margin-top:4px}
+.ask-card .ask-sub{font-size:.82rem;color:var(--accent);font-weight:600;text-decoration:none;background:none;border:0;padding:0;text-align:left;cursor:pointer}
+.btn.off{opacity:.5;pointer-events:none}
+.ask-flow{margin:2px 0 0;font-size:.8rem;color:var(--muted);text-align:center}
 .sec-h{font-family:var(--f-title);font-size:1.15rem;color:var(--navy);margin:10px 0 -4px}
 .why{padding:14px 16px;border-left:4px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0;font-size:.9rem;line-height:1.7}
 .why p{margin:0 0 8px}.why p:last-child{margin:0}
@@ -353,7 +365,8 @@ button.home-feature{width:100%;font:inherit;color:inherit;text-align:left;cursor
 .note{margin:0;font-size:.8rem;color:var(--muted);line-height:1.6}
 .zv button{position:fixed;top:12px;right:12px;z-index:51;padding:9px 14px;border:0;border-radius:999px;background:#fff;color:#111;font:inherit;font-weight:700}
 .zv p{position:fixed;top:16px;left:14px;margin:0;color:#ddd;font-size:.78rem}
-@media (max-width:360px){.home-duo{grid-template-columns:1fr}}
+@media (max-width:340px){.home-duo{gap:8px}.home-big{padding:14px 11px;gap:6px}.home-big b{font-size:.98rem}.home-big span{font-size:.76rem}.home-big small{font-size:.72rem}}
+@media (max-width:260px){.home-duo{grid-template-columns:1fr}}
 .pwa-bar{display:flex;flex-direction:column;gap:8px;margin:0 0 14px;padding:12px 14px;border:1px solid var(--accent);border-radius:14px;background:var(--accent-soft);color:var(--ink);font-size:.88rem;line-height:1.55}
 .pwa-bar b{color:var(--accent)}.pwa-bar .pwa-act{display:flex;flex-wrap:wrap;gap:8px}
 .pwa-bar a,.pwa-bar button{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;border:1px solid var(--accent);background:var(--surface);color:var(--accent);font:inherit;font-size:.84rem;font-weight:600;text-decoration:none;cursor:pointer}
@@ -384,11 +397,11 @@ try{
         <span>5등급제 누적 평균과 목표 등급을 계산합니다</span>
         <small>진단은 필요한 분만 받으시면 됩니다</small>
       </button>
-      <a class="home-big" href="https://open.kakao.com/o/sMOPxKTi">
-        <b>입시 궁금한 점<br>1:1로 물어보기</b>
-        <span>카카오톡 1:1 채팅으로 물어보세요</span>
+      <button class="home-big" type="button" data-go="ask">
+        <b>입시 궁금한 점<br>물어보기</b>
+        <span>입시 일정부터<br>우리 아이 고민까지</span>
         <small>보통 하루 안에 답해 드립니다</small>
-      </a>
+      </button>
     </div>
     <p class="home-note">로그인 없이 바로 사용할 수 있어요. 입력한 성적은 이 휴대폰에만 저장되고, ‘새 학생’을 누르면 지워집니다.</p>
     <section class="home-features" aria-label="메뉴">
@@ -435,6 +448,36 @@ try{
     </footer>
   </div>
 </main>
+
+<div class="wrap sub-screen" id="ask-screen" hidden>
+  <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
+  <h1 class="sub-title">입시 궁금한 점 물어보기</h1>
+  <p class="sub-desc">궁금한 내용에 따라 편한 곳을 골라 주세요.</p>
+  <section class="ask-card">
+    <span class="ask-step">01</span>
+    <h2>다 같이 묻고 이야기하기</h2>
+    <p>입시 일정, 전형, 대학별 기준처럼 누구나 궁금한 것을 편하게 물어보세요. 다른 학부모님·학생과 이야기도 나눌 수 있습니다.</p>
+    <ul><li>○○대 논술은 언제예요?”</li><li>5등급제면 내신 반영이 어떻게 돼요?”</li></ul>
+    <span class="ask-promise">보통 하루 안에 답해 드립니다</span>
+    <a class="btn primary wide" id="ask-open" href="#">오픈채팅방 들어가기 →</a>
+  </section>
+  <section class="ask-card">
+    <span class="ask-step">02</span>
+    <h2>여럿 앞에서 묻기 어려운 건 1:1로</h2>
+    <p>성적, 학교, 아이 상황처럼 오픈채팅방에 올리기 어려운 이야기는 1:1로 편하게 물어보세요. 다른 사람에게는 보이지 않습니다.</p>
+    <ul><li>이 내신이면 교과전형으로 어디까지 될까요?”</li><li>아이 학교에 듣고 싶은 과목이 없는데 어떻게 하죠?”</li></ul>
+    <span class="ask-promise">보통 하루 안에 답해 드립니다</span>
+    <a class="btn primary wide" href="https://open.kakao.com/o/sMOPxKTi">1:1로 물어보기 →</a>
+    <button class="ask-sub" type="button" data-go="calc">내신 성적이 있다면, 계산하고 한 줄 진단과 함께 보내기 →</button>
+  </section>
+  <section class="ask-card">
+    <span class="ask-step">03</span>
+    <h2>매달 옆에서 함께 보려면</h2>
+    <p>월 관리 회원은 우리 아이 질문까지, 횟수 제한 없이 언제든 카톡으로 물어보실 수 있습니다. 길게 따져 볼 결정은 정기상담에서 함께 정합니다.</p>
+    <ul><li>우리 아이 이번 수행평가 주제 괜찮을까요?”</li><li>이번 성적이면 지원 전형을 바꿔야 할까요?”</li></ul>
+    <button class="btn wide" type="button" data-go="mg">월 관리 안내 보기 →</button>
+  </section>
+</div>
 
 <div class="wrap sub-screen" id="info-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
@@ -864,8 +907,8 @@ const $=id=>document.getElementById(id);
  themeToggles.forEach(b=>b.addEventListener("click",()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark",true)));
  applyTheme(activeTheme,false);
 /* 1.7: 화면 이동을 주소 #으로 — 휴대폰 뒤로가기가 이전 화면으로 돌아가게 함 */
-const SCREENS={"":"home-screen",calc:"calculator-screen",info:"info-screen",about:"about-screen",diag:"diag-screen",jaryo:"jaryo-screen",shop:"shop-screen",jeongsi:"jeongsi-screen",jsga:"jsga-screen",jsbon:"jsbon-screen",jsapply:"jsapply-screen",ck:"ck-screen",mg:"mg-screen"};
-function showScreen(){const k=location.hash.replace(/^#/,"");const id=SCREENS[k]||"home-screen";if(id==="jaryo-screen")loadJaryo();if(id==="shop-screen")loadShop();
+const SCREENS={"":"home-screen",calc:"calculator-screen",info:"info-screen",about:"about-screen",diag:"diag-screen",jaryo:"jaryo-screen",shop:"shop-screen",jeongsi:"jeongsi-screen",jsga:"jsga-screen",jsbon:"jsbon-screen",jsapply:"jsapply-screen",ck:"ck-screen",mg:"mg-screen",ask:"ask-screen"};
+function showScreen(){const k=location.hash.replace(/^#/,"");const id=SCREENS[k]||"home-screen";if(id==="jaryo-screen")loadJaryo();if(id==="shop-screen")loadShop();if(id==="ask-screen")loadLinks();
   Object.values(SCREENS).forEach(x=>{$(x).hidden=(x!==id);});
   $("img-ov").hidden=true;$("zv").hidden=true;window.scrollTo(0,0);}
 function go(k){if(location.hash.replace(/^#/,"")!==k)location.hash=k;else showScreen();}
@@ -951,6 +994,13 @@ $("dq-make").addEventListener("click",()=>busy($("dq-make"),async()=>{
     :"신청 사진을 저장해 주세요. 그다음 아래 버튼으로 1:1 채팅을 열고, + 버튼 → 앨범에서 이 사진 1장을 보내 주세요.";
   $("dq-done").hidden=false;$("dq-done").scrollIntoView({behavior:"smooth",block:"center"});
 }));
+
+/* 1.9: 오픈채팅방 주소 — 자료함 저장소 links.json에서 읽음(방 주소가 바뀌어도 앱 업데이트 없이) */
+let lkLoaded=false;
+async function loadLinks(){if(lkLoaded)return;const a=$("ask-open");
+  try{const r=await fetch(JR_BASE+"links.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error(r.status);const d=await r.json();
+    if(d.openchat){a.href=d.openchat;a.classList.remove("off");a.textContent="오픈채팅방 들어가기 →";lkLoaded=true;return;}}catch(e){}
+  a.removeAttribute("href");a.classList.add("off");a.textContent="오픈채팅방은 곧 열립니다";}
 
 /* 1.8: 대학별 해설 파일 — 목록은 자료함과 같은 곳(shop.json)에서 불러옴, 앱 업데이트 없이 파일 추가 */
 let spData=null,spLoading=false;const spSel=new Set();
