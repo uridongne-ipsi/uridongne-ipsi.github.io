@@ -80,7 +80,7 @@ try{var t=localStorage.getItem('uridongne-theme');document.documentElement.setAt
 
   <header>
     <h1>우리동네 입시연구소 앱 설치</h1>
-    <p class="lead">내신 계산과 한 줄 진단, 입시 궁금한 점 1:1 질문, 자료함을 앱 하나로 쓸 수 있어요. 휴대폰 종류를 골라 주세요.</p>
+    <p class="lead">내신 계산과 한 줄 진단, 입시 궁금한 점 물어보기, 자료함을 앱 하나로 쓸 수 있어요.<span id="pick"> 휴대폰 종류를 골라 주세요.</span></p>
   </header>
 
   <div class="tabs" role="tablist" aria-label="휴대폰 종류">
@@ -157,7 +157,14 @@ try{var t=localStorage.getItem('uridongne-theme');document.documentElement.setAt
   tabs.android.addEventListener('click',function(){show('android');});
   tabs.ios.addEventListener('click',function(){show('ios');});
   var hash=location.hash.replace('#','');
-  show(hash==='android'||hash==='ios'?hash:(android?'android':'ios'));
+  if(android){
+    /* 안드로이드 휴대폰은 플레이스토어 앱으로만 — 아이폰용 웹앱 안내는 보여 주지 않음 */
+    document.querySelector('.tabs').hidden=true;
+    document.getElementById('pick').hidden=true;
+    show('android');
+  }else{
+    show(hash==='android'||hash==='ios'?hash:'ios');
+  }
 
   /* 카톡·네이버 등 앱 안에서 열렸을 때 */
   if(inapp&&!android){
