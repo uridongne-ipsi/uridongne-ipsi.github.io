@@ -93,7 +93,7 @@ try{var t=localStorage.getItem('uridongne-theme');document.documentElement.setAt
     <div class="card">
       <h2>플레이스토어에서 받기</h2>
       <p>삼성 갤럭시 등 안드로이드 휴대폰은 플레이스토어에서 「우리동네 입시연구소」를 설치하면 됩니다.</p>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=kr.co.uridongneipsi">플레이스토어에서 설치하기</a>
+      <a class="btn" id="play-link" href="https://play.google.com/store/apps/details?id=kr.co.uridongneipsi">플레이스토어에서 설치하기</a>
       <p class="muted">버튼이 열리지 않으면 플레이스토어에서 <b>우리동네 입시연구소</b>를 검색해 주세요.</p>
     </div>
   </section>
@@ -165,6 +165,15 @@ try{var t=localStorage.getItem('uridongne-theme');document.documentElement.setAt
   }else{
     show(hash==='android'||hash==='ios'?hash:'ios');
   }
+
+  /* 2026-11-04 플레이스토어 버튼에 출처 표시 — 플레이 콘솔 사용자 확보 보고서에서 어디서 왔는지 보임 */
+  try{
+    var q=new URLSearchParams(location.search),src=q.get('utm_source');
+    if(!src){var rh='';try{rh=document.referrer?new URL(document.referrer).hostname:'';}catch(e){}
+      src=/naver/.test(rh)?'naver_blog':/youtube|youtu\.be/.test(rh)?'youtube':/kakao/.test(rh)?'kakao':rh?rh.replace(/^www\./,''):(kakao?'kakao':naver?'naver':'direct');}
+    var pl=document.getElementById('play-link');
+    if(pl)pl.href='https://play.google.com/store/apps/details?id=kr.co.uridongneipsi&referrer='+encodeURIComponent('utm_source='+src+'&utm_medium=app_page&utm_campaign=install');
+  }catch(e){}
 
   /* 카톡·네이버 등 앱 안에서 열렸을 때 */
   if(inapp&&!android){
