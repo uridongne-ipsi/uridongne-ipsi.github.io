@@ -1,4 +1,5 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="우리동네 입시연구소"><meta name="theme-color" content="#F6F2E9"><meta name="format-detection" content="telephone=no"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon-180.png"><link rel="icon" type="image/png" href="./icon-192.png"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>  <script type="module" crossorigin src="./assets/index-GTNcBRle.js"></script>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="우리동네 입시연구소"><meta name="theme-color" content="#F6F2E9"><meta name="format-detection" content="telephone=no"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon-180.png"><link rel="icon" type="image/png" href="./icon-192.png"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}.pg{display:contents}.note b.hl,.why b.hl{color:var(--accent)}.shot.pg-miss{display:none}
+</style>  <script type="module" crossorigin src="./assets/index-GTNcBRle.js"></script>
 </head><body>
 <title>우리동네 입시연구소 | 내신성적 계산기</title>
 
@@ -425,7 +426,7 @@ try{
       <div class="home-feature home-split">
         <span class="home-feature-number">03</span>
         <div class="split-body"><b>수리논술</b>
-          <a class="split-row" href="https://uridongne-ipsi.co.kr/try/" data-nmark="try"><span><em class="sr-t">이번 주 무료 첨삭 맛보기<i class="nbadge" data-n="try" hidden aria-label="새 소식">N</i></em><small>매주 한 문항, 직접 쓴 답안을 첨삭</small></span><i aria-hidden="true">›</i></a>
+          <a class="split-row" id="try-row" href="https://uridongne-ipsi.co.kr/try/" data-nmark="try"><span><em class="sr-t">이번 주 무료 첨삭 맛보기<i class="nbadge" data-n="try" hidden aria-label="새 소식">N</i></em><small>매주 한 문항, 직접 쓴 답안을 첨삭</small></span><i aria-hidden="true">›</i></a>
           <button class="split-row" type="button" data-go="jaryo" data-jrcat="수리논술"><span><em class="sr-t">대학별 기출 풀이<i class="nbadge" data-n="nonsul" hidden aria-label="새 소식">N</i></em><small>대학별 완성 답안 PDF</small></span><i aria-hidden="true">›</i></button>
         </div>
       </div>
@@ -525,22 +526,15 @@ try{
 <div class="wrap sub-screen" id="shop-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
   <h1 class="sub-title">대학별 해설 파일</h1>
-  <p class="sub-desc">대학마다 기출 6문항을 골라, 풀이 흐름부터 답안지에 쓸 문장, 공개 채점 기준과 줄마다 연결한 해설, 점수가 새는 곳까지 정리한 PDF입니다. 문항 원문 대신 입학처 기출 자료로 가는 QR을 넣었습니다.</p>
+  <div class="pg" data-pg="shop"></div>
   <div class="two-btn"><a class="btn" id="sp-preview" href="#">무료 미리보기<br>PDF 보기 ↗</a><a class="btn" id="sp-hub" href="https://blog.naver.com/kwon_th/224448090448">자세한 안내<br>블로그 글 ↗</a></div>
   <div id="sp-state" class="jr-state" role="status" hidden></div>
   <div id="sp-list"></div>
-  <h2 class="sec-h">비용</h2>
-  <div class="price-box"><b>1개 14,900원 · 아무 대학 3개 37,900원</b><span>자연·의약을 섞어 3개를 고르셔도 됩니다. 주문 한 건마다 답안 1문항을 무료로 첨삭해 드립니다.</span></div>
+  <div class="pg" data-pg="shop_price"></div>
   <div class="dq"><h2>입금하실 분 예금주명</h2><small class="hint">파일 아래 띠에 이 이름과 주문번호가 들어갑니다.</small><input id="sp-name" type="text" maxlength="20" placeholder="예: 홍길동" autocomplete="off"></div>
   <div class="dq"><h2>받으실 방법</h2><div class="chips" data-q="sp_how"><button type="button">메일</button><button type="button">카카오톡</button></div></div>
   <div class="dq" id="sp-mail-box" hidden><h2>메일 주소</h2><input id="sp-mail" type="email" maxlength="60" placeholder="받으실 메일 주소" autocomplete="off"></div>
-  <div class="fine"><ul>
-    <li><b>파일 특성상 전달 후에는 환불이 되지 않습니다.</b> 구성은 무료 미리보기로 먼저 확인해 주세요.</li>
-    <li>파일이 열리지 않거나 다른 대학 파일이 전달된 경우에는 바로 다시 보내 드립니다.</li>
-    <li>메일을 권합니다. 카카오톡으로 보낸 파일은 일정 기간이 지나면 받을 수 없게 되어, 시험 직전에 다시 찾으실 때 열리지 않을 수 있습니다.</li>
-    <li>입금이 확인되면 바로 보내 드립니다. 밤 10시 이후 주문은 다음 날 낮 12시까지 보내 드리고, 시험 전날 주문은 새벽 2시까지 확인되는 대로 바로 보내 드립니다.</li>
-    <li>준비 중인 파일도 예약 주문하실 수 있고, 나오는 날 같은 대화방으로 보내 드립니다.</li>
-  </ul></div>
+  <div class="pg" data-pg="shop_fine"></div>
   <p class="msg err" id="sp-msg" role="status"></p>
   <div class="sp-sum" id="sp-sum"><span id="sp-count">고른 파일 0개</span><b id="sp-price">0원</b></div>
   <button class="btn primary wide" id="sp-go" type="button">주문 내용 복사하고 1:1 채팅 열기</button>
@@ -553,96 +547,30 @@ try{
 <div class="wrap sub-screen" id="jeongsi-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
   <h1 class="sub-title">정시 상담</h1>
-  <p class="sub-desc">정시 상담은 두 번에 나누어 진행합니다. 수능 뒤 가채점 상담으로 지원의 큰 틀을 잡고, 성적 발표 뒤 본 상담에서 가·나·다군을 함께 정합니다.</p>
-  <div class="big-choice">
-    <button type="button" data-go="jsga"><b>가채점 상담</b><span>수능 뒤 · 30분 안팎<br>원하는 라인과 지금 가능한 라인, 성적표가 나왔을 때의 세 가지 상황</span><small>무엇을 받는지 보기 →</small></button>
-    <button type="button" data-go="jsbon"><b>본 상담</b><span>성적 발표(12월 11일) 뒤 · 60분 안팎 + 원서 마감까지 카톡<br>환산점수·작년 합격선·진학사 칸 수로 가·나·다군 조합 결정</span><small>무엇을 받는지 보기 →</small></button>
-  </div>
-  <h2 class="sec-h">수능부터 원서 마감까지</h2>
-  <ol class="flow">
-    <li><span class="fd">11월 19일</span><b>수능</b><small>가채점 점수만으로는 대학별 환산점수를 정확히 낼 수 없습니다.</small></li>
-    <li class="on"><span class="fd">수능 뒤</span><b>가채점 상담</b><small>바라시는 것을 먼저 충분히 듣고, 대학 라인 단위로 큰 틀을 잡아 둡니다.</small></li>
-    <li><span class="fd">12월 11일</span><b>성적 발표</b><small>성적표만 기다리면 원서 접수까지 남은 3주 남짓 동안 바람과 현실을 한꺼번에 정리해야 합니다.</small></li>
-    <li class="on"><span class="fd">성적 발표 뒤</span><b>본 상담</b><small>잡아 둔 틀 위에 확정 점수를 얹어 가·나·다군 원서를 정합니다.</small></li>
-    <li><span class="fd">1월 4~7일</span><b>원서 접수 마감까지</b><small>이월 인원과 경쟁률이 나올 때마다 같은 페이지에 이어서 정리합니다.</small></li>
-  </ol>
-  <h2 class="sec-h">학생마다 상담 페이지 하나</h2>
-  <div class="pg3">
-    <div><b>함께 보며 통화</b><small>학부모님과 학생이 각자 휴대폰으로 같은 페이지를 열어 봅니다</small></div>
-    <div><b>요약과 소식이 한곳에</b><small>상담 요약, 원서 마감까지의 소식이 같은 페이지에 쌓입니다</small></div>
-    <div><b>실명 대신 별칭</b><small>링크는 가족끼리만 보시도록 보내 드립니다</small></div>
-  </div>
-  <h2 class="sec-h">비용</h2>
-  <div class="price-box"><b>가채점 상담 5만 원 · 본 상담 15만 원</b><span>가채점 상담을 받으셨다면 본 상담은 10만 원입니다(두 번 합계 15만 원). 본 상담 비용은 성적 발표 뒤 상담 날짜를 정할 때 받습니다.</span></div>
-  <button class="btn primary wide" type="button" data-go="jsapply">정시 상담 신청하기 →</button>
+  <div class="pg" data-pg="jeongsi"></div>
 </div>
 
 <div class="wrap sub-screen" id="jsga-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 정시 상담</button>
   <h1 class="sub-title">가채점 상담</h1>
-  <p class="sub-desc">수능 뒤 · 30분 안팎</p>
-  <div class="why"><p>오래 상담하며 가장 많이 본 장면은, 실컷 상담하고도 결국 처음부터 마음에 두었던 곳을 쓰는 경우였습니다. 그래서 「이 군에 이 대학·학과는 꼭 쓴다」 하는 곳이 있다면 가장 먼저 여쭙고, 그 자리를 먼저 놓고 나머지를 맞춥니다.</p></div>
-  <h2 class="sec-h">받으시는 것</h2>
-  <ul class="get-list">
-    <li><i>①</i><span><b>예상 점수표</b>입시기관들이 낸 예상 등급컷으로 바꾼 내 점수(범위)</span></li>
-    <li><i>②</i><span><b>원하는 라인과 지금 가능한 라인</b>희망 대학이 지금 점수에서 어디쯤인지 대학 라인 단위로</span></li>
-    <li><i>③</i><span><b>성적표가 나왔을 때의 세 가지 상황</b>좋게 · 예상대로 · 아쉽게 나왔을 때 각각 어디를 중심으로 볼지</span></li>
-    <li><i>④</i><span><b>본 상담 전까지 준비할 것</b></span></li>
-    <li><i>⑤</i><span><b>상담 요약</b>학생 상담 페이지에 정리해 가족이 함께 봅니다</span></li>
-  </ul>
-  <h2 class="sec-h">실제 상담 페이지에서는</h2>
-  <figure class="shot"><img src="./img/js1.png" alt="원하는 라인과 지금 가능한 라인 예시" data-zoom><figcaption>아직 환산점수를 정확히 낼 수 없는 단계라, 대학 라인 단위로 한눈에 보이게 정리합니다. <em>누르면 크게 볼 수 있습니다.</em></figcaption></figure>
-  <figure class="shot"><img src="./img/js2.png" alt="성적표가 나왔을 때의 세 가지 상황 예시" data-zoom><figcaption>등급컷이 움직이면 라인도 함께 움직입니다. 성적표가 좋게 나와도, 아쉽게 나와도 당황하지 않도록 세 가지 경우를 미리 봐 둡니다.</figcaption></figure>
-  <p class="note">사진은 실제 상담 페이지이며, 학생과 대학은 예시입니다.</p>
-  <h2 class="sec-h">이런 분께 맞습니다</h2>
-  <div class="why"><p>가채점 결과를 보고 수시 논술·면접을 보러 갈지 고민되는 경우, 성적표가 나오기 전에 바람과 현실 사이의 거리를 미리 알고 싶은 경우에 특히 도움이 됩니다.</p></div>
-  <h2 class="sec-h">비용</h2>
-  <div class="price-box"><b>5만 원</b><span>가채점 상담을 받으시면 성적 발표 뒤 본 상담은 10만 원입니다(따로 받으시면 15만 원).</span></div>
-  <button class="btn primary wide" type="button" data-go="jsapply" data-jstype="가채점 + 본 상담">가채점 상담 신청하기 →</button>
+  <div class="pg" data-pg="jsga"></div>
 </div>
 
 <div class="wrap sub-screen" id="jsbon-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 정시 상담</button>
   <h1 class="sub-title">본 상담</h1>
-  <p class="sub-desc">성적 발표(12월 11일) 뒤 · 60분 안팎 + 원서 마감까지 카톡</p>
-  <div class="why"><p>진학사는 칸 수(가능성)를 보여 주는 도구이고, 상담은 그 숫자를 보고 어디에 어떻게 쓸지를 정하는 일입니다. 군마다 한 장씩, 세 장의 원서를 어떻게 나눠 쓰느냐에 따라 같은 점수로도 결과가 달라집니다.</p></div>
-  <h2 class="sec-h">받으시는 것</h2>
-  <ul class="get-list">
-    <li><i>①</i><span><b>후보 대학 환산점수와 비교</b>확정 성적으로 낸 환산점수를 작년 합격선(70% 컷), 따로 모아 온 여러 해 입결 자료, 학생 본인의 진학사 칸 수와 함께 놓고 봅니다</span></li>
-    <li><i>②</i><span><b>가·나·다군 조합 여러 개</b>안정·적정·상향을 섞은 조합마다 얻는 것과 감수할 것을 설명드리고 함께 결정합니다</span></li>
-    <li><i>③</i><span><b>상담 요약</b>학생 상담 페이지에 정리합니다</span></li>
-    <li><i>④</i><span><b>원서 마감까지 카톡</b>언제든 물어보실 수 있고, 이월 인원과 경쟁률이 나오면 페이지에 이어서 정리해 드립니다</span></li>
-  </ul>
-  <h2 class="sec-h">실제 상담 페이지에서는</h2>
-  <p class="note">본 상담 페이지는 아래 순서로 채워집니다. 사진은 실제 상담 페이지이며, 학생과 대학은 예시입니다. <b style="color:var(--accent)">사진을 누르면 크게 볼 수 있습니다.</b></p>
-  <figure class="shot"><img src="./img/js_bon1.jpg" alt="확정 성적 예시" data-zoom><figcaption><em>확정 성적</em> — 성적표가 나오면 가채점 때 본 세 가지 상황 중 어디에 해당하는지부터 확인합니다.</figcaption></figure>
-  <figure class="shot"><img src="./img/js_bon2.jpg" alt="후보 대학 환산점수 비교 예시" data-zoom><figcaption><em>후보 대학 환산점수 비교</em> — 대학마다 반영 비율과 만점이 달라, 점수 자체가 아니라 작년 합격선과의 차이로 비교합니다. 진학사 칸 수와 여러 해 입결(모집인원·이월·경쟁률·추가합격 흐름)을 함께 놓고, 모집단위마다 판단 근거를 적어 드립니다. 이 학생에게 유리한 대학과 불리한 대학이 왜 갈리는지도 짚습니다. 흐리게 둔 판단 근거 칸은 상담에서 학생마다 직접 적어 드립니다.</figcaption></figure>
-  <figure class="shot"><img src="./img/js3.png" alt="가·나·다군 조합안 예시" data-zoom><figcaption><em>가·나·다군 조합안</em> — 안정형·균형형·도전형 조합을 나란히 놓고, 조합마다 무엇을 얻고 무엇을 감수하는지 설명드린 뒤 상담에서 함께 정합니다.</figcaption></figure>
-  <figure class="shot"><img src="./img/js_apply.jpg" alt="원서 마감까지 이어서 정리한 예시" data-zoom><figcaption><em>원서 마감까지</em> — 상담이 끝나도 페이지는 계속 이어집니다. 이월 인원이 발표되고 원서 접수 중 경쟁률이 나올 때마다, 쓰기로 한 조합을 그대로 갈지 같은 페이지에 정리해 드립니다.</figcaption></figure>
-  <p class="note">진학사 모의지원은 규정상 학생 본인 계정으로만 쓸 수 있어 학생이 직접 결제하고, 상담 때 그 화면을 함께 봅니다.</p>
-  <h2 class="sec-h">비용</h2>
-  <div class="price-box"><b>15만 원</b><span>가채점 상담을 받으셨다면 10만 원입니다. 본 상담 비용은 성적 발표 뒤 상담 날짜를 정할 때 받습니다.</span></div>
-  <button class="btn primary wide" type="button" data-go="jsapply" data-jstype="본 상담만">본 상담 신청하기 →</button>
+  <div class="pg" data-pg="jsbon"></div>
 </div>
 
 <div class="wrap sub-screen" id="jsapply-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 정시 상담</button>
   <h1 class="sub-title">정시 상담 신청</h1>
-  <ol class="js-steps">
-    <li>아래에서 신청 내용을 복사해 1:1 채팅으로 보내 주세요.</li>
-    <li>가능한 날짜로 잡아 드리고, 결제 전 확인사항을 보내 드립니다. 24시간 안에 입금하시면 확정됩니다.</li>
-    <li>입금이 확인되면 상담 전 질문지를 보내 드립니다.</li>
-    <li>약속한 시간에 통화하며 학생 상담 페이지를 함께 봅니다.</li>
-  </ol>
+  <div class="pg" data-pg="jsapply"></div>
   <div class="dq"><h2>신청할 상담</h2><div class="chips" data-q="js_type"><button type="button">가채점 + 본 상담</button><button type="button">본 상담만</button></div></div>
   <div class="dq"><h2>학생</h2><div class="chips" data-q="js_who"><button type="button">고3</button><button type="button">N수생</button></div></div>
   <div class="dq"><h2>희망 날짜·시간 2~3개</h2><small class="hint">보통 신청하신 날로부터 이틀 뒤부터 잡을 수 있습니다. 급하시면 함께 적어 주세요.</small><textarea id="js-when" maxlength="200" placeholder="예: 11/21(토) 오후 2시, 11/22(일) 오전"></textarea></div>
   <div class="dq"><h2>가채점 점수 (수능 뒤라면)</h2><small class="hint">과목·선택과목·원점수를 적어 주세요. 수능 전이면 비워 두셔도 됩니다.</small><textarea id="js-score" maxlength="300" placeholder="예: 국어(언매) 84 / 수학(미적) 88 / 영어 2등급 / 한국사 3등급 / 물리Ⅰ 45 / 화학Ⅰ 42"></textarea></div>
-  <div class="fine"><ul>
-    <li>질문지를 보내 주시기 전까지는 취소하시면 전액 돌려 드립니다. 질문지를 받은 뒤에는 날짜를 한 번 옮기시거나 준비한 상담 페이지만 받아 보실 수 있습니다.</li>
-    <li>수시에 합격해 정시에 지원하지 않게 되시면, 상담 전이라면 언제든 전액 돌려 드립니다.</li>
-    <li>상담은 할 수 있는 만큼만 신청 순서대로 받습니다.</li>
-  </ul></div>
+  <div class="pg" data-pg="jsapply_fine"></div>
   <p class="msg err" id="js-msg" role="status"></p>
   <button class="btn primary wide" id="js-go" type="button">신청 내용 복사하고 1:1 채팅 열기</button>
   <div class="dq-done" id="js-done" hidden>
@@ -654,29 +582,7 @@ try{
 <div class="wrap sub-screen" id="ck-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
   <h1 class="sub-title">수리논술 첨삭</h1>
-  <p class="sub-desc">직접 쓴 답안 사진을 보내 주시면, 대학이 공개한 채점 기준으로 한 줄씩 읽고 세 쪽짜리 첨삭으로 돌려드립니다.</p>
-  <h2 class="sec-h">답이 맞아도 점수가 깎이는 이유</h2>
-  <div class="why">
-    <p>수리논술은 최종 답보다 그 답에 이르는 과정을 채점합니다. 혼자 공부할 때는 이 부분을 확인하기 어렵습니다. 예시 답안과 나란히 놓아 봐도, 내 답안의 어느 줄이 빠졌는지, 어디서 근거 없이 넘어갔는지는 잘 보이지 않습니다.</p>
-    <p>내 답안을 채점자의 눈으로 한 줄씩 읽어 주는 것, 그게 첨삭이 하는 일입니다. 풀이를 아는 것과 답안지에 점수가 되게 쓰는 것은 다릅니다.</p>
-  </div>
-  <h2 class="sec-h">이렇게 돌려드립니다</h2>
-  <p class="note">한양대 2018 자연(오전) [문제 1] 첨삭 샘플입니다. 최종 답이 모두 맞는 답안인데도, 답안에 쓰지 않은 근거를 점수로 인정하지 않으면 100점 만점에 80점입니다.</p>
-  <figure class="shot"><img src="./img/ck-1.png" alt="첨삭 샘플 1쪽 답안지 위 첨삭" data-zoom data-tall><figcaption><em>1쪽 · 답안지 위 첨삭</em> — 빨간색은 감점되는 곳, 파란색은 써 두면 안전한 곳이고, 소문항마다 추정 점수를 적습니다. 누르면 크게 볼 수 있습니다.</figcaption></figure>
-  <figure class="shot"><img src="./img/ck-2.png" alt="첨삭 샘플 2쪽 첨삭 정리" data-zoom data-tall><figcaption><em>2쪽 · 첨삭 정리</em> — 채점 항목마다 몇 점이 나오는지, 어디서 왜 깎였는지 표로 정리하고, 같은 실수를 막는 쓰는 습관을 짚습니다.</figcaption></figure>
-  <figure class="shot"><img src="./img/ck-3.png" alt="첨삭 샘플 3쪽 다시 쓴 답안" data-zoom data-tall><figcaption><em>3쪽 · 다시 쓴 답안</em> — 풀이 흐름은 그대로 두고 빨간 표시가 있던 자리를 문장으로 채운 답안입니다. 풀이를 바꾸지 않아도 점수가 되게 쓰는 법을 보여 드립니다.</figcaption></figure>
-  <p class="note">샘플의 답안은 대학이 공개한 합격자 우수답안으로 만든 예시이며, 실제 수강생 답안이 아닙니다. 점수는 공개 채점 기준으로 매긴 추정치입니다.</p>
-  <h2 class="sec-h">받으시는 것</h2>
-  <ul class="get-list">
-    <li><i>①</i><span><b>세 쪽짜리 첨삭 PDF</b>답안지 위 첨삭 · 첨삭 정리 · 다시 쓴 답안</span></li>
-    <li><i>②</i><span><b>12시간 안에 회신</b>시험 전날 받은 답안은 그날 안에 돌려드립니다</span></li>
-    <li><i>③</i><span><b>문항마다 재첨삭 1번</b>고쳐 쓴 답안을 한 번 더 봐 드립니다</span></li>
-    <li><i>④</i><span><b>첨삭에 대한 질문</b>이해가 안 되는 표시는 1:1 채팅으로 물어보실 수 있습니다</span></li>
-    <li><i>⑤</i><span><b>어느 대학 문항이든</b>구매한 다음 해 12월 31일까지 쓰실 수 있습니다</span></li>
-  </ul>
-  <div class="price-box"><b>1문항권 12,000원 · 3문항권 33,000원</b><span>1문항은 대문항 1개(소문항 포함)입니다. 한 회차(대문항 3개)를 모두 받고 싶으시면 3문항권이 맞습니다. 3문항권은 첫 첨삭에서 짚은 쓰는 습관이 다음 답안에서 고쳐졌는지까지 이어서 봅니다.</span></div>
-  <p class="note">수능 다음 날부터 시험일까지 매일 쓰고 고치는 기간권도 있습니다. 1:1 채팅으로 물어보시면 안내해 드립니다. 첨삭이 처음이라면 매주 한 문항씩 바뀌는 무료 맛보기로 먼저 받아 보셔도 됩니다.</p>
-  <a class="btn wide" href="https://uridongne-ipsi.co.kr/try/">이번 주 무료 맛보기 보기 ↗</a>
+  <div class="pg" data-pg="ck"></div>
   <div class="dq"><h2>첨삭권 고르기</h2><div class="chips" data-q="ck_kind"><button type="button">1문항권 12,000원</button><button type="button">3문항권 33,000원</button></div></div>
   <div class="dq"><h2>입금하실 분 예금주명</h2><input id="ck-name" type="text" maxlength="20" placeholder="예: 홍길동" autocomplete="off"></div>
   <div class="dq"><h2>첨삭받을 대학·문항 (정해졌다면)</h2><input id="ck-what" type="text" maxlength="60" placeholder="예: 숭실대 2026 자연 [문제 2]" autocomplete="off"></div>
@@ -691,38 +597,7 @@ try{
 <div class="wrap sub-screen" id="mg-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
   <h1 class="sub-title">월 관리</h1>
-  <p class="sub-desc">중3 · 고1 · 고2 · 고3 · 한 달 단위</p>
-  <div class="why">
-    <p>입시는 고3에 한 번에 정해지지 않습니다. 과목 선택, 세특, 탐구의 방향이 학기마다 지나가고, 지나간 학기는 다시 고치기 어렵습니다.</p>
-    <p>어떤 성적을 받아 오든, 그 성적에 맞는 가장 좋은 선택을 함께 찾아 드립니다. 월 관리는 학기마다 아이 상태를 보고 과목, 활동, 전형의 방향을 함께 정하는 관리입니다. 방향을 잡고 점검하는 일은 제가 맡고, 아이는 조금만 신경 쓰면 직접 완성할 수 있게 돕습니다.</p>
-  </div>
-  <h2 class="sec-h">매달 받으시는 것</h2>
-  <ul class="get-list">
-    <li><i>①</i><span><b>정기상담 1회</b>60분 안팎, 페이스톡을 권합니다. 학부모님과 학생이 함께 하시길 권합니다</span></li>
-    <li><i>②</i><span><b>상담 요약</b>상담 뒤 카톡으로 보내 드립니다</span></li>
-    <li><i>③</i><span><b>우리 아이 질문까지, 횟수 제한 없이</b>입시 정보는 물론 아이 이야기도 정기상담을 기다리지 않고 언제든 카톡으로. 보통 하루 안에 답하고, 길게 따져 볼 결정은 정기상담에서</span></li>
-    <li><i>④</i><span><b>수행평가·탐구보고서</b>주제를 좁히고 단락별 개요와 질문을 붙여 드리고, 초고는 단락마다 첨삭합니다. 완성본을 대신 써 드리지는 않습니다 — 면접에서 자기 말로 설명할 수 있어야 하니까요</span></li>
-    <li><i>⑤</i><span><b>학생별 계획표</b>지금부터 고3까지 달마다 챙길 것</span></li>
-    <li><i>⑥</i><span><b>우리 아이 기록 페이지</b>상담 요약, 학기별 계획, 이번 달 할 일, 성적 흐름을 아이 한 명의 페이지에 쌓아 둡니다</span></li>
-    <li><i>⑦</i><span><b>이달의 수리논술 한 문제</b>고3에 한꺼번에 시작하면 늦으니 매달 한 문제만 부담 없이 — 수리논술 답안처럼 써 오면 첨삭해 드립니다</span></li>
-  </ul>
-  <h2 class="sec-h">우리 아이 기록 페이지</h2>
-  <p class="note">엄마·아빠·아이가 언제든 같은 화면을 열어, 따로 묻지 않아도 아이가 지금 어디쯤 와 있는지 함께 볼 수 있습니다. 사진은 실제 기록 페이지이며, 학생은 예시입니다. <b style="color:var(--accent)">사진을 누르면 크게 볼 수 있습니다.</b></p>
-  <figure class="shot"><img src="./img/mg1.jpg" alt="이번 달 할 일 예시" data-zoom data-tall><figcaption><em>이번 달 할 일</em> — 할 일을 마치고 카톡을 보내면 체크합니다. 아이가 남긴 한마디도 함께 기록됩니다.</figcaption></figure>
-  <figure class="shot"><img src="./img/mg2.jpg" alt="상담 기록 예시" data-zoom data-tall><figcaption><em>상담 기록</em> — 이야기한 것, 정한 것, 학생이 할 일, 학부모님이 챙겨 주실 것, 다음 상담 날짜까지 남깁니다.</figcaption></figure>
-  <figure class="shot"><img src="./img/mg3.jpg" alt="앞으로의 계획 예시" data-zoom><figcaption><em>앞으로의 계획</em> — 달마다 챙길 것을 미리 보여 드립니다. 학교 일정에 따라 바뀔 수 있습니다.</figcaption></figure>
-  <figure class="shot"><img src="./img/mg4.jpg" alt="성적 흐름과 최근 소식 예시" data-zoom><figcaption><em>성적 흐름 · 최근 소식</em> — 학기별 평균 등급과 목표, 그사이 정한 것들이 날짜순으로 쌓입니다.</figcaption></figure>
-  <h2 class="sec-h">학년별로 이것을 중심으로 봅니다</h2>
-  <div class="chips" id="mg-tabs"><button type="button" class="on" data-g="0">중3</button><button type="button" data-g="1">고1</button><button type="button" data-g="2">고2</button><button type="button" data-g="3">고3</button></div>
-  <ul class="get-list mg-g"><li><i>·</i><span>고교 유형(일반고·자사고 등)을 고를 때 아이에게 맞는 쪽을 함께 따져 봅니다</span></li><li><i>·</i><span>배정된 학교의 교육과정을 보고 고1부터 고3까지 큰 그림을 그립니다</span></li><li><i>·</i><span>고1 첫 학기 준비(동아리·진로희망·수행평가)</span></li></ul>
-  <ul class="get-list mg-g" hidden><li><i>·</i><span>첫 내신 성적이 나오면, 그 성적으로 앞으로 염두에 둘 전형과 과목 방향을 함께 봅니다</span></li><li><i>·</i><span>학기마다 생기부 점검(8월·1월) — 잘된 점, 비어 있는 곳, 다음 학기에 이어 갈 주제</span></li><li><i>·</i><span>희망 학과의 권장과목으로 2학년 과목 선택을 점검합니다</span></li></ul>
-  <ul class="get-list mg-g" hidden><li><i>·</i><span>학기마다 생기부 점검(8월·1월) — 1학년보다 깊어졌는지, 기록이 한 방향으로 모이는지</span></li><li><i>·</i><span>3학년 과목과 수능 선택과목을 정합니다</span></li><li><i>·</i><span>겨울방학에 교과·종합·정시 중 어디에 무게를 둘지 1차로 정합니다</span></li></ul>
-  <ul class="get-list mg-g" hidden><li><i>·</i><span>수시 원서 6장 조합을 함께 정합니다</span></li><li><i>·</i><span>1학기 생기부가 마감되면 아이 생기부에서 나올 만한 면접 질문과 답변을 정리합니다</span></li><li><i>·</i><span>1단계 발표에 따라 면접·논술 대응을 함께 정합니다</span></li><li><i>·</i><span>11월 수능 직전 정기상담(시험장 운영, 마지막 2주, 가채점표)</span></li></ul>
-  <h2 class="sec-h">고3 마지막 6개월</h2>
-  <div class="why"><p>6월 모의평가부터 정시 원서까지, 같은 사람이 끊김 없이 봅니다. 고3 관리 회원은 수능 뒤 가채점 상담이 무료이고, 6월부터 11월까지 쉬지 않고 이어 가시면 성적 발표 뒤 본 상담까지 무료입니다.</p></div>
-  <h2 class="sec-h">비용</h2>
-  <div class="price-box"><b>월 20만 원 · 고3 월 25만 원</b><span>중3·고1·고2는 월 20만 원, 고3은 수시 원서 상담을 포함해 월 25만 원입니다. 먼저 한 번 받아 보고 싶으시면 단발 상담(15만 원)도 있고, 2주 안에 월 관리를 시작하시면 단발 상담비를 첫 달 비용에서 빼 드립니다.</span></div>
-  <p class="note">신청할 수 있는 학년: 1~2월·11~12월은 중3·고1·고2, 3~10월은 고1·고2·고3. 방학 등에는 학년마다 2번까지 한 달씩 쉬어 가실 수 있습니다. 소수로만 진행해 정원이 차면 신청을 받지 못할 수 있습니다.</p>
+  <div class="pg" data-pg="mg"></div>
   <div class="dq"><h2>신청할 것</h2><div class="chips" data-q="mg_kind"><button type="button">월 관리</button><button type="button">단발 상담</button></div></div>
   <div class="dq"><h2>학년</h2><div class="chips" data-q="mg_grade"><button type="button">중3</button><button type="button">고1</button><button type="button">고2</button><button type="button">고3</button></div></div>
   <p class="msg err" id="mg-msg" role="status"></p>
@@ -738,14 +613,7 @@ try{
 <div class="wrap sub-screen" id="about-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
   <h1 class="sub-title">운영자 소개</h1>
-  <p class="sub-desc">우리동네 입시연구소</p>
-  <dl class="career">
-    <div><dt>2008~2016</dt><dd>수학 과외 및 진학지도</dd></div>
-    <div><dt>2016~2023</dt><dd>재수학원 부원장<small>수학·수리논술, N수생 입시 및 생활 관리<br>2018, 2019 수능 후 논술 시즌에는 서울에서 논술 첨삭 강사로 활동</small></dd></div>
-    <div><dt>~ 2026.06</dt><dd>단과 학원 강의, 기숙학원 원장</dd></div>
-    <div><dt>현재</dt><dd><b>우리동네 입시연구소 운영</b></dd></div>
-  </dl>
-  <a class="btn primary wide" href="https://blog.naver.com/kwon_th/224438159880">상담·관리 안내 보기 →</a>
+  <div class="pg" data-pg="about"></div>
 </div>
 
 <div class="wrap sub-screen" id="diag-screen" hidden>
@@ -930,6 +798,51 @@ function go(k){if(location.hash.replace(/^#/,"")!==k)location.hash=k;else showSc
 
 /* 1.7: 자료함 — 목록은 GitHub Pages(list.json)에서 불러옴, 앱 업데이트 없이 자료 추가 */
 const JR_BASE="https://uridongne-ipsi.co.kr/jaryo/";
+
+/* 1.11: 안내 화면(정시 상담·가채점·본 상담·신청 안내, 첨삭, 해설 파일, 월 관리, 운영자 소개, 맛보기 칸)은 자료함 저장소 pages/pages.json에서 읽음
+   — 앱 업데이트 없이 문구·사진을 바꿈. 순서: 마지막으로 받은 내용(없으면 앱 안 기본본)을 바로 그리고, 새로 받아 바뀌었으면 다시 그림.
+   정해 둔 틀(desc·h·why·note·list·shot·price·btn·flow·cards·choice·career·steps·fine·tabs) 밖의 칸은 무시함. ?pv 로 열면 pages_preview.json(미리보기, 저장 안 함) */
+const PG_LOCAL_IMG="https://uridongne-ipsi.co.kr/jaryo/pages/img/",PG_PV=/[?&]pv(=|&|$)/.test(location.search),PG_FILE=PG_PV?"pages_preview.json":"pages.json",PG_KEY="uridongne-pages";
+const PG_DEFAULT={"v":1,"updated":"2026-11-06","try":{"title":"이번 주 무료 첨삭 맛보기","desc":"매주 한 문항, 직접 쓴 답안을 첨삭","url":"https://uridongne-ipsi.co.kr/try/"},"pages":{"jeongsi":[{"t":"desc","text":"정시 상담은 두 번에 나누어 진행합니다. 수능 뒤 가채점 상담으로 지원의 큰 틀을 잡고, 성적 발표 뒤 본 상담에서 가·나·다군을 함께 정합니다. 수능 전에도 가채점 상담 날짜를 미리 잡아 두실 수 있습니다."},{"t":"choice","items":[{"go":"jsga","b":"가채점 상담","s":"수능 뒤 · 30분 안팎\n희망 분야마다 지금 점수로 어디까지 닿는지, 성적표가 나왔을 때의 세 가지 상황","small":"무엇을 받는지 보기 →"},{"go":"jsbon","b":"본 상담","s":"성적 발표(12월 11일) 뒤 · 60분 안팎 + 원서 마감까지 카톡\n작년 합격자 70% 지점과의 차이, 작년 마지노선 등수, 진학사 등수로 가·나·다군 조합 결정","small":"무엇을 받는지 보기 →"}]},{"t":"h","text":"두 번으로 나눈 이유"},{"t":"why","p":["가채점 점수만으로는 대학별 환산점수를 정확히 낼 수 없습니다. 그렇다고 성적표가 나올 때까지 기다리기만 하면, 원서 접수(1월 4~7일)까지 남은 3주 남짓 동안 바람과 현실을 한꺼번에 정리해야 합니다.","그래서 가채점 상담에서는 바라시는 것을 먼저 충분히 듣고, **희망 분야마다 지금 점수로 어디까지 닿는지** 큰 틀을 잡아 둡니다. 성적이 나오면 그 틀 위에 확정 점수를 얹어 원서를 정합니다.","오래 상담하며 가장 많이 본 장면은, 실컷 상담하고도 결국 처음부터 마음에 두었던 곳을 쓰는 경우였습니다. 그래서 「이 군에 이 대학·학과는 무조건 쓴다」 하는 곳이 있다면 가장 먼저 여쭙고, 그 한 자리를 먼저 놓고 나머지 두 군을 맞춥니다."]},{"t":"h","text":"수능부터 원서 마감까지"},{"t":"flow","items":[{"d":"11월 19일","b":"수능","s":"가채점 점수만으로는 대학별 환산점수를 정확히 낼 수 없습니다."},{"d":"수능 뒤","b":"가채점 상담","s":"희망 분야마다 라인을 잡고, 성적표가 나왔을 때의 세 가지 상황을 미리 봐 둡니다.","on":true},{"d":"12월 11일","b":"성적 발표","s":"가채점 때 본 세 가지 상황 중 어디에 해당하는지부터 확인합니다."},{"d":"성적 발표 뒤","b":"본 상담","s":"잡아 둔 틀 위에 확정 점수를 얹어 가·나·다군 원서를 정합니다.","on":true},{"d":"1월 4~7일","b":"원서 접수 마감까지","s":"이월 인원과 경쟁률이 나올 때마다 같은 페이지에 이어서 정리합니다."}]},{"t":"h","text":"학생마다 상담 페이지 하나"},{"t":"cards","items":[{"b":"함께 보며 통화","s":"페이스톡으로 통화하며 각자 휴대폰·컴퓨터로 같은 페이지를 봅니다"},{"b":"요약과 소식이 한곳에","s":"상담 요약, 원서 마감까지의 소식이 같은 페이지에 쌓입니다"},{"b":"실명 대신 별칭","s":"링크는 가족끼리만 보시도록 보내 드립니다"}]},{"t":"note","text":"휴대폰에서는 학과마다 한 줄로 먼저 보이고, 누르면 자세한 숫자가 펼쳐집니다. 이 페이지는 정답을 드리는 곳이 아니라, 가진 자료로 할 수 있는 가장 나은 판단 자료를 모아 드리는 곳입니다. 결정은 상담에서 함께 합니다."},{"t":"h","text":"비용"},{"t":"price","b":"가채점 상담 5만 원 · 본 상담 15만 원","s":"가채점 상담을 받으셨다면 본 상담은 10만 원입니다(두 번 합계 15만 원). 본 상담 비용은 성적 발표 뒤 본 상담 날짜를 정할 때 받습니다."},{"t":"h","text":"미리 알아 두시면 좋은 것"},{"t":"note","text":"상담은 할 수 있는 만큼만 신청 순서대로 받습니다. 가채점 상담 예약이 다 차면 성적 발표 뒤 본 상담으로 안내해 드리고, 이때는 가채점 상담에서 나누려던 이야기를 본 상담 앞부분에서 먼저 충분히 듣고 시작합니다."},{"t":"note","text":"내년에 고3이 되는 자녀가 있다면 「고3 마지막 6개월」도 함께 봐 두세요. 6월부터 11월까지 월 관리를 쉬지 않고 이어 가시면 정시 상담(가채점 + 본 상담)을 무료로 해 드립니다."},{"t":"btn","text":"월 관리 안내 보기 →","go":"mg"},{"t":"btn","text":"정시 상담 신청하기 →","go":"jsapply","primary":true}],"jsga":[{"t":"desc","text":"수능 뒤 · 30분 안팎"},{"t":"why","p":["상담 전에 질문지(희망 분야, 대학과 학과 중 무엇이 먼저인지, 남은 수시, 확실하지 않은 문항 등)를 받아 학생 페이지를 미리 만들어 둡니다.","「이 군에 이 대학·학과는 무조건 쓴다」 하는 곳이 있다면 가장 먼저 여쭙습니다. 그 한 자리를 먼저 놓고 나머지 두 군을 맞추는 쪽이 훨씬 정확합니다."]},{"t":"h","text":"받으시는 것"},{"t":"list","items":[{"b":"내 예상 점수","s":"입시기관 세 곳의 예상 등급컷으로 바꾼 점수(범위)와, 과목별로 몇 점에 라인이 움직이는지"},{"b":"원하는 라인과 지금 가능한 라인","s":"희망 분야마다 따로, 가·나·다군으로도 나눠서"},{"b":"우리 아이에게 맞춘 보기","s":"남은 수시, 지역인재, 영어 등급, 점수 구조처럼 해당되는 것만"},{"b":"작년 한 해로 보면 칸이 달라지는 학과"},{"b":"성적표가 나왔을 때의 세 가지 상황","s":"좋게 · 예상대로 · 아쉽게"},{"b":"본 상담 전까지 준비할 것"},{"b":"상담 요약","s":"학생 상담 페이지에 정리해 가족이 함께 봅니다"}]},{"t":"h","text":"실제 상담 페이지에서는"},{"t":"note","text":"사진은 실제 상담 페이지 견본입니다. 대학·학과 숫자는 2026 실제 입결이고, 학생은 예시입니다. ==사진을 누르면 크게 볼 수 있습니다.=="},{"t":"shot","src":"img/jg1.jpg","label":"한눈에","cap":"맨 위에 그날 상담의 요점을 세 줄로 먼저 적습니다. 지금 중심 라인, 가장 큰 변수, 오늘 정할 것입니다. 숫자가 많은 페이지라 무엇부터 봐야 하는지를 먼저 알려 드립니다.","alt":"상담 요점 세 줄 예시"},{"t":"shot","src":"img/jg2.jpg","label":"내 예상 점수","cap":"가채점은 기관마다 예상이 달라 범위로 봅니다. 과목마다 원점수 1~3점이 달라질 때 라인이 얼마나 움직이는지 함께 계산해, 성적표가 나오면 어느 과목부터 확인할지 미리 정해 둡니다.","alt":"예상 점수 예시","tall":true},{"t":"shot","src":"img/jg3.jpg","label":"희망 분야별 라인","cap":"라인은 지난 세 해 합격자 점수의 평균과 지금 점수의 거리로 봅니다. 한 해만 보면 그해에 튄 학과에 끌려가기 쉬워서입니다. 칠한 칸이 많을수록 여유 있는 곳이고, 희망 분야가 여럿이면 분야마다 따로 봅니다. 작년에만 크게 오르거나 내려온 학과는 이름 아래에 따로 표시합니다.","alt":"희망 분야별 라인 예시"},{"t":"shot","src":"img/jg4.jpg","label":"세 가지 상황","cap":"등급컷이 움직이면 라인도 함께 움직입니다. 성적표가 좋게 나올 때, 예상대로일 때, 아쉽게 나올 때를 미리 봐 둡니다. 「아쉽게」는 막연히 낮춰 잡지 않고, 질문지에 적어 주신 확실하지 않은 문항을 모두 틀렸을 때로 잡습니다.","alt":"세 가지 상황 예시","tall":true},{"t":"h","text":"비용"},{"t":"price","b":"5만 원","s":"가채점 상담을 받으시면 성적 발표 뒤 본 상담은 10만 원입니다(따로 받으시면 15만 원)."},{"t":"btn","text":"가채점 상담 신청하기 →","go":"jsapply","jstype":"가채점 + 본 상담","primary":true}],"jsbon":[{"t":"desc","text":"성적 발표(12월 11일) 뒤 · 60분 안팎 + 원서 마감까지 카톡"},{"t":"why","p":["진학사는 칸 수(가능성)를 보여 주는 도구이고, 상담은 그 숫자를 보고 어디에 어떻게 쓸지를 정하는 일입니다. 조합마다 무엇을 얻고 무엇을 감수하는지 설명드리고, 세 곳 모두 떨어지면 어떻게 할지도 원서를 내기 전에 먼저 정해 둡니다."]},{"t":"h","text":"받으시는 것"},{"t":"list","items":[{"b":"확정 성적","s":"가채점 때 본 세 가지 상황 중 어디에 해당하는지부터 확인합니다"},{"b":"후보 학과 환산점수 비교","s":"작년 합격자 70% 지점과의 차이, 작년 마지노선 등수, 학생 본인의 진학사 등수를 함께 놓고 판단합니다"},{"b":"군마다 추가 합격은 얼마나 도는지"},{"b":"올해 달라진 것","s":"군 이동, 뽑는 방법, 모집인원"},{"b":"가·나·다군 조합안","s":"안정형·균형형·도전형을 나란히 놓고 함께 결정합니다"},{"b":"진학사 기록","s":"보내 주신 진학사 화면을 날짜별로 옮겨 적습니다"},{"b":"상담 요약"}]},{"t":"h","text":"실제 상담 페이지에서는"},{"t":"note","text":"사진은 실제 상담 페이지 견본입니다. 대학·학과 숫자는 2026 실제 입결이고, 학생과 진학사 값은 예시입니다. ==사진을 누르면 크게 볼 수 있습니다.=="},{"t":"shot","src":"img/jb1.jpg","label":"후보 학과 환산점수 비교","cap":"대학마다 반영 비율과 만점이 달라, 환산점수 자체가 아니라 작년 합격자 70% 지점과의 차이로 비교합니다. 이 차이를 「국어·수학 표준점수로 몇 점」으로 바꿔 적어, 대학이 달라도 같은 눈금으로 봅니다. 작년 마지막 합격자 등수와 지금 진학사 등수, 여러 해 입결, 추가 합격 흐름, 올해 바뀐 점을 더해 모집단위마다 판단 이유를 적어 드립니다. 흐리게 둔 칸이 그 자리이고, 상담에서 학생마다 직접 적어 드립니다.","alt":"후보 학과 환산점수 비교 예시","tall":true},{"t":"shot","src":"img/jb2.jpg","label":"가·나·다군 조합안","cap":"안정형·균형형·도전형 조합을 나란히 놓고, 조합마다 무엇을 얻고 무엇을 감수하는지 설명드린 뒤 상담에서 함께 정합니다.","alt":"가·나·다군 조합안 예시"},{"t":"shot","src":"img/jb3.jpg","label":"진학사 기록","cap":"원서 접수 전까지 진학사 화면을 보내 주시면 날짜별로 옮겨 적습니다. 칸보다 「내 등수가 작년 마지노선 자리와 몇 등 차이인지」가 어떻게 움직이는지를 봅니다.","alt":"진학사 기록 예시"},{"t":"note","text":"진학사 모의지원은 규정상 학생 본인 계정으로만 쓸 수 있어 학생이 직접 결제하고, 본 상담 때는 그 화면을 함께 봅니다."},{"t":"h","text":"원서 마감까지"},{"t":"note","text":"상담이 끝나도 페이지는 이어집니다. 원서 접수 마감까지 카톡으로 언제든 물어보실 수 있습니다."},{"t":"shot","src":"img/jb4.jpg","label":"원서 마감 일정","cap":"정한 세 곳의 원서 마감 시각, 서류, 합격 발표 날짜를 2027 정시 모집요강에서 확인해 맨 위에 적어 드립니다. 대학마다 마감 시각이 달라 가장 먼저 닫히는 곳부터 챙길 수 있게 합니다. 이월 인원이 발표되고 경쟁률이 나올 때마다, 쓰기로 한 조합을 그대로 갈지 같은 페이지에 이어서 정리해 드립니다.","alt":"원서 마감 일정 예시"},{"t":"h","text":"비용"},{"t":"price","b":"15만 원","s":"가채점 상담을 받으셨다면 10만 원입니다. 본 상담 비용은 성적 발표 뒤 본 상담 날짜를 정할 때 받습니다."},{"t":"btn","text":"본 상담 신청하기 →","go":"jsapply","jstype":"본 상담만","primary":true}],"jsapply":[{"t":"steps","items":["아래에서 신청 내용을 복사해 1:1 채팅으로 보내 주세요.","가능한 날짜로 잡아 드립니다. 급하시면 말씀해 주시면 앞당겨 맞춰 보겠습니다.","날짜가 잡히면 결제 전 확인사항을 보내 드리고, 24시간 안에 입금해 주시면 확정됩니다.","입금이 확인되면 상담 전 질문지를 보내 드립니다. 상담 2일 전 밤 9시까지 보내 주시면, 그 내용으로 학생 페이지를 미리 만들어 둡니다.","약속한 시간에 통화하며 페이지를 함께 봅니다."]},{"t":"note","text":"수능 전에 미리 신청하시면 질문지는 가채점 점수만 빼고 먼저 받고, 가채점 점수는 수능 날 밤에 받습니다."}],"jsapply_fine":[{"t":"fine","items":["질문지를 보내 주시기 전까지는 취소하시면 전액 돌려 드립니다. 질문지를 받으면 바로 상담 준비를 시작하므로 그 뒤에는 돌려 드리지 않고, 날짜를 한 번 옮기시거나 준비한 상담 페이지만 받아 보실 수 있습니다.","다만 **수시에 합격해 정시에 지원하지 않게 되시면, 상담 전이라면 언제든 전액** 돌려 드립니다.","상담은 할 수 있는 만큼만 신청 순서대로 받습니다."]}],"shop":[{"t":"desc","text":"대학마다 기출 6문항을 골라, 풀이 흐름부터 답안지에 쓸 문장, 공개 채점 기준과 줄마다 연결한 해설, 점수가 새는 곳까지 정리한 PDF입니다. 문항 원문 대신 입학처 기출 자료로 가는 QR을 넣었습니다."}],"shop_price":[{"t":"h","text":"비용"},{"t":"price","b":"1개 14,900원 · 아무 대학 3개 37,900원","s":"자연·의약을 섞어 3개를 고르셔도 됩니다. 주문 한 건마다 답안 1문항을 무료로 첨삭해 드립니다."}],"shop_fine":[{"t":"fine","items":["**파일 특성상 전달 후에는 환불이 되지 않습니다.** 구성은 무료 미리보기로 먼저 확인해 주세요.","파일이 열리지 않거나 다른 대학 파일이 전달된 경우에는 바로 다시 보내 드립니다.","메일을 권합니다. 카카오톡으로 보낸 파일은 일정 기간이 지나면 받을 수 없게 되어, 시험 직전에 다시 찾으실 때 열리지 않을 수 있습니다.","입금이 확인되면 바로 보내 드립니다. 밤 10시 이후 주문은 다음 날 낮 12시까지 보내 드리고, 시험 전날 주문은 새벽 2시까지 확인되는 대로 바로 보내 드립니다.","준비 중인 파일도 예약 주문하실 수 있고, 나오는 날 같은 대화방으로 보내 드립니다."]}],"ck":[{"t":"desc","text":"직접 쓴 답안 사진을 보내 주시면, 대학이 공개한 채점 기준으로 한 줄씩 읽고 세 쪽짜리 첨삭으로 돌려드립니다."},{"t":"h","text":"답이 맞아도 점수가 깎이는 이유"},{"t":"why","p":["수리논술은 최종 답보다 그 답에 이르는 과정을 채점합니다. 혼자 공부할 때는 이 부분을 확인하기 어렵습니다. 예시 답안과 나란히 놓아 봐도, 내 답안의 어느 줄이 빠졌는지, 어디서 근거 없이 넘어갔는지는 잘 보이지 않습니다.","내 답안을 채점자의 눈으로 한 줄씩 읽어 주는 것, 그게 첨삭이 하는 일입니다. 풀이를 아는 것과 답안지에 점수가 되게 쓰는 것은 다릅니다."]},{"t":"h","text":"이렇게 돌려드립니다"},{"t":"note","text":"한양대 2018 자연(오전) [문제 1] 첨삭 샘플입니다. 최종 답이 모두 맞는 답안인데도, 답안에 쓰지 않은 근거를 점수로 인정하지 않으면 100점 만점에 80점입니다."},{"t":"shot","src":"img/ck-1.png","label":"1쪽 · 답안지 위 첨삭","cap":"빨간색은 감점되는 곳, 파란색은 써 두면 안전한 곳이고, 소문항마다 추정 점수를 적습니다. 누르면 크게 볼 수 있습니다.","alt":"첨삭 샘플 1쪽 답안지 위 첨삭","tall":true},{"t":"shot","src":"img/ck-2.png","label":"2쪽 · 첨삭 정리","cap":"채점 항목마다 몇 점이 나오는지, 어디서 왜 깎였는지 표로 정리하고, 같은 실수를 막는 쓰는 습관을 짚습니다.","alt":"첨삭 샘플 2쪽 첨삭 정리","tall":true},{"t":"shot","src":"img/ck-3.png","label":"3쪽 · 다시 쓴 답안","cap":"풀이 흐름은 그대로 두고 빨간 표시가 있던 자리를 문장으로 채운 답안입니다. 풀이를 바꾸지 않아도 점수가 되게 쓰는 법을 보여 드립니다.","alt":"첨삭 샘플 3쪽 다시 쓴 답안","tall":true},{"t":"note","text":"샘플의 답안은 대학이 공개한 합격자 우수답안으로 만든 예시이며, 실제 수강생 답안이 아닙니다. 점수는 공개 채점 기준으로 매긴 추정치입니다."},{"t":"h","text":"받으시는 것"},{"t":"list","items":[{"b":"세 쪽짜리 첨삭 PDF","s":"답안지 위 첨삭 · 첨삭 정리 · 다시 쓴 답안"},{"b":"12시간 안에 회신","s":"시험 전날 받은 답안은 그날 안에 돌려드립니다"},{"b":"문항마다 재첨삭 1번","s":"고쳐 쓴 답안을 한 번 더 봐 드립니다"},{"b":"첨삭에 대한 질문","s":"이해가 안 되는 표시는 1:1 채팅으로 물어보실 수 있습니다"},{"b":"어느 대학 문항이든","s":"구매한 다음 해 12월 31일까지 쓰실 수 있습니다"}]},{"t":"price","b":"1문항권 12,000원 · 3문항권 33,000원","s":"1문항은 대문항 1개(소문항 포함)입니다. 한 회차(대문항 3개)를 모두 받고 싶으시면 3문항권이 맞습니다. 3문항권은 첫 첨삭에서 짚은 쓰는 습관이 다음 답안에서 고쳐졌는지까지 이어서 봅니다."},{"t":"note","text":"수능 다음 날부터 시험일까지 매일 쓰고 고치는 기간권도 있습니다. 1:1 채팅으로 물어보시면 안내해 드립니다. 첨삭이 처음이라면 매주 한 문항씩 바뀌는 무료 맛보기로 먼저 받아 보셔도 됩니다."},{"t":"btn","text":"이번 주 무료 맛보기 보기 ↗","href":"https://uridongne-ipsi.co.kr/try/"}],"mg":[{"t":"desc","text":"중3 · 고1 · 고2 · 고3 · 한 달 단위"},{"t":"why","p":["입시는 고3에 한 번에 정해지지 않습니다. 과목 선택, 세특, 탐구의 방향이 학기마다 지나가고, 지나간 학기는 다시 고치기 어렵습니다.","어떤 성적을 받아 오든, 그 성적에 맞는 가장 좋은 선택을 함께 찾아 드립니다. 월 관리는 학기마다 아이 상태를 보고 과목, 활동, 전형의 방향을 함께 정하는 관리입니다. 방향을 잡고 점검하는 일은 제가 맡고, 아이는 조금만 신경 쓰면 직접 완성할 수 있게 돕습니다."]},{"t":"h","text":"매달 받으시는 것"},{"t":"list","items":[{"b":"정기상담 1회","s":"60분 안팎, 페이스톡을 권합니다. 학부모님과 학생이 함께 하시길 권합니다"},{"b":"상담 요약","s":"상담 뒤 카톡으로 보내 드립니다"},{"b":"우리 아이 질문까지, 횟수 제한 없이","s":"입시 정보는 물론 아이 이야기도 정기상담을 기다리지 않고 언제든 카톡으로. 보통 하루 안에 답하고, 길게 따져 볼 결정은 정기상담에서"},{"b":"수행평가·탐구보고서","s":"주제를 좁히고 단락별 개요와 질문을 붙여 드리고, 초고는 단락마다 첨삭합니다. 완성본을 대신 써 드리지는 않습니다 — 면접에서 자기 말로 설명할 수 있어야 하니까요"},{"b":"학생별 계획표","s":"지금부터 고3까지 달마다 챙길 것"},{"b":"우리 아이 기록 페이지","s":"상담 요약, 학기별 계획, 이번 달 할 일, 성적 흐름을 아이 한 명의 페이지에 쌓아 둡니다"},{"b":"이달의 수리논술 한 문제","s":"고3에 한꺼번에 시작하면 늦으니 매달 한 문제만 부담 없이 — 수리논술 답안처럼 써 오면 첨삭해 드립니다"}]},{"t":"h","text":"우리 아이 기록 페이지"},{"t":"note","text":"엄마·아빠·아이가 언제든 같은 화면을 열어, 따로 묻지 않아도 아이가 지금 어디쯤 와 있는지 함께 볼 수 있습니다. 사진은 실제 기록 페이지이며, 학생은 예시입니다. ==사진을 누르면 크게 볼 수 있습니다.=="},{"t":"shot","src":"img/mg1.jpg","label":"이번 달 할 일","cap":"할 일을 마치고 카톡을 보내면 체크합니다. 아이가 남긴 한마디도 함께 기록됩니다.","alt":"이번 달 할 일 예시","tall":true},{"t":"shot","src":"img/mg2.jpg","label":"상담 기록","cap":"이야기한 것, 정한 것, 학생이 할 일, 학부모님이 챙겨 주실 것, 다음 상담 날짜까지 남깁니다.","alt":"상담 기록 예시","tall":true},{"t":"shot","src":"img/mg3.jpg","label":"앞으로의 계획","cap":"달마다 챙길 것을 미리 보여 드립니다. 학교 일정에 따라 바뀔 수 있습니다.","alt":"앞으로의 계획 예시"},{"t":"shot","src":"img/mg4.jpg","label":"성적 흐름 · 최근 소식","cap":"학기별 평균 등급과 목표, 그사이 정한 것들이 날짜순으로 쌓입니다.","alt":"성적 흐름과 최근 소식 예시"},{"t":"h","text":"학년별로 이것을 중심으로 봅니다"},{"t":"tabs","tabs":[{"label":"중3","items":["고교 유형(일반고·자사고 등)을 고를 때 아이에게 맞는 쪽을 함께 따져 봅니다","배정된 학교의 교육과정을 보고 고1부터 고3까지 큰 그림을 그립니다","고1 첫 학기 준비(동아리·진로희망·수행평가)"]},{"label":"고1","items":["첫 내신 성적이 나오면, 그 성적으로 앞으로 염두에 둘 전형과 과목 방향을 함께 봅니다","학기마다 생기부 점검(8월·1월) — 잘된 점, 비어 있는 곳, 다음 학기에 이어 갈 주제","희망 학과의 권장과목으로 2학년 과목 선택을 점검합니다"]},{"label":"고2","items":["학기마다 생기부 점검(8월·1월) — 1학년보다 깊어졌는지, 기록이 한 방향으로 모이는지","3학년 과목과 수능 선택과목을 정합니다","겨울방학에 교과·종합·정시 중 어디에 무게를 둘지 1차로 정합니다"]},{"label":"고3","items":["수시 원서 6장 조합을 함께 정합니다","1학기 생기부가 마감되면 아이 생기부에서 나올 만한 면접 질문과 답변을 정리합니다","1단계 발표에 따라 면접·논술 대응을 함께 정합니다","11월 수능 직전 정기상담(시험장 운영, 마지막 2주, 가채점표)"]}]},{"t":"h","text":"고3 마지막 6개월"},{"t":"why","p":["6월 모의평가부터 정시 원서까지, 같은 사람이 끊김 없이 봅니다. 고3 관리 회원은 수능 뒤 가채점 상담이 무료이고, 6월부터 11월까지 쉬지 않고 이어 가시면 성적 발표 뒤 본 상담까지 무료입니다."]},{"t":"h","text":"비용"},{"t":"price","b":"월 20만 원 · 고3 월 25만 원","s":"중3·고1·고2는 월 20만 원, 고3은 수시 원서 상담을 포함해 월 25만 원입니다. 먼저 한 번 받아 보고 싶으시면 단발 상담(15만 원)도 있고, 2주 안에 월 관리를 시작하시면 단발 상담비를 첫 달 비용에서 빼 드립니다."},{"t":"note","text":"신청할 수 있는 학년: 1~2월·11~12월은 중3·고1·고2, 3~10월은 고1·고2·고3. 방학 등에는 학년마다 2번까지 한 달씩 쉬어 가실 수 있습니다. 소수로만 진행해 정원이 차면 신청을 받지 못할 수 있습니다."}],"about":[{"t":"desc","text":"우리동네 입시연구소"},{"t":"career","items":[{"dt":"2008~2016","dd":"수학 과외 및 진학지도"},{"dt":"2016~2023","dd":"재수학원 부원장","small":"수학·수리논술, N수생 입시 및 생활 관리\n2018, 2019 수능 후 논술 시즌에는 서울에서 논술 첨삭 강사로 활동"},{"dt":"~ 2026.06","dd":"단과 학원 강의, 기숙학원 원장"},{"dt":"현재","dd":"**우리동네 입시연구소 운영**"}]},{"t":"btn","text":"상담·관리 안내 보기 →","href":"https://blog.naver.com/kwon_th/224438159880","primary":true}]}};
+const PG_CIRC="①②③④⑤⑥⑦⑧⑨⑩⑪⑫";
+let pgCur=null,pgFrom="local",pgTried=0;
+function pgT(t){return String(t==null?"":t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/==(.+?)==/g,'<b class="hl">$1</b>').replace(/\n/g,"<br>");}
+function pgA(t){return String(t==null?"":t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");}
+function pgSrc(src,remote){src=String(src||"");if(/^https:\/\//.test(src))return src;src=src.replace(/^\.?\/?/,"");return remote?JR_BASE+"pages/"+src:PG_LOCAL_IMG+src.replace(/^img\//,"");}
+function pgBlock(b,remote){const L=a=>Array.isArray(a)?a:[];switch(b&&b.t){
+  case "desc":return '<p class="sub-desc">'+pgT(b.text)+'</p>';
+  case "h":return '<h2 class="sec-h">'+pgT(b.text)+'</h2>';
+  case "note":return '<p class="note">'+pgT(b.text)+'</p>';
+  case "why":return '<div class="why">'+L(b.p).map(p=>'<p>'+pgT(p)+'</p>').join("")+'</div>';
+  case "list":return '<ul class="get-list">'+L(b.items).map((it,i)=>'<li><i>'+pgT(it.mark||PG_CIRC[i]||"·")+'</i><span><b>'+pgT(it.b)+'</b>'+pgT(it.s||"")+'</span></li>').join("")+'</ul>';
+  case "shot":return '<figure class="shot"><img src="'+pgA(pgSrc(b.src,remote))+'" data-local="'+pgA(pgSrc(b.src,false))+'" alt="'+pgA(b.alt||b.label||"")+'" loading="lazy" data-zoom'+(b.tall?" data-tall":"")+'><figcaption>'+(b.label?'<em>'+pgT(b.label)+'</em> — ':"")+pgT(b.cap||"")+'</figcaption></figure>';
+  case "price":return '<div class="price-box"><b>'+pgT(b.b)+'</b>'+(b.s?'<span>'+pgT(b.s)+'</span>':"")+'</div>';
+  case "btn":{const c="btn wide"+(b.primary?" primary":"");
+    if(b.go)return '<button class="'+c+'" type="button" data-go="'+pgA(b.go)+'"'+(b.jstype?' data-jstype="'+pgA(b.jstype)+'"':"")+'>'+pgT(b.text)+'</button>';
+    if(/^https:\/\//.test(b.href||""))return '<a class="'+c+'" href="'+pgA(b.href)+'">'+pgT(b.text)+'</a>';return "";}
+  case "flow":return '<ol class="flow">'+L(b.items).map(it=>'<li'+(it.on?' class="on"':"")+'><span class="fd">'+pgT(it.d)+'</span><b>'+pgT(it.b)+'</b><small>'+pgT(it.s||"")+'</small></li>').join("")+'</ol>';
+  case "cards":return '<div class="pg3">'+L(b.items).map(it=>'<div><b>'+pgT(it.b)+'</b><small>'+pgT(it.s||"")+'</small></div>').join("")+'</div>';
+  case "choice":return '<div class="big-choice">'+L(b.items).map(it=>'<button type="button" data-go="'+pgA(it.go)+'"><b>'+pgT(it.b)+'</b><span>'+pgT(it.s||"")+'</span>'+(it.small?'<small>'+pgT(it.small)+'</small>':"")+'</button>').join("")+'</div>';
+  case "career":return '<dl class="career">'+L(b.items).map(it=>'<div><dt>'+pgT(it.dt)+'</dt><dd>'+pgT(it.dd)+(it.small?'<small>'+pgT(it.small)+'</small>':"")+'</dd></div>').join("")+'</dl>';
+  case "steps":return '<ol class="js-steps">'+L(b.items).map(x=>'<li>'+pgT(x)+'</li>').join("")+'</ol>';
+  case "fine":return '<div class="fine"><ul>'+L(b.items).map(x=>'<li>'+pgT(x)+'</li>').join("")+'</ul></div>';
+  case "tabs":{const T=L(b.tabs);return '<div class="chips pg-tabs">'+T.map((x,i)=>'<button type="button" data-i="'+i+'"'+(i?"":' class="on"')+'>'+pgT(x.label)+'</button>').join("")+'</div>'+T.map((x,i)=>'<ul class="get-list pg-tab"'+(i?" hidden":"")+'>'+L(x.items).map(y=>'<li><i>·</i><span>'+pgT(y)+'</span></li>').join("")+'</ul>').join("");}
+  default:return "";}}
+function pgRender(d,remote){const P=(d&&d.pages)||{};
+  document.querySelectorAll(".pg[data-pg]").forEach(el=>{const k=el.dataset.pg;const bl=Array.isArray(P[k])&&P[k].length?P[k]:null;const use=bl||PG_DEFAULT.pages[k]||[];const rm=bl?remote:false;
+    el.innerHTML=use.map(b=>{try{return pgBlock(b,rm);}catch(e){return "";}}).join("");
+    el.querySelectorAll("img[data-local]").forEach(im=>im.addEventListener("error",()=>{if(im.dataset.local&&im.getAttribute("src")!==im.dataset.local){im.src=im.dataset.local;}else im.closest(".shot").classList.add("pg-miss");}));});
+  const tr=(d&&d.try)||PG_DEFAULT.try;const row=document.getElementById("try-row");
+  if(row&&tr){const t=row.querySelector(".sr-t"),s2=row.querySelector("small");if(tr.title&&t&&t.firstChild&&t.firstChild.nodeType===3)t.firstChild.nodeValue=tr.title;if(tr.desc&&s2)s2.textContent=tr.desc;if(/^https:\/\//.test(tr.url||""))row.href=tr.url;}}
+function pgOk(d){return d&&typeof d==="object"&&d.pages&&typeof d.pages==="object";}
+function pgShow(d,remote){const key=JSON.stringify(d)+remote;if(key===pgCur)return;pgCur=key;pgFrom=remote?"remote":"local";pgRender(d,remote);}
+(function(){let c=null;if(!PG_PV){try{c=JSON.parse(localStorage.getItem(PG_KEY)||"null");}catch(e){}}pgShow(pgOk(c)?c:PG_DEFAULT,pgOk(c));})();
+async function loadPages(){const now=Date.now();if(now-pgTried<60000)return;pgTried=now;
+  try{const r=await fetch(JR_BASE+"pages/"+PG_FILE+"?t="+now,{cache:"no-store"});if(!r.ok)throw new Error(r.status);const d=await r.json();if(!pgOk(d))return;
+    pgShow(d,true);if(!PG_PV){try{localStorage.setItem(PG_KEY,JSON.stringify(d));}catch(e){}}}catch(e){}}
+document.addEventListener("click",e=>{const b=e.target.closest(".pg-tabs button");if(!b)return;const box=b.closest(".pg");const i=Number(b.dataset.i);
+  box.querySelectorAll(".pg-tabs button").forEach(x=>x.classList.toggle("on",x===b));box.querySelectorAll(".pg-tab").forEach((u,k)=>u.hidden=k!==i);});
+loadPages();document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")loadPages();});
 const JR_CATS=["수리논술","면접 자료","입시 자료","수학 학습 자료"];
 let jrData=null,jrCat="수리논술",jrLoading=false,jrScroll=false;
 function jrRow(it){const a=document.createElement("a");a.className="pdf-row";a.href=JR_BASE+"pdf/"+encodeURIComponent(it.file);
@@ -1020,11 +933,11 @@ document.addEventListener("visibilitychange",()=>{if(document.visibilityState===
 window.addEventListener("hashchange",showScreen);
 if(location.hash)history.replaceState(null,"",location.pathname);
 $("open-calculator").addEventListener("click",()=>go("calc"));
-document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>{
+document.addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(!b)return;
   if(b.dataset.jrcat){jrCat=b.dataset.jrcat;jrScroll=true;if(jrData)jrRender();}
   if(b.dataset.jstype){const g=document.querySelector('[data-q="js_type"]');g.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.textContent===b.dataset.jstype));DQ.js_type=b.dataset.jstype;}
   if(b.dataset.go==="diag"&&!doneRows().some(graded)){say("성적 나온 학기의 과목과 등급을 먼저 입력해 주세요.","err");return;}
-  go(b.dataset.go);}));
+  go(b.dataset.go);});
 $("btn-home").addEventListener("click",()=>{if(location.hash)history.back();else showScreen();});
 document.querySelectorAll("[data-back]").forEach(b=>b.addEventListener("click",()=>{if(location.hash)history.back();else showScreen();}));
 /* 블로그 카테고리 주소 */
@@ -1132,7 +1045,7 @@ $("mg-go").addEventListener("click",async()=>{
   $("mg-done").querySelector("p").innerHTML=ok?"신청 내용이 복사됐습니다. 아래 버튼으로 1:1 채팅을 열고, 입력 칸을 길게 눌러 <b>붙여넣기</b> 한 뒤 보내 주세요. 결제 전 확인사항과 상담 전 질문지를 보내 드립니다.":"복사가 되지 않았습니다. 아래 버튼으로 1:1 채팅을 열고 신청할 것과 학년을 적어 보내 주세요.";
   $("mg-done").hidden=false;$("mg-done").scrollIntoView({behavior:"smooth",block:"center"});});
 /* 1.8: 사진 크게 보기 */
-document.querySelectorAll("img[data-zoom]").forEach(im=>im.addEventListener("click",()=>{const z=$("zv");$("zv-img").src=im.src;z.classList.toggle("tall",im.hasAttribute("data-tall"));z.hidden=false;z.scrollTo(0,0);}));
+document.addEventListener("click",e=>{const im=e.target.closest("img[data-zoom]");if(!im)return;const z=$("zv");$("zv-img").src=im.src;z.classList.toggle("tall",im.hasAttribute("data-tall"));z.hidden=false;z.scrollTo(0,0);});
 $("zv-close").addEventListener("click",()=>{$("zv").hidden=true;});
 /* 1.8: 정시 상담 신청 */
 $("js-go").addEventListener("click",async()=>{
