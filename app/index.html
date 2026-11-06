@@ -173,6 +173,9 @@ try{var t=localStorage.getItem('uridongne-theme');document.documentElement.setAt
       src=/naver/.test(rh)?'naver_blog':/youtube|youtu\.be/.test(rh)?'youtube':/kakao/.test(rh)?'kakao':rh?rh.replace(/^www\./,''):(kakao?'kakao':naver?'naver':'direct');}
     var pl=document.getElementById('play-link');
     if(pl)pl.href='https://play.google.com/store/apps/details?id=kr.co.uridongneipsi&referrer='+encodeURIComponent('utm_source='+src+'&utm_medium=app_page&utm_campaign=install');
+    /* 2026-11-06 블로그 사이드바 QR(utm_source=blog_qr)로 들어온 안드로이드만 버튼 없이 바로 플레이스토어로 —
+       휴대폰 카메라는 기본 브라우저로 열어 안정적. 다른 경로(카톡·네이버 앱 안 등)는 지금처럼 버튼을 누름. 못 넘어가도 버튼은 그대로 보임 */
+    if(android&&src==='blog_qr'&&pl){setTimeout(function(){location.replace(pl.href);},300);}
   }catch(e){}
 
   /* 카톡·네이버 등 앱 안에서 열렸을 때 */
