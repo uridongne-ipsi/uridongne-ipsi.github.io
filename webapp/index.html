@@ -278,6 +278,18 @@ button.home-feature{width:100%;font:inherit;color:inherit;text-align:left;cursor
 .link-row{display:flex;flex-direction:column;gap:2px;padding:13px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);text-decoration:none}
 .link-row b{font-size:1rem}.link-row small{color:var(--muted);font-size:.8rem}
 .link-row::after{content:"블로그에서 보기 ↗";font-size:.74rem;color:var(--accent);font-weight:600;margin-top:4px}
+/* 1.10: 입시 정보 — 블로그 최근 글 3개 + 새 글 N 표시 */
+.bl-sec{display:grid;gap:9px;margin-bottom:18px}.bl-sec h2{font-size:.86rem;color:var(--muted);margin:0;font-weight:600}
+.bl-row{display:flex;gap:10px;align-items:flex-start;padding:13px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);text-decoration:none}
+.bl-row span{display:grid;gap:4px;min-width:0;flex:1}
+.bl-row b{font-size:.95rem;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bl-row small{color:var(--muted);font-size:.78rem}
+.bl-row .bl-ar{flex:none;color:var(--accent);font-style:normal;font-size:1.1rem;line-height:1.3}
+.nbadge{display:inline-grid;place-items:center;min-width:17px;height:17px;padding:0 4px;margin-left:6px;border-radius:9px;background:var(--accent);color:#fff;font-family:var(--f-num);font-size:.66rem;font-weight:700;font-style:normal;line-height:1;vertical-align:2px}
+.nbadge[hidden]{display:none}
+.split-row .sr-t{font-style:normal}.split-row i.nbadge{color:#fff;font-size:.66rem}
+.bl-more{font-size:.8rem;color:var(--accent);font-weight:600;text-decoration:none;justify-self:end}
+
 .career{margin:0;display:grid;gap:0;border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:4px 16px}
 .career div{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
 .career div:last-child{border-bottom:0}
@@ -407,34 +419,34 @@ try{
     <section class="home-features" aria-label="메뉴">
       <button class="home-feature" type="button" data-go="info">
         <span class="home-feature-number">02</span>
-        <span class="home-feature-copy"><b>입시 정보</b><small>블로그 분야별 글 모음</small></span>
+        <span class="home-feature-copy"><b>입시 정보<i class="nbadge" data-n="info" hidden aria-label="새 소식">N</i></b><small>블로그 최근 글과 분야별 글 모음</small></span>
         <span class="home-feature-arrow" aria-hidden="true">›</span>
       </button>
       <div class="home-feature home-split">
         <span class="home-feature-number">03</span>
         <div class="split-body"><b>수리논술</b>
-          <a class="split-row" href="https://uridongne-ipsi.co.kr/try/"><span>이번 주 무료 첨삭 맛보기<small>매주 한 문항, 직접 쓴 답안을 첨삭</small></span><i aria-hidden="true">›</i></a>
-          <button class="split-row" type="button" data-go="jaryo" data-jrcat="수리논술"><span>대학별 기출 풀이<small>대학별 완성 답안 PDF</small></span><i aria-hidden="true">›</i></button>
+          <a class="split-row" href="https://uridongne-ipsi.co.kr/try/" data-nmark="try"><span><em class="sr-t">이번 주 무료 첨삭 맛보기<i class="nbadge" data-n="try" hidden aria-label="새 소식">N</i></em><small>매주 한 문항, 직접 쓴 답안을 첨삭</small></span><i aria-hidden="true">›</i></a>
+          <button class="split-row" type="button" data-go="jaryo" data-jrcat="수리논술"><span><em class="sr-t">대학별 기출 풀이<i class="nbadge" data-n="nonsul" hidden aria-label="새 소식">N</i></em><small>대학별 완성 답안 PDF</small></span><i aria-hidden="true">›</i></button>
         </div>
       </div>
       <button class="home-feature" type="button" data-go="jaryo">
         <span class="home-feature-number">04</span>
-        <span class="home-feature-copy"><b>자료함</b><small>수리논술·면접 답안, 입시·수학 자료 PDF</small></span>
+        <span class="home-feature-copy"><b>자료함<i class="nbadge" data-n="jaryo" hidden aria-label="새 소식">N</i></b><small>수리논술·면접 답안, 입시·수학 자료 PDF</small></span>
         <span class="home-feature-arrow" aria-hidden="true">›</span>
       </button>
-      <button class="home-feature" type="button" data-go="about">
+      <button class="home-feature" type="button" data-go="about" data-nmark="about">
         <span class="home-feature-number">05</span>
-        <span class="home-feature-copy"><b>운영자 소개</b><small>경력과 상담·관리 안내</small></span>
+        <span class="home-feature-copy"><b>운영자 소개<i class="nbadge" data-n="about" hidden aria-label="새 소식">N</i></b><small>경력과 상담·관리 안내</small></span>
         <span class="home-feature-arrow" aria-hidden="true">›</span>
       </button>
     </section>
     <section class="paid" aria-label="유료 서비스">
       <h2 class="paid-h">유료 서비스</h2>
       <div class="paid-grid">
-        <button type="button" data-go="shop"><b>수리논술<br>점수가 되는 답안</b><small>풀이는 맞았는데<br>점수가 새는 곳</small></button>
-        <button type="button" data-go="ck"><b>수리논술 첨삭</b><small>내 답안을 채점 기준으로 한 줄씩</small></button>
-        <button type="button" data-go="jeongsi"><b>정시 상담</b><small>가채점 상담 · 본 상담</small></button>
-        <button type="button" data-go="mg"><b>월 관리</b><small>매달 정기상담과 학년별 계획</small></button>
+        <button type="button" data-go="shop" data-nmark="shop"><b>수리논술<br>점수가 되는 답안<i class="nbadge" data-n="shop" hidden aria-label="새 소식">N</i></b><small>풀이는 맞았는데<br>점수가 새는 곳</small></button>
+        <button type="button" data-go="ck" data-nmark="ck"><b>수리논술 첨삭<i class="nbadge" data-n="ck" hidden aria-label="새 소식">N</i></b><small>내 답안을 채점 기준으로 한 줄씩</small></button>
+        <button type="button" data-go="jeongsi" data-nmark="jeongsi"><b>정시 상담<i class="nbadge" data-n="jeongsi" hidden aria-label="새 소식">N</i></b><small>가채점 상담 · 본 상담</small></button>
+        <button type="button" data-go="mg" data-nmark="mg"><b>월 관리<i class="nbadge" data-n="mg" hidden aria-label="새 소식">N</i></b><small>매달 정기상담과 학년별 계획</small></button>
       </div>
     </section>
     <footer class="brandfoot home-brandfoot">
@@ -482,6 +494,8 @@ try{
 <div class="wrap sub-screen" id="info-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
   <h1 class="sub-title">입시 정보</h1>
+  <section class="bl-sec" id="bl-sec" hidden aria-labelledby="bl-h"><h2 id="bl-h">최근 올라온 글</h2><div class="link-list" id="bl-list"></div><a class="bl-more" href="https://blog.naver.com/kwon_th">블로그 전체 글 보기 ↗</a></section>
+  <section class="bl-sec" aria-labelledby="bl-cat-h"><h2 id="bl-cat-h">분야별 글 모음</h2>
   <p class="sub-desc">누르면 블로그의 해당 분야 글 목록이 열립니다.</p>
   <div class="link-list">
     <a class="link-row" data-cat="schedule" href="#"><b>입시 일정</b><small>주간·월간 입시 일정</small></a>
@@ -491,6 +505,7 @@ try{
     <a class="link-row" data-cat="saenggibu" href="#"><b>생기부 · 세특</b><small>세특과 탐구 주제</small></a>
     <a class="link-row" data-cat="univ" href="#"><b>대학 · 학과 정보</b><small>대학별 학과 소개</small></a>
   </div>
+  </section>
 </div>
 
 <div class="wrap sub-screen" id="jaryo-screen" hidden>
@@ -908,8 +923,8 @@ const $=id=>document.getElementById(id);
  applyTheme(activeTheme,false);
 /* 1.7: 화면 이동을 주소 #으로 — 휴대폰 뒤로가기가 이전 화면으로 돌아가게 함 */
 const SCREENS={"":"home-screen",calc:"calculator-screen",info:"info-screen",about:"about-screen",diag:"diag-screen",jaryo:"jaryo-screen",shop:"shop-screen",jeongsi:"jeongsi-screen",jsga:"jsga-screen",jsbon:"jsbon-screen",jsapply:"jsapply-screen",ck:"ck-screen",mg:"mg-screen",ask:"ask-screen"};
-function showScreen(){const k=location.hash.replace(/^#/,"");const id=SCREENS[k]||"home-screen";if(id==="jaryo-screen")loadJaryo();if(id==="shop-screen")loadShop();if(id==="ask-screen")loadLinks();
-  Object.values(SCREENS).forEach(x=>{$(x).hidden=(x!==id);});
+function showScreen(){const k=location.hash.replace(/^#/,"");const id=SCREENS[k]||"home-screen";if(id==="jaryo-screen")loadJaryo();if(id==="shop-screen")loadShop();if(id==="info-screen")blSeen();if(id==="ask-screen")loadLinks();
+  Object.values(SCREENS).forEach(x=>{$(x).hidden=(x!==id);});if(typeof nOnScreen==="function")nOnScreen();
   $("img-ov").hidden=true;$("zv").hidden=true;window.scrollTo(0,0);}
 function go(k){if(location.hash.replace(/^#/,"")!==k)location.hash=k;else showScreen();}
 
@@ -919,13 +934,19 @@ const JR_CATS=["수리논술","면접 자료","입시 자료","수학 학습 자
 let jrData=null,jrCat="수리논술",jrLoading=false,jrScroll=false;
 function jrRow(it){const a=document.createElement("a");a.className="pdf-row";a.href=JR_BASE+"pdf/"+encodeURIComponent(it.file);
   const b=document.createElement("b");b.textContent=it.title;const sm=document.createElement("small");
-  sm.textContent=(it.desc?it.desc+" · ":"")+Math.max(0.1,Math.round(it.size/1048576*10)/10)+"MB";a.append(b,sm);return a;}
+  sm.textContent=(it.desc?it.desc+" · ":"")+Math.max(0.1,Math.round(it.size/1048576*10)/10)+"MB";
+  const t=Date.parse(it.date);if(!isNaN(t)&&Date.now()-t<7*86400000&&!blGet("uridongne-jaryo-read",[]).includes(it.file)){const n=document.createElement("i");n.className="nbadge";n.textContent="N";n.setAttribute("aria-label","새 자료");b.append(n);}
+  a.addEventListener("click",()=>{const r=blGet("uridongne-jaryo-read",[]);if(!r.includes(it.file)){r.unshift(it.file);blSet("uridongne-jaryo-read",r.slice(0,60));}const x=b.querySelector(".nbadge");if(x)x.remove();jrUnreadCheck();});
+  a.append(b,sm);return a;}
+function jrUnreadCheck(){if(!jrData)return;const r=blGet("uridongne-jaryo-read",[]),now=Date.now();
+  const isNew=i=>{const t=Date.parse(i.date);return !isNaN(t)&&now-t<7*86400000&&!r.includes(i.file);};
+  nUnread("jaryo",jrData.items.some(isNew));nUnread("nonsul",jrData.items.some(i=>i.cat==="수리논술"&&isNew(i)));}
 function jrRender(){
-  const items=jrData.items;
+  const items=jrData.items;setTimeout(jrUnreadCheck,0);items.forEach(i=>{nSet("jaryo",i.date);if(i.cat==="수리논술")nSet("nonsul",i.date);});
   const nw=document.getElementById("jr-new");nw.replaceChildren(...items.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3).map(jrRow));
   const tabs=document.getElementById("jr-tabs");tabs.replaceChildren(...JR_CATS.map(c=>{const n=items.filter(i=>i.cat===c).length;
     const bt=document.createElement("button");bt.type="button";bt.setAttribute("role","tab");bt.setAttribute("aria-selected",c===jrCat?"true":"false");
-    bt.textContent=c+" "+n;bt.addEventListener("click",()=>{jrCat=c;jrRender();});return bt;}));
+    bt.textContent=c+" "+n;bt.addEventListener("click",()=>{jrCat=c;jrRender();nOnScreen();});return bt;}));
   const se=document.getElementById("jr-search");se.hidden=jrCat!=="수리논술"&&jrCat!=="면접 자료";
   const q=se.hidden?"":se.value.trim();
   const list=document.getElementById("jr-list");list.replaceChildren();
@@ -949,6 +970,53 @@ async function loadJaryo(){
 }
 document.getElementById("jr-retry").addEventListener("click",()=>{document.getElementById("jr-state").textContent="자료 목록을 불러오는 중입니다…";loadJaryo();});
 document.getElementById("jr-search").addEventListener("input",()=>{if(jrData)jrRender();});
+/* 1.10: 입시 정보 — 블로그 최근 글. 목록은 자료함 저장소 blog.json(GitHub가 블로그 RSS를 읽어 자동으로 고침)에서 불러옴.
+   N 표시: 글 = 올라온 지 3일 안 + 아직 안 누른 글 / 첫 화면 02 = 입시 정보 화면을 마지막으로 본 뒤 새 글이 올라옴(7일 안). 알림·권한 없음 */
+const BL_DAY=86400000;let blData=null,blLoading=false;
+function blGet(k,d){try{const v=JSON.parse(localStorage.getItem(k)||"null");return v==null?d:v;}catch(e){return d;}}
+function blSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+function blTime(it){const t=Date.parse(it.date);return isNaN(t)?0:t;}
+function blRender(){if(!blData||!Array.isArray(blData.items))return;
+  const items=blData.items.filter(it=>it&&it.title&&it.link).sort((a,b)=>blTime(b)-blTime(a)).slice(0,3);
+  const now=Date.now(),read=blGet("uridongne-blog-read",[]);
+  const list=$("bl-list");list.replaceChildren(...items.map(it=>{const a=document.createElement("a");a.className="bl-row";a.href=it.link;
+    const sp=document.createElement("span");const b=document.createElement("b");b.textContent=it.title;
+    const t=blTime(it);if(t&&now-t<3*BL_DAY&&!read.includes(it.link)){const n=document.createElement("i");n.className="nbadge";n.textContent="N";n.setAttribute("aria-label","새 글");b.append(n);}
+    const sm=document.createElement("small");const d=t?new Date(t):null;sm.textContent=(it.cat?it.cat+" · ":"")+(d?(d.getMonth()+1)+"월 "+d.getDate()+"일":"");
+    const ar=document.createElement("i");ar.className="bl-ar";ar.setAttribute("aria-hidden","true");ar.textContent="›";
+    sp.append(b,sm);a.append(sp,ar);
+    a.addEventListener("click",()=>{const r=blGet("uridongne-blog-read",[]);if(!r.includes(it.link)){r.unshift(it.link);blSet("uridongne-blog-read",r.slice(0,30));}setTimeout(blRender,300);});
+    return a;}));
+  $("bl-sec").hidden=!items.length;
+  nSet("info",items.length?blTime(items[0]):0);
+  nUnread("info",items.some(it=>{const t=blTime(it);return t&&now-t<3*BL_DAY&&!read.includes(it.link);}));}
+function blSeen(){nMark("info");}
+async function loadBlog(){if(blLoading)return;blLoading=true;
+  if(!blData){const c=blGet("uridongne-blog",null);if(c&&c.items){blData=c;blRender();}}
+  try{const r=await fetch(JR_BASE+"blog.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error(r.status);
+    const d=await r.json();if(d&&Array.isArray(d.items)){blData=d;blSet("uridongne-blog",d);blRender();
+      nOnScreen();}}
+  catch(e){}finally{blLoading=false;}}
+
+/* 1.10: 새 소식 N 표시(공통) — 칸마다 「가장 최근에 새로 생긴 때」(nLatest)와 「이 휴대폰에서 마지막으로 본 때」(uridongne-seen)를 비교.
+   자동: info=블로그 새 글, jaryo=자료함 새 파일, nonsul=자료함 수리논술 새 파일 / 직접 표시: 자료함 저장소 news.json의 날짜(try·about·shop·ck·jeongsi·mg 등, 키를 더하면 칸을 늘릴 수 있음)
+   N은 그 칸에 들어가면 사라지고, 새로 생긴 지 7일이 지나도 사라짐 */
+function NL(){return window.__nLatest||(window.__nLatest={});}
+function nTime(v){if(!v)return 0;const t=typeof v==="number"?v:Date.parse(v);return isNaN(t)?0:t;}
+function nPaint(){const seen=blGet("uridongne-seen",{}),now=Date.now();
+  const un=window.__nUnread||{};
+  document.querySelectorAll(".nbadge[data-n]").forEach(el=>{const k=el.dataset.n;if(k in un){el.hidden=!un[k];return;}const t=NL()[k]||0;el.hidden=!(t&&t>(seen[k]||0)&&now-t<7*86400000);});}
+function nUnread(k,v){(window.__nUnread||(window.__nUnread={}))[k]=!!v;nPaint();}
+function nSet(k,t){t=nTime(t);if(t>(NL()[k]||0))NL()[k]=t;nPaint();}
+function nMark(k){const t=NL()[k]||0;if(!t)return;const seen=blGet("uridongne-seen",{});if(t>(seen[k]||0)){seen[k]=t;blSet("uridongne-seen",seen);}nPaint();}
+function nOnScreen(){const h=location.hash.replace(/^#/,"");if(h==="info")nMark("info");
+  if(h==="jaryo"){nMark("jaryo");if(jrCat==="수리논술")nMark("nonsul");}if(NL()[h]!==undefined&&["shop","ck","jeongsi","mg","about"].includes(h))nMark(h);}
+document.addEventListener("click",e=>{const el=e.target.closest("[data-nmark]");if(el)nMark(el.dataset.nmark);},true);
+async function loadNews(){try{const r=await fetch(JR_BASE+"news.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)return;const d=await r.json();
+  Object.keys(d||{}).forEach(k=>nSet(k,d[k]));nOnScreen();}catch(e){}}
+loadBlog();loadNews();loadJaryo();
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"){loadBlog();loadNews();loadJaryo();}});
+
 window.addEventListener("hashchange",showScreen);
 if(location.hash)history.replaceState(null,"",location.pathname);
 $("open-calculator").addEventListener("click",()=>go("calc"));
