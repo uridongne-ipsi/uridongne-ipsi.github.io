@@ -168,7 +168,7 @@ try{var t=localStorage.getItem('uridongne-theme');document.documentElement.setAt
 
   /* 2026-11-04 플레이스토어 버튼에 출처 표시 — 플레이 콘솔 사용자 확보 보고서에서 어디서 왔는지 보임 */
   try{
-    var q=new URLSearchParams(location.search),src=q.get('utm_source');
+    var q=new URLSearchParams(location.search),src=q.get('utm_source')||q.get('from'); /* 2026-11-08 사이트 안 링크는 utm 대신 from — utm은 애널리틱스 방문 출처를 덮어씀 */
     if(!src){var rh='';try{rh=document.referrer?new URL(document.referrer).hostname:'';}catch(e){}
       src=/naver/.test(rh)?'naver_blog':/youtube|youtu\.be/.test(rh)?'youtube':/kakao/.test(rh)?'kakao':rh?rh.replace(/^www\./,''):(kakao?'kakao':naver?'naver':'direct');}
     var pl=document.getElementById('play-link');
