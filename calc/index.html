@@ -365,7 +365,7 @@ function renderTarget(){
   $("t-facts").innerHTML=`<dt>현재 ${label}</dt><dd class="num">${fmt(cur.avg)}</dd><dt>반영된 학점</dt><dd class="num">${fmtc(cur.cr)}학점 · ${cur.n}과목</dd><dt>남은 학점</dt><dd class="num">${fmtc(Rc)}학점 · ${N}과목</dd><dt>남은 학기</dt><dd>${planSems.length?planSems.join(", "):"없음"}</dd>`;
   const T=st.target, box=$("t-res");
   if(!(T>=1&&T<=5)){box.innerHTML=`<p class="say muted">목표 등급은 1.00~5.00 사이로 넣어 주세요.</p>`;return;}
-  if(!Rc){box.innerHTML=`<p class="say">남은 학기에 ${label} 과목이 없습니다. 아래 입력표에서 2-2, 3-1처럼 아직 성적이 안 나온 학기를 <b>예정 학기</b>로 두고 들을 과목과 학점을 넣어 주세요.</p>`;return;}
+  if(!Rc){box.innerHTML=`<p class="say">남은 학기에 ${label==="전과목"?"입력된":label} 과목이 없습니다. 아래 입력표에서 2-2, 3-1처럼 아직 성적이 안 나온 학기를 <b>예정 학기</b>로 두고 들을 과목과 학점을 넣어 주세요.</p>`;return;}
   const tot=cur.cr+Rc, need=(T*tot-cur.s)/Rc, eps=1e-9;
   const finalIf=g=>(cur.s+g*Rc)/tot;
   const scen=[1,2,3,4,5].map(g=>{const f=finalIf(g);return `<div class="${f<=T+eps?"hit":""}">모두 ${g}등급<b>${fmt(f)}</b></div>`;}).join("");
