@@ -102,11 +102,12 @@ footer{font-size:12px;color:var(--sub);border-top:1px solid var(--line);padding-
   </div>
 
   <header>
-    <span class="week">11월 6일(금) – 11월 13일(금) 14시 문항</span>
+    <span class="week" id="wk-week">11월 6일(금) – 11월 15일(일) 문항</span>
     <h1>이번 주 수리논술<br><em>무료 첨삭</em> 맛보기</h1>
     <p class="lede">매주 한 문항을 정해 두었습니다. 직접 쓴 답안을 사진으로 보내 주시면, 유료 첨삭과 똑같은 기준으로 빨간 펜 첨삭을 해 드립니다.</p>
   </header>
 
+  <div id="wk-sheet">
   <section class="sheet" aria-labelledby="qtitle">
     <div class="sheet-head">
       <b id="qtitle">건국대 2026 자연 [문제 4]</b>
@@ -129,6 +130,7 @@ footer{font-size:12px;color:var(--sub);border-top:1px solid var(--line);padding-
       <span>문항 원문의 저작권은 건국대학교에 있습니다.</span>
     </div>
   </section>
+  </div>
 
   <section aria-labelledby="how">
     <h2 id="how">이렇게 참여하세요</h2>
@@ -145,7 +147,7 @@ footer{font-size:12px;color:var(--sub);border-top:1px solid var(--line);padding-
         <code id="kakao">https://open.kakao.com/o/sMOPxKTi</code>
         <button type="button" id="copy">주소 복사</button>
       </div>
-      <p class="say">사진과 함께 <b>"건국대 맛보기 답안입니다"</b> 한 줄만 남겨 주세요.</p>
+      <p class="say">사진과 함께 <b id="wk-say">"건국대 맛보기 답안입니다"</b> 한 줄만 남겨 주세요.</p>
     </div>
   </section>
 
@@ -162,7 +164,7 @@ footer{font-size:12px;color:var(--sub);border-top:1px solid var(--line);padding-
   <section aria-labelledby="rules">
     <h2 id="rules">알아 두실 것</h2>
     <ul class="rules">
-      <li>문항은 매주 금요일 14시에 바뀝니다. 한 문항에 한 사람당 한 번 받을 수 있습니다.</li>
+      <li>문항은 매주 월요일 0시에 바뀝니다. 한 문항에 한 사람당 한 번 받을 수 있습니다.</li>
       <li>고1·고2 학생도 참여할 수 있습니다.</li>
       <li>보내 주신 답안은 허락 없이 어디에도 공개하지 않습니다.</li>
     </ul>
@@ -171,11 +173,55 @@ footer{font-size:12px;color:var(--sub);border-top:1px solid var(--line);padding-
   <aside class="more" aria-labelledby="moreh">
     <h2 id="moreh">원하는 대학 문제로 받고 싶다면</h2>
     <p>첨삭권으로 어느 대학, 어느 문항이든 받을 수 있습니다. 고쳐 쓴 답안을 한 번 더 확인해 드리는 것까지 포함입니다. 이용 방법은 같은 1:1 문의로 물어봐 주세요.</p>
-    <p>이번 문항처럼 접선과 수직 조건을 다루는 같은 해 [문제 3]의 해설은 건국대 해설 파일에 실려 있습니다. <a href="https://blog.naver.com/kwon_th/224448090448" target="_blank" rel="noopener">해설 파일 안내 보기</a></p>
+    <p id="wk-more">이번 문항처럼 접선과 수직 조건을 다루는 같은 해 [문제 3]의 해설은 건국대 해설 파일에 실려 있습니다. <a href="https://blog.naver.com/kwon_th/224448090448" target="_blank" rel="noopener">해설 파일 안내 보기</a></p>
   </aside>
 
-  <footer>우리동네 입시연구소 · 입시 수학 18년 · 문항은 매주 금요일 14시에 이 페이지에서 바뀝니다.</footer>
+  <footer>우리동네 입시연구소 · 입시 수학 18년 · 문항은 매주 월요일 0시에 이 페이지에서 바뀝니다.</footer>
 </div>
+
+
+<!-- 다음 주 문항 예약: data-from 시각(한국 시각)이 지나면 휴대폰 시각을 보고 저절로 바뀝니다.
+     template 안에는 data-slot="week|sheet|say|more" 네 조각. 지난 주 template은 지워도 됩니다. -->
+<template class="wk" data-from="2026-11-16T00:00:00+09:00">
+  <span data-slot="week">11월 16일(월) – 11월 22일(일) 문항</span>
+  <div data-slot="sheet">
+  <section class="sheet" aria-labelledby="qtitle">
+    <div class="sheet-head">
+      <b id="qtitle">한양대 2026 자연(오전) [문제 2]</b>
+      <div class="meta">
+        <span>배점 <strong>50점</strong></span>
+        <span>권장 시간 <strong>45분</strong></span>
+        <span>2027 시험일 <strong>11월 29일(일)</strong></span>
+      </div>
+    </div>
+    <div class="sheet-body">
+      <p class="q">소문항 3개로 된 문항입니다. 세 문항을 모두 써 주세요.</p>
+      <ul class="conds">
+        <li data-n="1."><div><span class="math">x <span class="up">&ge;</span> <span class="n">0</span></span>에서는 <span class="math">f(x) <span class="up">=</span> <span class="up">&minus;</span>(e<sup>x</sup> <span class="up">&minus;</span> <span class="up">cos</span> x)<sup class="up">2026</sup><span class="up">sin</span> x</span> (<span class="math"><span class="n">0</span> <span class="up">&le;</span> x <span class="up">&le;</span> <span class="n">2</span><span class="up">π</span></span>), <span class="math">f(x) <span class="up">=</span> x <span class="up">&minus;</span> <span class="n">2</span><span class="up">π</span></span> (<span class="math">x <span class="up">&gt;</span> <span class="n">2</span><span class="up">π</span></span>)이고, <span class="math">x <span class="up">&lt;</span> <span class="n">0</span></span>일 때 <span class="math">f(x) <span class="up">=</span> <span class="up">&minus;</span>f(<span class="up">&minus;</span>x)</span>입니다. <span class="math">g(x) <span class="up">=</span> <span class="up">|</span><span class="up">&int;</span><sub>a</sub><sup>x</sup> f(t) dt<span class="up">|</span></span>가 실수 전체에서 미분가능하도록 하는 실수 <span class="math">a</span>의 값을 모두 구하는 문제입니다.</div></li>
+        <li data-n="2."><div>원 <span class="math">x<sup class="up">2</sup> <span class="up">+</span> y<sup class="up">2</sup> <span class="up">=</span> <span class="n">1</span></span>과 직선 <span class="math">y <span class="up">=</span> a(x <span class="up">&minus;</span> <span class="n">1</span>)</span> (<span class="math">a <span class="up">&gt;</span> <span class="n">1</span></span>)의 두 교점을 <span class="math"><span class="n">P</span></span>, <span class="math"><span class="n">Q</span></span>, 직선 <span class="math">y <span class="up">=</span> a(x <span class="up">&minus;</span> <span class="n">1</span>) <span class="up">+</span> k</span> (<span class="math">k <span class="up">&gt;</span> <span class="n">0</span></span>)와의 두 교점을 <span class="math"><span class="n">R</span></span>, <span class="math"><span class="n">S</span></span>라 합니다. 두 선분 <span class="math"><span class="n">PQ</span></span>, <span class="math"><span class="n">RS</span></span>와 짧은 두 호 <span class="math"><span class="n">PR</span></span>, <span class="math"><span class="n">QS</span></span>로 둘러싸인 부분의 넓이를 <span class="math">S(k)</span>라 할 때, <span class="math"><span class="up">lim</span><sub>k<span class="up">&rarr;</span><span class="n">0</span><span class="up">+</span></sub> <span class="frac"><span><i>S</i>(<i>k</i>)</span><span><i>k</i></span></span></span>를 구하는 문제입니다.</div></li>
+        <li data-n="3."><div><span class="math">g(t) <span class="up">&ge;</span> <span class="n">0</span></span>이고 이계도함수를 갖는 <span class="math">g</span>에 대해 점 <span class="math"><span class="n">P</span></span>의 시각 <span class="math">t</span>에서의 위치가 <span class="math">(t, g(t))</span>, <span class="math">h(t) <span class="up">=</span> f(g(t))</span>입니다. <span class="math">t <span class="up">=</span> <span class="frac"><span>1</span><span>4</span></span></span>에서 점 <span class="math"><span class="n">P</span></span>는 <span class="math">x</span>축 위에 있고 가속도가 <span class="math">(<span class="n">0</span>, <span class="n">1</span>)</span>, <span class="math">t <span class="up">=</span> <span class="n">1</span></span>에서 속력이 최대 <span class="math"><span class="up">&radic;</span><span class="n">2</span></span>입니다. <span class="math">f</span>는 최고차항의 계수가 <span class="math"><span class="n">1</span></span>인 삼차함수로 <span class="math">x <span class="up">&ge;</span> <span class="n">0</span></span>에서 <span class="math">f<span class="up">&prime;</span>(x) <span class="up">&gt;</span> <span class="n">0</span></span>이고, <span class="math">h(<span class="frac"><span>1</span><span>4</span></span>) <span class="up">=</span> <span class="n">0</span></span>, <span class="math">h<span class="up">&prime;</span>(<span class="n">1</span>) <span class="up">=</span> <span class="frac"><span>9</span><span>4</span></span></span>, <span class="math">h<span class="up">&Prime;</span>(<span class="frac"><span>1</span><span>4</span></span>) <span class="up">=</span> <span class="n">4</span></span>, <span class="math">h<span class="up">&Prime;</span>(<span class="n">1</span>) <span class="up">=</span> <span class="up">&minus;</span><span class="n">2</span></span>일 때 <span class="math">f(<span class="n">3</span>)</span>의 값을 구하는 문제입니다.</div></li>
+      </ul>
+      <p class="q">답만 맞히는 문제가 아닙니다. 그래프의 모양을 어떻게 확인했는지, 극한값을 무엇으로 끼워 구했는지, 조건에서 어떤 식을 얻었는지를 답안에 써야 점수가 나옵니다.</p>
+    </div>
+    <div class="src">
+      <span>문항은 조건만 요약해 소개했습니다(문항 1·3의 일부 범위 조건은 줄였습니다). 원문은 한양대 입학처 누리집의 논술 기출문제 자료에서 「2026학년도 자연계열 논술(오전) 문제」를 받으세요. <a href="https://go.hanyang.ac.kr" target="_blank" rel="noopener">한양대 입학처 열기</a></span>
+      <span>문항 원문의 저작권은 한양대학교에 있습니다.</span>
+    </div>
+  </section>
+  </div>
+  <span data-slot="say">"한양대 맛보기 답안입니다"</span>
+  <span data-slot="more">같은 한양대 2025·2026 자연 시험 6문항의 해설은 한양대 해설 파일에 실려 있습니다. <a href="https://blog.naver.com/kwon_th/224448090448" target="_blank" rel="noopener">해설 파일 안내 보기</a></span>
+</template>
+
+<script>
+(function(){
+  var now=Date.now(),pick=null;
+  [].forEach.call(document.querySelectorAll('template.wk'),function(t){var f=Date.parse(t.getAttribute('data-from'));if(!isNaN(f)&&f<=now&&(!pick||f>=Date.parse(pick.getAttribute('data-from'))))pick=t;});
+  if(!pick)return;
+  var c=pick.content;
+  [['week','wk-week'],['sheet','wk-sheet'],['say','wk-say'],['more','wk-more']].forEach(function(p){var src=c.querySelector('[data-slot="'+p[0]+'"]'),dst=document.getElementById(p[1]);if(src&&dst)dst.innerHTML=src.innerHTML;});
+})();
+</script>
 
 <script>
 document.getElementById('copy').addEventListener('click', function(){
