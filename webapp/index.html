@@ -392,6 +392,132 @@ button.home-feature{width:100%;font:inherit;color:inherit;text-align:left;cursor
 .season-card{display:flex;align-items:center;gap:12px;width:100%;padding:13px 14px;border:1.5px solid var(--clay,#A84D1F);border-radius:14px;background:var(--surface);color:inherit;font:inherit;text-align:left;cursor:pointer}
 .season-copy{display:grid;gap:3px;flex:1;min-width:0}.season-copy em{font-style:normal;font-size:.72rem;font-weight:700;color:var(--clay,#A84D1F)}
 .season-copy b{font-family:var(--f-title);font-size:1rem;line-height:1.35;color:var(--navy)}.season-copy small{font-size:.8rem;color:var(--muted)}
+
+/* 1.14 첫 화면 개편 */
+html{height:100%}body{min-height:100%;box-sizing:border-box;margin:0}
+.home-inner{gap:12px}
+.home-tools{display:flex;align-items:center;gap:8px}
+.grade-btn{height:38px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font:inherit;font-size:.86rem;font-weight:600;cursor:pointer}
+.home-brand .mark{width:44px;height:44px}
+.me-row{display:flex;gap:8px;align-items:stretch}
+.me-card{flex:1;min-width:0;display:grid;gap:4px;padding:11px 13px;border:1px solid var(--line);border-radius:14px;background:var(--surface);cursor:pointer}
+.me-h{font-size:.84rem;color:var(--navy)}
+.me-fill{display:grid;gap:2px;font-size:.82rem}.me-fill[hidden],.me-empty[hidden]{display:none}
+.me-l1{color:var(--ink)}.me-l2{color:var(--ink)}.me-l2 small{color:var(--muted);font-size:.76rem}.me-l2 u{text-underline-offset:2px}
+.me-empty{display:grid;gap:6px;font-size:.8rem;color:var(--muted)}
+.me-adds{display:flex;flex-wrap:wrap;gap:5px}.me-adds button{padding:4px 9px;border:1px solid var(--line);border-radius:999px;background:var(--sunk);color:var(--accent);font:inherit;font-size:.76rem;font-weight:600;cursor:pointer}
+.me-adds button[hidden]{display:none}
+.me-plan{width:76px;flex:none;display:grid;place-content:center;justify-items:center;gap:2px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--accent);font:inherit;cursor:pointer}
+.me-plan span{font-size:1.35rem;line-height:1}.me-plan b{font-family:var(--f-title);font-size:.95rem}
+.season-card{padding:9px 13px;border-width:1.2px;border-radius:12px}
+.season-copy{gap:1px}.season-copy b{font-size:.92rem}.season-copy small{font-size:.76rem}
+.home-big{background:var(--surface);border:1px solid var(--line);padding:14px 13px;gap:6px}
+.home-big b{font-size:1.02rem}.home-big span{font-size:.78rem}
+.home-ask{border:1px solid var(--line);margin-top:0;padding:12px 14px}
+.wk-h{margin:4px 0 -4px 2px;font-size:.82rem;color:var(--muted)}
+.wk-duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wk-duo.one{grid-template-columns:1fr}
+.wk-card{position:relative;display:flex;flex-direction:column;gap:5px;padding:13px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);font:inherit;text-align:left;text-decoration:none;cursor:pointer}
+.wk-card[hidden]{display:none}
+.wk-card em{font-style:normal;font-size:.74rem;font-weight:700;color:var(--ink);padding-right:22px}
+.wk-card b{font-family:var(--f-title);font-size:1rem;line-height:1.35;color:var(--navy);word-break:keep-all}
+.wk-card small{font-size:.76rem;color:var(--muted)}
+.wk-card>.nbadge{position:absolute;top:10px;right:10px;margin:0}
+.hinfo{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:var(--surface);min-width:0}
+.hinfo-top{display:flex;justify-content:space-between;align-items:baseline}.hinfo-top h2{font-size:1.05rem;color:var(--navy)}
+.hinfo-top a{font-size:.8rem;color:var(--accent);text-decoration:none;font-weight:600}
+.hterm{display:grid;gap:6px}.hterm[hidden]{display:none}.hterm b{font-size:.8rem;color:var(--navy)}
+.hterm-in{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--sunk);color:var(--muted);font:inherit;font-size:.82rem;text-align:left;cursor:text}
+.hchips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -14px;padding:0 14px}.hchips::-webkit-scrollbar{display:none}
+.hchips.more{-webkit-mask-image:linear-gradient(90deg,#000 78%,transparent);mask-image:linear-gradient(90deg,#000 78%,transparent)}
+.hchips a{flex:none;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);font-size:.8rem;text-decoration:none;background:var(--surface)}
+.hbl{display:grid;grid-template-columns:minmax(0,1fr);gap:4px}.hbl a{min-width:0}.hbl a .nbadge{flex:none}.home-inner>*{min-width:0;max-width:100%}html,body{overflow-x:hidden}.hbl[hidden]{display:none}.hbl-h{font-size:.76rem;color:var(--muted);font-weight:600}
+.hbl a{display:flex;gap:8px;align-items:baseline;padding:4px 0;color:var(--ink);text-decoration:none;font-size:.85rem;line-height:1.45}
+.hbl a time{flex:none;font-weight:700;font-family:var(--f-num);font-size:.78rem;color:var(--navy)}
+.hbl a span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.home-card{display:flex;align-items:center;gap:10px;width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.home-card .home-feature-copy b{font-family:var(--f-title);font-size:1.02rem;color:var(--navy)}
+.paid-grid>*{border:1px solid var(--line)}
+.hfoot{display:grid;gap:10px;margin-top:8px;padding-top:16px;border-top:1px solid var(--line)}
+.hfoot-row{display:flex;align-items:center;gap:10px}.hfoot-t{flex:1;display:grid;min-width:0}
+.hfoot-t b{font-family:var(--f-title);font-size:.98rem;color:var(--navy)}.hfoot-t small{font-size:.74rem;color:var(--muted)}
+.hfoot-ic{display:grid;justify-items:center;gap:1px;color:var(--muted);text-decoration:none;padding:0 4px}
+.hfoot-ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}.hfoot-ic small{font-size:.66rem}
+.hfoot .home-privacy{text-align:center;margin:0}
+.calc-note{margin:0}
+/* 학년 고르기 */
+.grade-ov{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:24px;background:var(--bg)}
+.grade-ov[hidden]{display:none}
+.grade-box{width:min(100%,380px);display:grid;justify-items:center;gap:12px;text-align:center}
+.grade-box h2{color:var(--navy);font-size:1.3rem;margin-top:6px}.grade-box p{margin:-6px 0 6px;color:var(--muted);font-size:.88rem}
+.grade-pick{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
+.grade-pick button{padding:16px 0;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);font:inherit;font-size:1.05rem;font-weight:700;cursor:pointer}
+.grade-pick button.on{border:2px solid var(--accent);color:var(--accent);background:var(--accent-soft)}
+.grade-box .btn.wide{width:100%}.grade-box .btn[disabled]{opacity:.45}
+.grade-skip{border:0;background:none;color:var(--muted);font:inherit;font-size:.84rem;text-decoration:underline;cursor:pointer}
+/* 나의 정보 */
+.me-goal-l{font-weight:700;color:var(--navy);margin-bottom:-8px}
+.me-goal{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit}
+.me-tab{width:100%;border-collapse:collapse;font-size:.88rem}.me-tab th,.me-tab td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left}
+.me-tab td.num{font-family:var(--f-num)}
+.me-chart{width:100%;height:auto;margin:8px 0}
+.me-chart .ax{stroke:var(--line)}.me-chart .ln{fill:none;stroke:var(--accent);stroke-width:2.5}.me-chart circle{fill:var(--accent)}.me-chart text{fill:var(--muted);font-size:11px;font-family:var(--f-num)}
+.zv img{width:100%;margin:56px 0 20px}.zv.tall img{width:100%}
+.me-del{width:30px;height:30px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--muted);font:inherit;cursor:pointer}
+.me-tab td,.me-tab th{word-break:keep-all}
+.me-none{color:var(--muted);font-size:.88rem;margin:6px 0 10px}
+#me-tab-n,#me-tab-m{display:grid;gap:10px}#me-tab-n[hidden],#me-tab-m[hidden]{display:none}
+/* 플래너 */
+.cal-head{display:flex;align-items:center;justify-content:space-between}.cal-head b{font-family:var(--f-title);font-size:1.15rem;color:var(--navy)}
+.cal-nav{width:40px;height:40px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-size:1.3rem;cursor:pointer}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal .dw{text-align:center;font-size:.74rem;color:var(--muted);padding:4px 0}
+.cal button{position:relative;aspect-ratio:1/1.05;display:grid;place-items:center;border:1px solid transparent;border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;font-family:var(--f-num);font-size:.9rem;cursor:pointer;padding:0}
+.cal button.blank{visibility:hidden}
+.cal button.off{opacity:.35;cursor:default;background:transparent}
+.cal button.today{border:2px solid var(--accent)}
+.cal button.tmr{font-weight:700}
+.cal button .dot{position:absolute;bottom:6px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--accent)}
+.cal button .plus{position:absolute;top:2px;right:5px;font-size:.78rem;color:var(--accent);font-weight:700}
+.cal button.tmr .plus{opacity:.5}
+.pd-rows{display:grid;gap:6px}
+.pd-row{display:grid;grid-template-columns:64px 1fr 40px;gap:6px;align-items:center}
+.pd-row input[type=text]{width:100%;padding:9px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:.88rem}
+.pd-row input[disabled]{opacity:.75}
+.pd-ck{width:40px;height:38px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--good);font-size:1.1rem;font-weight:700;cursor:pointer}
+.pd-ck.on{background:var(--good-soft);border-color:var(--good)}
+.pd-lock{color:var(--accent)}
+#pd-load[hidden],#pd-add[hidden]{display:none}
+/* 이번 주의 수학 한 문제 */
+.mt-tag{margin:6px 0 -10px;font-weight:700;color:var(--accent);font-size:.86rem}
+.mt-fig{margin:0;padding:10px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.mt-fig img{display:block;width:100%;height:auto}
+.mt-fig figcaption{font-size:.72rem;color:#777;text-align:center;margin-top:6px}
+:root[data-theme="dark"] .mt-fig{filter:brightness(.88)}
+.mt-hint{padding:12px 14px;border-left:3px solid var(--accent);background:var(--sunk);border-radius:6px;font-size:.92rem;line-height:1.6}
+.mt-hint[hidden],.mt-say[hidden],.mt-sol[hidden],.mt-sol-b[hidden]{display:none}
+.mt-ans{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.mt-ans .mc{width:48px;height:48px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:inherit;font-size:1.2rem;cursor:pointer}
+.mt-ans input{flex:1;min-width:0;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;font-family:var(--f-num);font-size:1rem}
+.mt-say{margin:0;font-weight:600}.mt-say.ok{color:var(--good)}.mt-say.no{color:var(--accent)}
+.mt-sol-b{justify-self:start;border:0;background:none;color:var(--muted);font:inherit;font-size:.84rem;text-decoration:underline;cursor:pointer;padding:0}
+.mt-sol{display:grid;gap:10px}.mt-sol img{display:block;width:100%;border:1px solid var(--line);border-radius:10px;background:#fff}
+.mt-pdf{display:grid;gap:8px}.mt-pdf a.btn{color:var(--ink)}
+/* 용어 사전 */
+.tm-in{width:100%}
+.tm-g{margin:14px 0 4px;font-size:.8rem;color:var(--muted);font-weight:700}
+.tm-it{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:8px;overflow:hidden}
+.tm-it>button{display:grid;gap:2px;width:100%;padding:11px 13px;border:0;background:none;color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.tm-it>button b{color:var(--navy)}.tm-it>button small{color:var(--muted);font-size:.82rem}
+.tm-body{padding:0 13px 12px;font-size:.88rem;line-height:1.65;display:grid;gap:6px}.tm-body[hidden]{display:none}
+.tm-body .ex{color:var(--muted)}.tm-body .gr{color:var(--accent);font-weight:600;font-size:.82rem}
+.tm-body a{color:var(--accent)}
+.tm-none a.btn{color:var(--ink)}
+.pd-row input::placeholder{color:var(--muted);opacity:.45}
+.me-l2 u{white-space:nowrap}
+.tm-none{display:grid;gap:8px;text-align:center;color:var(--muted)}.tm-none[hidden]{display:none}
+@media (max-width:340px){.wk-card b{font-size:.92rem}.me-plan{width:64px}.grade-btn{padding:0 8px;font-size:.8rem}.home-brand{font-size:.9rem;gap:8px}.home-brand .mark{width:36px;height:36px}.home-tools{gap:5px}.home-tools .theme-toggle{width:38px;height:38px}.hterm-in{font-size:.76rem}}
+.home-brand span,.grade-btn{white-space:nowrap}
 </style>
 <script>
 try{
@@ -408,77 +534,141 @@ try{
     <div class="pwa-bar" id="pwa-bar" hidden></div>
     <div class="home-top">
       <div class="home-brand"><svg class="mark" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg><span>우리동네 입시연구소</span></div>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="어두운 화면으로 바꾸기"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
+      <div class="home-tools"><button class="grade-btn" id="grade-btn" type="button" aria-label="학년 바꾸기"><span id="grade-lab">학년</span> ▾</button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="어두운 화면으로 바꾸기"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button></div>
     </div>
-    <h1 class="home-title">성적은 계산하고,<br>궁금한 건 물어보세요</h1>
+    <div class="me-row">
+      <div class="me-card" id="me-card" role="button" tabindex="0">
+        <b class="me-h">나의 정보</b>
+        <div class="me-fill" id="me-fill" hidden><span class="me-l1" id="me-l1"></span><span class="me-l2" id="me-l2"></span></div>
+        <div class="me-empty" id="me-empty"><span>아직 넣은 성적이 없어요</span><span class="me-adds"><button type="button" data-meadd="goal">＋목표</button><button type="button" data-meadd="calc" id="me-add-calc">＋내신</button><button type="button" data-meadd="mock">＋모의</button></span></div>
+      </div>
+      <button class="me-plan" type="button" data-go="plan"><span aria-hidden="true">📝</span><b>플래너</b></button>
+    </div>
+    <button class="season-card" id="season-card" type="button" data-go="season" hidden><span class="season-copy"><em id="season-g"></em><b id="season-t"></b><small id="season-s"></small></span><span class="home-feature-arrow" aria-hidden="true">›</span></button>
     <div class="home-duo">
       <button class="home-big" id="open-calculator" type="button">
         <b>내신 계산하고<br>한 줄 진단 받기</b>
-        <span>5등급제 누적 평균과 목표 등급을 계산합니다</span>
-        <small>진단은 필요한 분만 받으시면 됩니다</small>
+        <span>누적 평균과 목표 등급</span>
       </button>
       <button class="home-big" type="button" data-go="imosu">
         <b>이 모의고사가<br>수능이었다면</b>
-        <span>모의고사 백분위로 보는<br>작년 수능 기준 대학 라인</span>
-        <small>고1부터 재수생까지</small>
+        <span>작년 수능 기준 대학 라인</span>
       </button>
     </div>
     <button class="home-ask" type="button" data-go="ask">
-      <span class="home-ask-copy"><b>입시 궁금한 점 물어보기</b><small>입시 일정부터 우리 아이 고민까지</small></span>
+      <span class="home-ask-copy"><b>입시 궁금한 점 물어보기</b><small>입시 수학 18년, 운영자가 직접 답합니다 · 무료</small></span>
       <span class="home-feature-arrow" aria-hidden="true">›</span>
     </button>
-    <p class="home-note">로그인 없이 바로 사용할 수 있어요. 입력한 성적은 이 휴대폰에만 저장되고, ‘새 학생’을 누르면 지워집니다.</p>
-    <button class="season-card" id="season-card" type="button" data-go="season" hidden><span class="season-copy"><em id="season-g"></em><b id="season-t"></b><small id="season-s"></small></span><span class="home-feature-arrow" aria-hidden="true">›</span></button>
-    <section class="home-features" aria-label="메뉴">
-      <button class="home-feature" type="button" data-go="info">
-        <span class="home-feature-number">02</span>
-        <span class="home-feature-copy"><b>입시 정보<i class="nbadge" data-n="info" hidden aria-label="새 소식">N</i></b><small>블로그 최근 글과 분야별 글 모음</small></span>
-        <span class="home-feature-arrow" aria-hidden="true">›</span>
-      </button>
-      <div class="home-feature home-split">
-        <span class="home-feature-number">03</span>
-        <div class="split-body"><b>수리논술</b>
-          <a class="split-row" id="try-row" href="https://uridongne-ipsi.co.kr/try/" data-nmark="try"><span><em class="sr-t">이번 주 무료 첨삭 맛보기<i class="nbadge" data-n="try" hidden aria-label="새 소식">N</i></em><small>매주 한 문항, 직접 쓴 답안을 첨삭</small></span><i aria-hidden="true">›</i></a>
-          <button class="split-row" type="button" data-go="jaryo" data-jrcat="수리논술"><span><em class="sr-t">대학별 기출 풀이<i class="nbadge" data-n="nonsul" hidden aria-label="새 소식">N</i></em><small>대학별 완성 답안 PDF</small></span><i aria-hidden="true">›</i></button>
-        </div>
-      </div>
-      <button class="home-feature" type="button" data-go="jaryo">
-        <span class="home-feature-number">04</span>
-        <span class="home-feature-copy"><b>자료함<i class="nbadge" data-n="jaryo" hidden aria-label="새 소식">N</i></b><small>수리논술·면접 답안, 입시·수학 자료 PDF</small></span>
-        <span class="home-feature-arrow" aria-hidden="true">›</span>
-      </button>
-      <button class="home-feature" type="button" data-go="about" data-nmark="about">
-        <span class="home-feature-number">05</span>
-        <span class="home-feature-copy"><b>운영자 소개<i class="nbadge" data-n="about" hidden aria-label="새 소식">N</i></b><small>경력과 상담·관리 안내</small></span>
-        <span class="home-feature-arrow" aria-hidden="true">›</span>
-      </button>
+    <p class="wk-h">이번 주</p>
+    <div class="wk-duo" id="wk-duo">
+      <button class="wk-card" id="wk-math" type="button" data-go="math" data-nmark="math" hidden><i class="nbadge" data-n="math" hidden aria-label="새 소식">N</i><em id="wk-math-tag"></em><b>이번 주의<br>수학 한 문제</b><small>일주일 동안 고민해 보기</small></button>
+      <a class="wk-card" id="try-row" href="https://uridongne-ipsi.co.kr/try/" data-nmark="try"><i class="nbadge" data-n="try" hidden aria-label="새 소식">N</i><em id="wk-try-tag">수리논술</em><b class="sr-t">이번 주 무료<br>첨삭 맛보기</b><small>답안을 써서 보내면 첨삭</small></a>
+    </div>
+    <section class="hinfo" aria-labelledby="hinfo-h">
+      <div class="hinfo-top"><h2 id="hinfo-h">입시 정보</h2><a href="https://blog.naver.com/kwon_th">블로그 전체 글 ↗</a></div>
+      <div class="hterm" id="hterm" hidden><b>📖 입시 용어 사전</b><button type="button" class="hterm-in" data-go="terms">🔍 들은 말이 무슨 뜻인지 찾아보세요 (예: 최저)</button></div>
+      <div class="hchips" id="hchips"></div>
+      <div class="hbl" id="hbl" hidden><b class="hbl-h">블로그 새 글</b><div id="home-bl"></div></div>
     </section>
+    <button class="home-card" type="button" data-go="jaryo">
+      <span class="home-feature-copy"><b>자료함<i class="nbadge" data-n="jaryo" hidden aria-label="새 소식">N</i></b><small>대학별 기출 풀이 · 면접 답안 · 입시·수학 자료 PDF</small></span>
+      <span class="home-feature-arrow" aria-hidden="true">›</span>
+    </button>
+    <button class="home-card" type="button" data-go="about" data-nmark="about">
+      <span class="home-feature-copy"><b>운영자 소개<i class="nbadge" data-n="about" hidden aria-label="새 소식">N</i></b><small>경력과 상담·관리 안내</small></span>
+      <span class="home-feature-arrow" aria-hidden="true">›</span>
+    </button>
     <section class="paid" aria-label="유료 서비스">
       <h2 class="paid-h">유료 서비스</h2>
       <div class="paid-grid">
-        <button type="button" data-go="shop" data-nmark="shop"><b>수리논술<br>점수가 되는 답안<i class="nbadge" data-n="shop" hidden aria-label="새 소식">N</i></b><small>풀이는 맞았는데<br>점수가 새는 곳</small></button>
-        <button type="button" data-go="ck" data-nmark="ck"><b>수리논술 첨삭<i class="nbadge" data-n="ck" hidden aria-label="새 소식">N</i></b><small>내 답안을 채점 기준으로 한 줄씩</small></button>
+        <button type="button" data-go="shop" data-nmark="shop"><b>수리논술<br>점수가 되는 답안<i class="nbadge" data-n="shop" hidden aria-label="새 소식">N</i></b><small>대학별 기출 6문항 PDF<br>채점 기준에 맞춰 쓰는 법</small></button>
+        <button type="button" data-go="ck" data-nmark="ck"><b>수리논술<br>내 답안 첨삭<i class="nbadge" data-n="ck" hidden aria-label="새 소식">N</i></b><small>어느 대학 문항이든<br>보내면 한 줄씩 짚어 회신</small></button>
         <button type="button" data-go="jeongsi" data-nmark="jeongsi"><b>정시 상담<i class="nbadge" data-n="jeongsi" hidden aria-label="새 소식">N</i></b><small>가채점 상담 · 본 상담</small></button>
         <button type="button" data-go="mg" data-nmark="mg"><b>월 관리<i class="nbadge" data-n="mg" hidden aria-label="새 소식">N</i></b><small>매달 정기상담과 학년별 계획</small></button>
       </div>
     </section>
-    <footer class="brandfoot home-brandfoot">
-      <div class="bf-top"><svg class="mark" width="40" height="40" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg><div><b>우리동네 입시연구소</b><span>입시 수학 18년 · 중학생부터 재수생까지</span></div></div>
-      <nav class="bf-links" aria-label="우리동네 입시연구소 외부 채널">
-        <a href="https://open.kakao.com/o/plI61EOi">오픈채팅 자료방</a>
-        <a href="https://blog.naver.com/kwon_th">블로그</a>
-        <a href="https://www.youtube.com/@uridongne_ipsi">유튜브</a>
-      </nav>
+    <footer class="hfoot">
+      <div class="hfoot-row"><svg class="mark" width="40" height="40" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg><span class="hfoot-t"><b>우리동네 입시연구소</b><small>입시 수학 18년 · 고등부터 N수까지</small></span>
+        <a class="hfoot-ic" href="https://blog.naver.com/kwon_th" aria-label="블로그"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-4 3v-3H4z"/><path d="M8 10.5h8"/></svg><small>블로그</small></a>
+        <a class="hfoot-ic" href="https://www.youtube.com/@uridongne_ipsi" aria-label="유튜브"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10.5 9.5v5l4-2.5z"/></svg><small>유튜브</small></a>
+      </div>
       <p class="home-privacy"><a href="./privacy-policy.html">개인정보 처리 안내</a></p>
     </footer>
   </div>
 </main>
 
 
+
+<div class="grade-ov" id="grade-ov" hidden role="dialog" aria-modal="true" aria-labelledby="grade-q">
+  <div class="grade-box">
+    <svg class="mark" width="52" height="52" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg>
+    <h2 id="grade-q">학생의 학년을 골라 주세요</h2>
+    <p>학부모님은 자녀 학년을 골라 주세요.</p>
+    <div class="grade-pick" id="grade-pick"><button type="button" data-g="고1">고1</button><button type="button" data-g="고2">고2</button><button type="button" data-g="고3">고3</button><button type="button" data-g="N수생">N수생</button></div>
+    <button class="btn primary wide" id="grade-ok" type="button" disabled>이 학년으로 시작</button>
+    <button class="grade-skip" id="grade-skip" type="button">건너뛰기</button>
+  </div>
+</div>
+
+<div class="wrap sub-screen" id="me-screen" hidden>
+  <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
+  <h1 class="sub-title">나의 정보</h1>
+  <label class="me-goal-l" for="me-goal">목표</label>
+  <input class="me-goal" id="me-goal" type="text" maxlength="40" placeholder="예: 내신 1.8 · ○○대 ○○학과" autocomplete="off">
+  <p class="note">등급 숫자(예: 1.8)를 함께 적으면 첫 화면에 「목표까지 ○ 남음」이 보입니다.</p>
+  <div class="chips me-tabs" id="me-tabs"><button type="button" data-t="n" class="on">내신</button><button type="button" data-t="m">모의고사</button></div>
+  <section id="me-tab-n"><div id="me-n"></div><button class="btn wide" type="button" id="me-open-calc">내신 계산기 열기</button></section>
+  <section id="me-tab-m" hidden><div id="me-m"></div><button class="btn wide" type="button" data-go="imosu">이 모의고사가 수능이었다면 열기</button></section>
+  <p class="note">모두 이 휴대폰 안에만 저장됩니다. 앱을 지우거나 휴대폰을 바꾸면 사라집니다.</p>
+</div>
+
+<div class="wrap sub-screen" id="plan-screen" hidden>
+  <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
+  <h1 class="sub-title">플래너</h1>
+  <div class="cal-head"><button type="button" class="cal-nav" id="cal-prev" aria-label="지난 달">‹</button><b id="cal-title"></b><button type="button" class="cal-nav" id="cal-next" aria-label="다음 달">›</button></div>
+  <div class="cal" id="cal"></div>
+  <p class="note cal-tip">날짜를 눌러 플래너를 쓰세요 · 내일 것도 미리 쓸 수 있어요</p>
+</div>
+
+<div class="wrap sub-screen" id="planday-screen" hidden>
+  <button class="btn calculator-home" type="button" data-back>← 달력</button>
+  <h1 class="sub-title" id="pd-title"></h1>
+  <p class="note pd-lock" id="pd-lock" hidden>지난 날은 체크만 바꿀 수 있어요</p>
+  <button class="btn" type="button" id="pd-load">가장 최근에 쓴 계획 불러오기</button>
+  <div class="pd-rows" id="pd-rows"></div>
+  <button class="btn" type="button" id="pd-add">＋ 줄 추가</button>
+  <button class="btn primary wide" type="button" id="pd-photo">사진으로 저장</button>
+  <p class="note">적는 대로 이 휴대폰에 저장됩니다. 앱을 지우거나 휴대폰을 바꾸면 기록이 사라지니, 사진으로도 저장해 두세요.</p>
+</div>
+
+<div class="wrap sub-screen" id="math-screen" hidden>
+  <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
+  <p class="mt-tag" id="mt-tag"></p>
+  <h1 class="sub-title">이번 주의 수학 한 문제</h1>
+  <figure class="mt-fig"><img id="mt-img" alt="이번 주 문제" data-zoom><figcaption>그림을 누르면 크게 볼 수 있습니다</figcaption></figure>
+  <p class="note" id="mt-src"></p>
+  <button class="btn wide" type="button" id="mt-hint-b">힌트 보기</button>
+  <div class="mt-hint" id="mt-hint" hidden></div>
+  <div class="mt-ans" id="mt-ans"></div>
+  <p class="mt-say" id="mt-say" hidden></p>
+  <button class="mt-sol-b" type="button" id="mt-sol-b" hidden>해설 보기</button>
+  <section class="mt-sol" id="mt-sol" hidden><div id="mt-sol-imgs"></div><div class="mt-pdf" id="mt-pdf"></div></section>
+  <p class="note mt-intro">한 번 더 생각해 볼 거리가 있는 기출만 골랐습니다.<br>답을 넣거나 힌트를 본 뒤 해설을 열어 보세요.</p>
+</div>
+
+<div class="wrap sub-screen" id="terms-screen" hidden>
+  <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
+  <h1 class="sub-title">📖 입시 용어 사전</h1>
+  <input class="jr-search tm-in" id="tm-in" type="search" placeholder="들은 말이 무슨 뜻인지 찾아보세요 (예: 최저)" autocomplete="off">
+  <div id="tm-list"></div>
+  <div class="tm-none" id="tm-none" hidden><p>찾는 용어가 없나요?</p><a class="btn wide" href="https://open.kakao.com/o/sMOPxKTi">1:1로 물어보기</a></div>
+</div>
 <div class="wrap sub-screen" id="imosu-screen" hidden>
   <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
   <h1 class="sub-title">이 모의고사가 수능이었다면</h1>
   <p class="sub-desc">2026학년도 수능 · 2026 정시 입결(대학어디가 70% 합격자) 기준</p>
+  <p class="home-note">로그인 없이 바로 사용할 수 있어요. 입력한 성적은 이 휴대폰에만 저장됩니다.</p>
 
 
 
@@ -515,7 +705,7 @@ try{
 <div class="card" id="im-flowcard" hidden>
  <h2>시험마다 어떻게 움직였나</h2>
  <table class="flow"><thead><tr><th>시험</th><th>국수탐 평균</th><th>라인</th></tr></thead><tbody id="im-flow"></tbody></table>
- <p class="note">이 기록은 이 화면을 닫으면 사라집니다.</p>
+ <p class="note">이 표는 화면을 닫으면 사라집니다. 시험별 결과는 첫 화면 「나의 정보」에 남습니다.</p>
 </div>
 
 <footer>
@@ -612,6 +802,7 @@ function run(){
  document.getElementById('im-out').innerHTML=h;
  window._last={raw:s,li,k:Y*10000+(+ex[0].split(' ')[0].split('.')[0])*100+(+ex[0].split(' ')[0].split('.')[1]),n:`고${G} ${Y}.${ex[0]}`,s:r1(s),l:li<D.lines.length?D.lines[li].name:'가장 아래 묶음 아래',li};
  dept();
+ try{if(window.meSaveMock)window.meSaveMock({n:window._last.n,k:window._last.k,ex:ex[0],g:G,y:Y,pk:k,pm:m,t1,t2,e,s:window._last.s,l:window._last.l});}catch(_){}
  document.getElementById('im-out').scrollIntoView({behavior:'smooth'})}
 // 계열 — 가채점 도구의 학과 분류를 가져옴(2026-11-10)
 const ENG_KW=/공학|공과|컴퓨터|전기|전자|기계|반도체|소프트웨어|인공지능|AI|신소재|재료|건축|에너지|모빌리티|로봇|항공|조선|원자핵|데이터|자동차|건설|토목|배터리|이차전지|디스플레이|통신|SW/;
@@ -840,6 +1031,7 @@ window.imRun=run;window.imAddFlow=addFlow;
     <button class="btn calculator-home" id="btn-home" type="button">← 처음 화면</button>
     <button class="theme-toggle" type="button" data-theme-toggle aria-label="어두운 화면으로 바꾸기"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
   </div>
+  <p class="home-note calc-note">로그인 없이 바로 사용할 수 있어요. 입력한 성적은 이 휴대폰에만 저장됩니다.</p>
   <header class="head">
     <div class="brandrow"><svg class="mark" width="30" height="30" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg><span>우리동네 입시연구소</span></div>
     <div class="titlerow">
@@ -953,15 +1145,6 @@ window.imRun=run;window.imAddFlow=addFlow;
     <li>대학별 환산점수·학년별 반영비율은 반영하지 않은 기본 평균입니다. 등급이 정수라 실제 필요한 과목 수는 과목별 학점에 따라 조금 달라집니다.</li>
   </ul>
 
-  <footer class="brandfoot">
-    <div class="bf-top"><svg class="mark" width="40" height="40" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg><div><b>우리동네 입시연구소</b><span>입시 수학 18년 · 중학생부터 재수생까지</span></div></div>
-    <nav class="bf-links" aria-label="우리동네 입시연구소 외부 채널">
-      <a href="https://open.kakao.com/o/plI61EOi">오픈채팅 자료방</a>
-      <a href="https://blog.naver.com/kwon_th">블로그</a>
-      <a href="https://www.youtube.com/@uridongne_ipsi">유튜브</a>
-    </nav>
-    <p class="bf-privacy"><a href="./privacy-policy.html">개인정보 처리 안내</a></p>
-  </footer>
 </div>
 
 <script>
@@ -993,10 +1176,10 @@ const $=id=>document.getElementById(id);
  themeToggles.forEach(b=>b.addEventListener("click",()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark",true)));
  applyTheme(activeTheme,false);
 /* 1.7: 화면 이동을 주소 #으로 — 휴대폰 뒤로가기가 이전 화면으로 돌아가게 함 */
-const SCREENS={"":"home-screen",calc:"calculator-screen",info:"info-screen",about:"about-screen",diag:"diag-screen",jaryo:"jaryo-screen",shop:"shop-screen",jeongsi:"jeongsi-screen",jsga:"jsga-screen",jsbon:"jsbon-screen",jsapply:"jsapply-screen",ck:"ck-screen",season:"season-screen",mg:"mg-screen",ask:"ask-screen",imosu:"imosu-screen"};
+const SCREENS={"":"home-screen",calc:"calculator-screen",info:"info-screen",about:"about-screen",diag:"diag-screen",jaryo:"jaryo-screen",shop:"shop-screen",jeongsi:"jeongsi-screen",jsga:"jsga-screen",jsbon:"jsbon-screen",jsapply:"jsapply-screen",ck:"ck-screen",season:"season-screen",mg:"mg-screen",ask:"ask-screen",imosu:"imosu-screen",me:"me-screen",plan:"plan-screen",planday:"planday-screen",math:"math-screen",terms:"terms-screen"};
 function showScreen(){const k=location.hash.replace(/^#/,"");const id=SCREENS[k]||"home-screen";if(id==="jaryo-screen")loadJaryo();if(id==="shop-screen")loadShop();if(id==="info-screen")blSeen();if(id==="ask-screen")loadLinks();
   Object.values(SCREENS).forEach(x=>{$(x).hidden=(x!==id);});if(typeof nOnScreen==="function")nOnScreen();
-  $("img-ov").hidden=true;$("zv").hidden=true;window.scrollTo(0,0);}
+  $("img-ov").hidden=true;$("zv").hidden=true;window.scrollTo(0,0);if(typeof v114Screen==="function")v114Screen(k);}
 function go(k){if(location.hash.replace(/^#/,"")!==k)location.hash=k;else showScreen();}
 
 /* 1.7: 자료함 — 목록은 GitHub Pages(list.json)에서 불러옴, 앱 업데이트 없이 자료 추가 */
@@ -1037,11 +1220,15 @@ function pgRender(d,remote){const P=(d&&d.pages)||{};const CH={};Object.keys(P).
     el.innerHTML=use.map(b=>{try{return pgBlock(b,rm);}catch(e){return "";}}).join("");
     if(typeof nPaint==="function")setTimeout(nPaint,0);el.querySelectorAll("img[data-local]").forEach(im=>im.addEventListener("error",()=>{if(im.dataset.local&&im.getAttribute("src")!==im.dataset.local){im.src=im.dataset.local;}else im.closest(".shot").classList.add("pg-miss");}));});
   const tr=(d&&d.try)||PG_DEFAULT.try;const row=document.getElementById("try-row");
-  if(row&&tr){const t=row.querySelector(".sr-t"),s2=row.querySelector("small");if(tr.title&&t&&t.firstChild&&t.firstChild.nodeType===3)t.firstChild.nodeValue=tr.title;if(tr.desc&&s2)s2.textContent=tr.desc;if(/^https:\/\//.test(tr.url||""))row.href=tr.url;}}
+  if(row&&tr){if(tr.tag)$("wk-try-tag").textContent=tr.tag;if(tr.desc2)row.querySelector("small").textContent=tr.desc2;if(/^https:\/\//.test(tr.url||""))row.href=tr.url;}
+  try{wkApply();}catch(e){}}
 function seasonApply(d){const s=d&&d.season;const c=document.getElementById("season-card");if(!c)return;const end=s&&Date.parse(s.end);
   const live=!!(s&&s.on===true&&s.title&&!isNaN(end)&&Date.now()<end&&Array.isArray(d.pages&&d.pages.season)&&d.pages.season.length);
-  c.hidden=!live;if(!live){if(location.hash==="#season")go("");return;}
-  $("season-g").textContent=s.tag||"지금 진행 중";$("season-t").textContent=s.title;$("season-s").textContent=s.sub||"";$("season-h").textContent=s.page_title||s.title;}
+  const gs=Array.isArray(s&&s.grades)?s.grades:null;let myG="";try{myG=gradeNow();}catch(e){}
+  const forMe=!gs||!gs.length||!myG||gs.includes(myG);
+  c.hidden=!live||!forMe;if(!live){if(location.hash==="#season")go("");return;}
+  let sub=s.sub||"";if(Array.isArray(s.rounds)){const nx=s.rounds.find(r=>r&&r.text&&Date.parse(r.at)>Date.now());if(nx)sub=nx.text;}
+  $("season-g").textContent=s.tag||"지금 진행 중";$("season-t").textContent=s.title;$("season-s").textContent=sub;$("season-h").textContent=s.page_title||s.title;}
 function pgOk(d){return d&&typeof d==="object"&&d.pages&&typeof d.pages==="object";}
 function pgShow(d,remote){const key=JSON.stringify(d)+remote;if(key===pgCur)return;pgCur=key;pgFrom=remote?"remote":"local";pgLast=d;pgRender(d,remote);seasonApply(d);}
 (function(){let c=null;if(!PG_PV){try{c=JSON.parse(localStorage.getItem(PG_KEY)||"null");}catch(e){}}pgShow(pgOk(c)?c:PG_DEFAULT,pgOk(c));})();
@@ -1103,7 +1290,7 @@ function blRender(){if(!blData||!Array.isArray(blData.items))return;
   const now=Date.now(),read=blGet("uridongne-blog-read",[]);
   const list=$("bl-list");list.replaceChildren(...items.map(it=>{const a=document.createElement("a");a.className="bl-row";a.href=it.link;
     const sp=document.createElement("span");const b=document.createElement("b");b.textContent=it.title;
-    const t=blTime(it);if(t&&now-t<3*BL_DAY&&!read.includes(it.link)){const n=document.createElement("i");n.className="nbadge";n.textContent="N";n.setAttribute("aria-label","새 글");b.append(n);}
+    const t=blTime(it);if(t&&now-t<7*BL_DAY&&!read.includes(it.link)){const n=document.createElement("i");n.className="nbadge";n.textContent="N";n.setAttribute("aria-label","새 글");b.append(n);}
     const sm=document.createElement("small");const d=t?new Date(t):null;sm.textContent=(it.cat?it.cat+" · ":"")+(d?(d.getMonth()+1)+"월 "+d.getDate()+"일":"");
     const ar=document.createElement("i");ar.className="bl-ar";ar.setAttribute("aria-hidden","true");ar.textContent="›";
     sp.append(b,sm);a.append(sp,ar);
@@ -1111,7 +1298,7 @@ function blRender(){if(!blData||!Array.isArray(blData.items))return;
     return a;}));
   $("bl-sec").hidden=!items.length;
   nSet("info",items.length?blTime(items[0]):0);
-  nUnread("info",items.some(it=>{const t=blTime(it);return t&&now-t<3*BL_DAY&&!read.includes(it.link);}));}
+  nUnread("info",items.some(it=>{const t=blTime(it);return t&&now-t<7*BL_DAY&&!read.includes(it.link);}));try{homeBl(items,read,now);}catch(e){}}
 function blSeen(){nMark("info");}
 async function loadBlog(){if(blLoading)return;blLoading=true;
   if(!blData){const c=blGet("uridongne-blog",null);if(c&&c.items){blData=c;blRender();}}
@@ -1131,7 +1318,7 @@ function nPaint(){const seen=blGet("uridongne-seen",{}),now=Date.now();
   const un=Object.assign({},window.__nUnread||{},PU);
   document.querySelectorAll(".nbadge[data-n]").forEach(el=>{const k=el.dataset.n;if(k in un){el.hidden=!un[k];return;}const t=NL()[k]||0;el.hidden=!(t&&t>(seen[k]||0)&&now-t<7*86400000);});}
 function nUnread(k,v){(window.__nUnread||(window.__nUnread={}))[k]=!!v;nPaint();}
-function nSet(k,t){t=nTime(t);if(t>(NL()[k]||0))NL()[k]=t;nPaint();}
+function nSet(k,t){t=nTime(t);if(t>Date.now())return;if(t>(NL()[k]||0))NL()[k]=t;nPaint();}
 function nMark(k){const t=NL()[k]||0;if(!t)return;const seen=blGet("uridongne-seen",{});if(t>(seen[k]||0)){seen[k]=t;blSet("uridongne-seen",seen);}nPaint();}
 function nOnScreen(){const h=location.hash.replace(/^#/,"");if(h==="info")nMark("info");
   if(h==="jaryo"){nMark("jaryo");if(jrCat==="수리논술")nMark("nonsul");}if(NL()[h]!==undefined&&["shop","ck","jeongsi","mg","about"].includes(h))nMark(h);}
@@ -1638,8 +1825,213 @@ $("stu-name").addEventListener("input",persist);
 $("t-val").addEventListener("input",persist);
 $("tabs").addEventListener("click",persist);
 document.addEventListener("visibilitychange",()=>{if(document.hidden)persist();});
-function refresh(){renderTiles();renderTarget();renderMatrix();persist();}
+function refresh(){renderTiles();renderTarget();renderMatrix();persist();if(typeof homePaint==="function")try{homePaint();}catch(e){}}
 restore();renderEditor();refresh();
+
+/* ===== 1.14: 학년 · 나의 정보 · 플래너 · 이번 주(수학 한 문제·맛보기 예약) · 용어 사전 검색 ===== */
+const LS=(k,d)=>{try{const v=JSON.parse(localStorage.getItem(k)||"null");return v==null?d:v;}catch(e){return d;}};
+const LSset=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}};
+const esc4=t=>String(t==null?"":t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const GRADES=["고1","고2","고3","N수생"],GKEY="uridongne-grade";
+/* 학년: 학년도 = 3월 1일 기준. 저장한 학년도가 지금 학년도보다 앞서면(3월 이후 첫 실행) 고르기 화면을 다시 띄우고 한 학년 올린 버튼에 표시 */
+function acadYear(d){d=d||new Date();return d.getMonth()>=2?d.getFullYear():d.getFullYear()-1;}
+function gradeRec(){return LS(GKEY,null);}
+function gradeNow(){const r=gradeRec();return r&&GRADES.includes(r.g)?r.g:"";}
+function bump(g){return {"고1":"고2","고2":"고3","고3":"N수생","N수생":"N수생"}[g]||"";}
+let gPick="";
+function gradeOpen(pre){gPick=pre||"";$("grade-ov").hidden=false;document.body.style.overflow="hidden";$("grade-skip").textContent=gradeNow()?"닫기":"건너뛰기";
+  $("grade-pick").querySelectorAll("button").forEach(b=>b.classList.toggle("on",b.dataset.g===gPick));$("grade-ok").disabled=!gPick;}
+function gradeSave(g){LSset(GKEY,{g:g||"",ay:acadYear()});$("grade-ov").hidden=true;document.body.style.overflow="";homePaint();}
+$("grade-pick").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;gPick=b.dataset.g;
+  $("grade-pick").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));$("grade-ok").disabled=false;});
+$("grade-ok").addEventListener("click",()=>gradeSave(gPick));
+$("grade-skip").addEventListener("click",()=>gradeSave(gradeNow()));
+$("grade-btn").addEventListener("click",()=>gradeOpen(gradeNow()));
+(function(){const r=gradeRec();
+  if(!r){gradeOpen("");return;}                                   // 처음(기존 이용자 포함)
+  if(!GRADES.includes(r.g)&&/중/.test(String(r.g||""))){gradeOpen("고1");return;}   // 혹시 중학생으로 저장된 경우
+  if((r.ay||0)<acadYear())gradeOpen(r.g?bump(r.g):"");})();     // 새 학년도(3월) 첫 실행
+
+/* 입시 정보 칩: 앞쪽은 모두 같고 뒤쪽은 학년별. 주소가 아직 없는 분류(BLOG_CAT_MORE 빈칸)는 칩을 숨김 */
+const BLOG_CAT_MORE={subject:"https://blog.naver.com/PostList.naver?blogId=kwon_th&categoryNo=21",study:"https://blog.naver.com/PostList.naver?blogId=kwon_th&categoryNo=13",nsu:"https://blog.naver.com/PostList.naver?blogId=kwon_th&categoryNo=24"};
+const CHIP_BASE=[["입시 일정","schedule"],["학종","jonghap"],["교과","gyogwa"],["정시·수능","jeongsi"],["생기부","saenggibu"]];
+const CHIP_G={"고1":[["과목 선택","subject"],["대학·학과","univ"],["공부법","study"]],"고2":[["과목 선택","subject"],["대학·학과","univ"],["공부법","study"]],
+  "고3":[["수리논술","nonsul"],["대학·학과","univ"],["재수·N수","nsu"]],"N수생":[["수리논술","nonsul"],["대학·학과","univ"],["재수·N수","nsu"]],"":[["대학·학과","univ"],["수리논술","nonsul"]]};
+function chipUrl(k){return CAT_URL[k]||BLOG_CAT_MORE[k]||"";}
+function chipsPaint(){const g=gradeNow();$("hchips").innerHTML=CHIP_BASE.concat(CHIP_G[g]||CHIP_G[""]).filter(c=>chipUrl(c[1])).map(c=>'<a href="'+esc4(chipUrl(c[1]))+'">'+esc4(c[0])+'</a>').join("");chipsFade();}
+function chipsFade(){const h=$("hchips");h.classList.toggle("more",h.scrollLeft+h.clientWidth<h.scrollWidth-4);}
+$("hchips").addEventListener("scroll",chipsFade,{passive:true});window.addEventListener("resize",chipsFade);
+function homeBl(items,read,now){const L=items.slice(0,2);$("hbl").hidden=!L.length;
+  $("home-bl").innerHTML=L.map(it=>{const t=blTime(it),d=t?new Date(t):null,isN=t&&now-t<7*BL_DAY&&!read.includes(it.link);
+    return '<a href="'+esc4(it.link)+'" data-bl="'+esc4(it.link)+'"><time>'+(d?(d.getMonth()+1)+"/"+d.getDate():"")+'</time><span>'+esc4(it.title)+'</span>'+(isN?'<i class="nbadge" aria-label="새 글">N</i>':"")+'</a>';}).join("");}
+document.addEventListener("click",e=>{const a=e.target.closest("[data-bl]");if(!a)return;const r=blGet("uridongne-blog-read",[]);if(!r.includes(a.dataset.bl)){r.unshift(a.dataset.bl);blSet("uridongne-blog-read",r.slice(0,30));}setTimeout(blRender,300);},true);
+
+/* 나의 정보 — 목표(직접 적음) · 내신(계산기 저장값) · 모의고사(이모수 결과) 모두 이 휴대폰 안 */
+const MOCK_KEY="uridongne-mock",GOAL_KEY="uridongne-goal";
+window.meSaveMock=function(r){const L=LS(MOCK_KEY,[]).filter(x=>x&&x.n!==r.n);r.at=Date.now();L.push(r);LSset(MOCK_KEY,L.slice(-40));homePaint();};
+function mocks(){return LS(MOCK_KEY,[]).filter(x=>x&&x.n).sort((a,b)=>(a.k||0)-(b.k||0));}
+function naesin(){const a=agg(doneRows(),"all");return a.cr?a.avg:null;}
+function semAvgs(){return SEMS.map(x=>{const sm=st.sems[x];if(!sm||!sm.done)return null;const a=agg(sm.rows,"all");return a.cr?{s:x,v:a.avg,n:a.n,cr:a.cr}:null;}).filter(Boolean);}
+function goalNum(t){t=String(t||"");let m=t.match(/(?:^|[^\d.])([1-5]\.\d{1,2})(?!\d)/)||t.match(/내신\s*([1-5])(?![\d.])/);if(!m)return null;const v=parseFloat(m[1]);return v>=1&&v<=5?v:null;}
+function exShort(ex){const m=String(ex||"").match(/^(\d+)\.\d+\s*(.)(.)/);return m?m[1]+"월 "+(m[2]==="모"?"모평":(m[2]==="학"?"학평":m[2]+m[3])):String(ex||"");}
+function pct2g(p){p=Number(p);return p>=96?1:p>=89?2:p>=77?3:p>=60?4:p>=40?5:p>=23?6:p>=11?7:p>=4?8:9;}
+function homePaint(){const g=gradeNow();$("grade-lab").textContent=g||"학년";chipsPaint();
+  const goal=LS(GOAL_KEY,""),av=naesin(),M=mocks(),last=M[M.length-1],nsu=g==="N수생";
+  const l1=goal?"목표: "+esc4(goal):"";let parts=[];
+  if(nsu){if(last)parts.push(esc4(exShort(last.ex))+" 국"+pct2g(last.pk)+" 수"+pct2g(last.pm)+" 영"+esc4(last.e)+" 탐"+pct2g(last.t1)+"·"+pct2g(last.t2)+' · <u>결과 보기</u>');}
+  else{if(av!=null){const gn=goalNum(goal);let x="내신 "+fmt(av);if(gn!=null)x+=av-gn>0.005?" <small>(목표까지 "+(Math.round((av-gn)*100)/100)+" 남음)</small>":" <small>(목표 달성)</small>";parts.push(x);}
+    if(last)parts.push('<u>'+esc4(exShort(last.ex))+" 결과 보기</u>");}
+  const any=!!parts.length;$("me-fill").hidden=!(l1||parts.length);$("me-empty").hidden=any;$("me-empty").querySelector("span").hidden=!!l1;$("me-empty").querySelector('[data-meadd="goal"]').hidden=!!l1;
+  $("me-l1").innerHTML=l1;$("me-l1").hidden=!l1;$("me-l2").innerHTML=parts.join(" · ");$("me-l2").hidden=!parts.length;
+  $("me-add-calc").hidden=nsu;
+  if(typeof seasonApply==="function"){try{seasonApply(pgLast||PG_DEFAULT);}catch(e){}}}
+let meTab="n";
+$("me-card").addEventListener("click",e=>{const b=e.target.closest("[data-meadd]");
+  if(b){e.stopPropagation();const k=b.dataset.meadd;if(k==="calc")go("calc");else if(k==="mock")go("imosu");else{go("me");setTimeout(()=>$("me-goal").focus(),60);}return;}
+  if(e.target.closest("u")&&mocks().length){meTab="m";}go("me");});
+$("me-card").addEventListener("keydown",e=>{if(e.key==="Enter")go("me");});
+$("me-goal").addEventListener("input",()=>{LSset(GOAL_KEY,$("me-goal").value.trim());});
+$("me-tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;meTab=b.dataset.t;meRender();});
+$("me-open-calc").addEventListener("click",()=>go("calc"));
+$("me-m").addEventListener("click",e=>{const b=e.target.closest("[data-mdel]");if(!b)return;if(!confirm("「"+b.dataset.mdel+"」 결과를 지울까요?"))return;
+  LSset(MOCK_KEY,LS(MOCK_KEY,[]).filter(x=>x&&x.n!==b.dataset.mdel));meRender();homePaint();});
+function meChart(pts,lab,inv){if(pts.length<2)return "";const W=320,H=130,P=28;const vs=pts.map(p=>p.v);let lo=Math.min(...vs),hi=Math.max(...vs);if(hi-lo<0.5){lo-=0.25;hi+=0.25;}
+  const X=i=>P+i*(W-2*P)/(pts.length-1),Y=v=>inv?18+(v-lo)/(hi-lo)*(H-40):18+(hi-v)/(hi-lo)*(H-40);
+  return '<svg class="me-chart" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+lab+' 흐름"><line class="ax" x1="'+P+'" y1="'+(H-18)+'" x2="'+(W-P)+'" y2="'+(H-18)+'"/><polyline class="ln" points="'+pts.map((p,i)=>X(i)+","+Y(p.v)).join(" ")+'"/>'+
+    pts.map((p,i)=>'<circle cx="'+X(i)+'" cy="'+Y(p.v)+'" r="3.5"/><text x="'+X(i)+'" y="'+(H-4)+'" text-anchor="middle">'+esc4(p.x)+'</text><text x="'+X(i)+'" y="'+(Y(p.v)-8)+'" text-anchor="middle">'+esc4(p.t)+'</text>').join("")+'</svg>';}
+function meRender(){$("me-goal").value=LS(GOAL_KEY,"");
+  $("me-tabs").querySelectorAll("button").forEach(b=>b.classList.toggle("on",b.dataset.t===meTab));$("me-tab-n").hidden=meTab!=="n";$("me-tab-m").hidden=meTab!=="m";
+  const S=semAvgs(),av=naesin();
+  $("me-n").innerHTML=S.length?('<p style="margin:0">지금까지 누적 평균(전과목) <b class="num">'+fmt(av)+'</b></p>'+meChart(S.map(x=>({x:x.s,v:x.v,t:fmt(x.v)})),"학기별 평균",true)+
+    '<table class="me-tab"><thead><tr><th>학기</th><th>평균</th><th>과목 · 학점</th></tr></thead><tbody>'+S.map(x=>'<tr><td>'+x.s+'</td><td class="num">'+fmt(x.v)+'</td><td>'+x.n+'과목 · '+x.cr+'학점</td></tr>').join("")+'</tbody></table>')
+    :'<p class="me-none">아직 넣은 내신 성적이 없습니다. 내신 계산기에서 성적 나온 학기를 넣으면 여기에 모입니다.</p>';
+  const M=mocks();
+  $("me-m").innerHTML=M.length?(meChart(M.slice(-6).map(x=>({x:exShort(x.ex).replace("월 ","/").replace("모평","모").replace("학평","학"),v:Number(x.s),t:String(x.s)})),"국수탐 평균",false)+
+    '<table class="me-tab"><thead><tr><th>시험</th><th>국·수·영·탐</th><th>라인</th><th></th></tr></thead><tbody>'+M.slice().reverse().map(x=>'<tr><td>'+esc4(x.n)+'</td><td class="num">'+esc4(x.pk)+'·'+esc4(x.pm)+'·'+esc4(x.e)+'등급·'+esc4(x.t1)+'/'+esc4(x.t2)+'</td><td>'+esc4(x.l)+'</td><td><button type="button" class="me-del" data-mdel="'+esc4(x.n)+'" aria-label="이 결과 지우기">✕</button></td></tr>').join("")+'</tbody></table><p class="note">국·수·탐은 백분위, 영어는 등급입니다. 같은 시험을 다시 넣으면 마지막 것만 남습니다.</p>')
+    :'<p class="me-none">아직 넣은 모의고사가 없습니다. 「이 모의고사가 수능이었다면」에서 결과를 보면 여기에 모입니다.</p>';}
+
+/* 플래너 — 하루의 끝은 새벽 4시. 오늘·내일은 쓰고 고침, 지난 날 쓴 날은 체크만, 안 쓴 지난 날·모레 이후는 반응 없음 */
+const PL_KEY="uridongne-planner",WD="일월화수목금토";
+function pDay(off){const d=new Date(Date.now()-4*3600000);d.setHours(12,0,0,0);d.setDate(d.getDate()+(off||0));return d;}
+function ymd(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function plAll(){return LS(PL_KEY,{});}
+function hasTxt(p){return !!(p&&Array.isArray(p.rows)&&p.rows.some(r=>(r.t||"").trim()||(r.task||"").trim()));}
+let calY,calM,pdKey="";
+function calRender(){const T=ymd(pDay(0)),N=ymd(pDay(1)),A=plAll();$("cal-title").textContent=calY+"년 "+(calM+1)+"월";
+  const first=new Date(calY,calM,1,12),days=new Date(calY,calM+1,0).getDate();let h=[...WD].map(w=>'<span class="dw">'+w+'</span>').join("");
+  for(let i=0;i<first.getDay();i++)h+='<button class="blank" tabindex="-1" aria-hidden="true"></button>';
+  for(let d=1;d<=days;d++){const k=calY+"-"+String(calM+1).padStart(2,"0")+"-"+String(d).padStart(2,"0"),has=hasTxt(A[k]);
+    let c="",x="";if(k===T){c="today";if(!has)x='<i class="plus">＋</i>';}else if(k===N){c="tmr";if(!has)x='<i class="plus">＋</i>';}else if(k<T){if(!has)c="off";}else c="off";
+    h+='<button type="button" class="'+c+'" data-day="'+k+'"'+(c==="off"?' disabled':'')+'>'+d+x+(has?'<i class="dot"></i>':'')+'</button>';}
+  $("cal").innerHTML=h;}
+$("cal-prev").addEventListener("click",()=>{calM--;if(calM<0){calM=11;calY--;}calRender();});
+$("cal-next").addEventListener("click",()=>{calM++;if(calM>11){calM=0;calY++;}calRender();});
+$("cal").addEventListener("click",e=>{const b=e.target.closest("button[data-day]");if(!b||b.disabled)return;pdKey=b.dataset.day;try{history.replaceState({keepCal:1},"");}catch(_){}go("planday");});
+function pdEditable(){return pdKey===ymd(pDay(0))||pdKey===ymd(pDay(1));}
+function pdGet(){const A=plAll();const p=A[pdKey]||{rows:[]};while(p.rows.length<10)p.rows.push({t:"",task:"",ok:false});return p;}
+function pdSave(p){const A=plAll();if(hasTxt(p)||p.rows.some(r=>r.ok))A[pdKey]={rows:p.rows,ts:Date.now()};else delete A[pdKey];LSset(PL_KEY,A);}
+function pdRender(){if(!pdKey){go("plan");return;}const d=new Date(pdKey+"T12:00:00"),ed=pdEditable(),p=pdGet();
+  $("pd-title").textContent=(d.getMonth()+1)+"/"+d.getDate()+"("+WD[d.getDay()]+") 플래너";$("pd-lock").hidden=ed;$("pd-load").hidden=!ed;$("pd-add").hidden=!ed;
+  $("pd-rows").innerHTML='<div class="pd-row"><small>시간(24시)</small><small>할 일</small><small>✓</small></div>'+p.rows.map((r,i)=>'<div class="pd-row" data-i="'+i+'"><input type="text" data-f="t" inputmode="numeric" maxlength="5" value="'+esc4(r.t)+'"'+(i?'':' placeholder="0930"')+''+(ed?'':' disabled')+'><input type="text" data-f="task" value="'+esc4(r.task)+'"'+(ed?'':' disabled')+'><button type="button" class="pd-ck'+(r.ok?' on':'')+'" aria-label="했어요">'+(r.ok?'✓':'')+'</button></div>').join("");}
+function tFmt(v){const d=String(v||"").replace(/\D/g,"").slice(0,4);if(!d)return "";let h,m;
+  if(d.length<=2){h=+d;m=0;}else if(d.length===3){h=+d[0];m=+d.slice(1);}else{h=+d.slice(0,2);m=+d.slice(2);}
+  if(h>24||m>59||(h===24&&m>0))return d;return String(h).padStart(2,"0")+":"+String(m).padStart(2,"0");}
+$("pd-rows").addEventListener("focusin",e=>{if(e.target.dataset.f==="t"&&!e.target.disabled)e.target.value=e.target.value.replace(/\D/g,"");});
+$("pd-rows").addEventListener("focusout",e=>{if(e.target.dataset.f!=="t"||e.target.disabled||!pdEditable())return;const row=e.target.closest(".pd-row");e.target.value=tFmt(e.target.value);
+  const p=pdGet();p.rows[+row.dataset.i].t=e.target.value;pdSave(p);});
+$("pd-rows").addEventListener("input",e=>{if(!pdEditable()){pdRender();alert("새벽 4시가 지나 이 날 플래너는 체크만 바꿀 수 있습니다.");return;}if(e.target.dataset.f==="t"){const c=e.target.value.replace(/\D/g,"").slice(0,4);if(c!==e.target.value)e.target.value=c;}const row=e.target.closest(".pd-row");if(!row||!pdEditable())return;const p=pdGet();p.rows[+row.dataset.i][e.target.dataset.f]=e.target.value;pdSave(p);});
+$("pd-rows").addEventListener("click",e=>{const b=e.target.closest(".pd-ck");if(!b)return;const i=+b.closest(".pd-row").dataset.i,p=pdGet();p.rows[i].ok=!p.rows[i].ok;pdSave(p);b.classList.toggle("on",p.rows[i].ok);b.textContent=p.rows[i].ok?"✓":"";});
+$("pd-add").addEventListener("click",()=>{const p=pdGet();p.rows.push({t:"",task:"",ok:false});const A=plAll();A[pdKey]={rows:p.rows,ts:Date.now()};LSset(PL_KEY,A);pdRender();});
+$("pd-load").addEventListener("click",()=>{const A=plAll();const ks=Object.keys(A).filter(k=>k<pdKey&&hasTxt(A[k])).sort();if(!ks.length){alert("앞서 쓴 계획이 없습니다.");return;}
+  const p=pdGet();if(hasTxt(p)&&!confirm("지금 적은 내용 대신 "+ks[ks.length-1].slice(5).replace("-","/")+" 계획을 불러올까요?"))return;
+  p.rows=A[ks[ks.length-1]].rows.map(r=>({t:r.t||"",task:r.task||"",ok:false}));pdSave(p);pdRender();});
+$("pd-photo").addEventListener("click",()=>busy($("pd-photo"),async()=>{const p=pdGet(),rows=p.rows.filter(r=>(r.t||"").trim()||(r.task||"").trim());
+  const d=new Date(pdKey+"T12:00:00"),W=1080,RH=74,H=300+Math.max(rows.length,1)*RH+150,cv=document.createElement("canvas");cv.width=W;cv.height=H;const c=cv.getContext("2d");
+  const IM=imageTheme(),SF='"IBM Plex Sans KR","Apple SD Gothic Neo",sans-serif',TF='"Gowun Batang",serif';
+  c.fillStyle=IM.bg;c.fillRect(0,0,W,H);c.fillStyle=IM.ink;c.font="700 56px "+TF;c.fillText((d.getMonth()+1)+"월 "+d.getDate()+"일 ("+WD[d.getDay()]+") 플래너",72,140);
+  c.fillStyle=IM.muted;c.font="500 26px "+SF;c.fillText("시간",72,230);c.fillText("할 일",260,230);c.fillText("✓",W-110,230);
+  let y=260;(rows.length?rows:[{t:"",task:"(아직 적은 계획이 없습니다)",ok:false}]).forEach(r=>{c.strokeStyle=IM.line;c.lineWidth=2;c.beginPath();c.moveTo(72,y);c.lineTo(W-72,y);c.stroke();
+    c.fillStyle=IM.ink;c.font="500 32px "+SF;c.fillText(String(r.t||"").slice(0,8),72,y+48);let tx=String(r.task||"");while(c.measureText(tx).width>W-430&&tx.length>1)tx=tx.slice(0,-1);c.fillText(tx,260,y+48);
+    if(r.ok){c.fillStyle=IM.accent;c.font="700 36px "+SF;c.fillText("✓",W-112,y+50);}y+=RH;});
+  c.strokeStyle=IM.line;c.beginPath();c.moveTo(72,y);c.lineTo(W-72,y);c.stroke();
+  c.fillStyle=IM.muted;c.font="500 24px "+SF;c.textAlign="right";c.fillText("우리동네 입시연구소 앱",W-72,H-60);c.textAlign="left";
+  const blob=await new Promise(r=>cv.toBlob(r,"image/png"));if(!blob)return;const fn="플래너_"+pdKey.replace(/-/g,"")+".png";
+  let ok=false;try{ok=await window.appSaveToGallery(blob,fn);}catch(e){ok=false;}
+  if(ok){alert("사진 앱(갤러리)에 저장했습니다.");return;}try{await window.appSaveFile(blob,fn);}catch(e){showImage(blob);}}));
+
+/* 이번 주 — 자료함 저장소 weekly.json. 항목마다 from(언제부터 보일지)을 붙여 미리 올려 두면 휴대폰 시각을 보고 저절로 바뀜(매주 월요일 0시) */
+const WK_KEY="uridongne-weekly",MT_KEY="uridongne-math";let wkData=LS(WK_KEY,null),wkTried=0;
+function wkCur(list){const now=Date.now();return (Array.isArray(list)?list:[]).filter(x=>x&&!isNaN(Date.parse(x.from))&&Date.parse(x.from)<=now).sort((a,b)=>Date.parse(b.from)-Date.parse(a.from))[0]||null;}
+function wkSrc(u){u=String(u||"");return /^https:\/\//.test(u)?u:JR_BASE+u.replace(/^\.?\//,"");}
+function wkApply(){const m=wkCur(wkData&&wkData.math),t=wkCur(wkData&&wkData.try);
+  $("wk-math").hidden=!m;$("wk-duo").classList.toggle("one",!m);
+  if(m){$("wk-math-tag").textContent=[m.subject,m.unit].filter(Boolean).join(" · ");nSet("math",m.from);}
+  if(t){if(t.tag)$("wk-try-tag").textContent=t.tag;if(t.desc)$("try-row").querySelector("small").textContent=t.desc;if(/^https:\/\//.test(t.url||""))$("try-row").href=t.url;nSet("try",t.from);}
+  if(location.hash==="#math")mtRender();}
+async function loadWeekly(){const now=Date.now();if(now-wkTried<60000){wkApply();return;}wkTried=now;wkApply();
+  try{const r=await fetch(JR_BASE+"weekly.json?t="+now,{cache:"no-store"});if(r.status===404){wkData=null;LSset(WK_KEY,null);wkApply();return;}if(!r.ok)throw 0;const d=await r.json();if(d&&typeof d==="object"){wkData=d;LSset(WK_KEY,d);wkApply();}}catch(e){}}
+function mtState(id){return (LS(MT_KEY,{})[id])||{};}
+function mtSet(id,o){const A=LS(MT_KEY,{});A[id]=Object.assign(A[id]||{},o);LSset(MT_KEY,A);}
+function mtRender(){const m=wkCur(wkData&&wkData.math);if(!m){go("");return;}const S=mtState(m.id);
+  $("mt-tag").textContent=[m.subject,m.unit].filter(Boolean).join(" · ");$("mt-img").src=wkSrc(m.img);$("mt-src").textContent=m.src?"출처: "+m.src:"";
+  $("mt-hint").textContent=m.hint||"";$("mt-hint").hidden=!S.hint;$("mt-hint-b").hidden=!!S.hint||!m.hint;
+  const done=!!S.ok;let a="";
+  if(m.type==="mc")a=[1,2,3,4,5].map(i=>'<button type="button" class="mc" data-a="'+i+'">'+"①②③④⑤"[i-1]+'</button>').join("");
+  else a='<input id="mt-in" type="text" inputmode="decimal" placeholder="답을 숫자로 넣으세요" autocomplete="off"><button class="btn primary" type="button" id="mt-go">확인</button>';
+  $("mt-ans").innerHTML=a;$("mt-ans").hidden=done;
+  const say=$("mt-say");if(done){say.hidden=false;say.className="mt-say ok";say.textContent="맞았습니다. 해설을 천천히 읽어 보세요.";}
+  else if(S.wrong){say.hidden=false;say.className="mt-say no";say.textContent="아직 아닙니다. 힌트를 보고 한 번 더 생각해 보세요.";}else say.hidden=true;
+  const open=!!S.sol||done;$("mt-sol").hidden=!open;$("mt-sol-b").hidden=open||!(S.hint||S.wrong);$("mt-sol-b").textContent=S.wrong&&!S.hint?"그래도 해설 보기":"해설 보기";
+  if(open){$("mt-sol-imgs").innerHTML=(Array.isArray(m.sol)?m.sol:[]).map(u=>'<img src="'+esc4(wkSrc(u))+'" alt="해설" loading="lazy" data-zoom>').join("");
+    $("mt-pdf").innerHTML=(m.prob_pdf?'<a class="btn wide" href="'+esc4(wkSrc(m.prob_pdf))+'">문제 PDF 받기</a>':"")+(m.sol_pdf?'<a class="btn wide" href="'+esc4(wkSrc(m.sol_pdf))+'">해설 PDF 받기</a>':"");}}
+function mtCheck(v){const m=wkCur(wkData&&wkData.math);if(!m)return;v=String(v||"").replace(/[０-９]/g,c=>String.fromCharCode(c.charCodeAt(0)-65248)).replace(/\s/g,"");if(!v)return;
+  const a=String(m.answer).trim(),ok=v===a||(!isNaN(Number(v))&&!isNaN(Number(a))&&Number(v)===Number(a));
+  if(ok)mtSet(m.id,{ok:true,sol:true});else mtSet(m.id,{wrong:true});mtRender();}
+$("mt-ans").addEventListener("click",e=>{const b=e.target.closest(".mc");if(b)mtCheck(b.dataset.a);if(e.target.id==="mt-go")mtCheck($("mt-in").value);});
+$("mt-ans").addEventListener("keydown",e=>{if(e.target.id==="mt-in"&&e.key==="Enter")mtCheck(e.target.value);});
+$("mt-hint-b").addEventListener("click",()=>{const m=wkCur(wkData&&wkData.math);if(m){const keep=$("mt-in")?$("mt-in").value:"";mtSet(m.id,{hint:true});mtRender();if(keep&&$("mt-in"))$("mt-in").value=keep;}});
+$("mt-sol-b").addEventListener("click",()=>{const m=wkCur(wkData&&wkData.math);if(m){mtSet(m.id,{sol:true});mtRender();}});
+
+/* 용어 사전 — 자료함 저장소 terms.json. 파일이 없거나 terms가 비면 첫 화면 검색창을 숨김. term·alias 둘 다에서 찾음, 검색 기록은 남기지 않음 */
+const TM_KEY="uridongne-terms";let tmData=LS(TM_KEY,null),tmTried=0;
+function tmList(){return tmData&&Array.isArray(tmData.terms)?tmData.terms.filter(t=>t&&t.term):[];}
+function tmApply(){$("hterm").hidden=!tmList().length;if(location.hash==="#terms"){if(!tmList().length)go("");else tmRender();}}
+async function loadTerms(){const now=Date.now();if(now-tmTried<60000)return;tmTried=now;
+  try{const r=await fetch(JR_BASE+"terms.json?t="+now,{cache:"no-store"});if(r.status===404){tmData=null;LSset(TM_KEY,null);tmApply();return;}if(!r.ok)throw 0;
+    const d=await r.json();tmData=d&&typeof d==="object"?d:null;LSset(TM_KEY,tmData);tmApply();}catch(e){}}
+const tmNorm=t=>String(t||"").toLowerCase().replace(/[\s·・\-_()]/g,"");
+function tmRender(){const q=tmNorm($("tm-in").value),L=tmList();
+  const hit=q?L.filter(t=>tmNorm(t.term).includes(q)||(Array.isArray(t.alias)&&t.alias.some(a=>tmNorm(a).includes(q)))).sort((a,b)=>(tmNorm(b.term)===q)-(tmNorm(a.term)===q)||(tmNorm(a.term).indexOf(q)<0)-(tmNorm(b.term).indexOf(q)<0)):L;
+  let h="",grp=null;hit.forEach(t=>{if(!q&&t.group!==grp){grp=t.group;h+='<p class="tm-g">'+esc4(grp||"기타")+'</p>';}
+    h+='<div class="tm-it"><button type="button" data-tm="'+esc4(t.id||t.term)+'"><b>'+esc4(t.term)+'</b><small>'+esc4(t.short||"")+'</small></button><div class="tm-body" hidden>'+
+      (t.desc?'<p style="margin:0">'+esc4(t.desc).replace(/\n/g,"<br>")+'</p>':"")+(t.example?'<p class="ex" style="margin:0">예) '+esc4(t.example)+'</p>':"")+(t.grade?'<p class="gr" style="margin:0">'+esc4(t.grade)+'</p>':"")+
+      (Array.isArray(t.links)?t.links.filter(l=>l&&/^https:\/\//.test(l.url||"")).map(l=>'<a href="'+esc4(l.url)+'">'+esc4(l.title||"관련 글")+' ↗</a>').join(""):"")+'</div></div>';});
+  $("tm-list").innerHTML=h;$("tm-none").hidden=!(q&&!hit.length);}
+$("tm-in").addEventListener("input",tmRender);
+$("tm-list").addEventListener("click",e=>{const b=e.target.closest("[data-tm]");if(!b)return;const bd=b.nextElementSibling;bd.hidden=!bd.hidden;});
+
+function v114Screen(k){if(k===""){homePaint();wkApply();}if(k==="me")meRender();if(k==="plan"){if(!(history.state&&history.state.keepCal)){const t=pDay(0);calY=t.getFullYear();calM=t.getMonth();}calRender();}
+  if(k==="imosu"){const n={"고1":"1","고2":"2","고3":"3","N수생":"3"}[gradeNow()];const b=n&&document.querySelector('#im-grade button[data-g="'+n+'"]');if(b&&!b.classList.contains("on"))b.click();}
+  if(k==="planday")pdRender();if(k==="math"){mtRender();nMark("math");}if(k==="terms"){if(!tmList().length){go("");return;}$("tm-in").value="";tmRender();setTimeout(()=>$("tm-in").focus(),60);}}
+try{document.body.append($("img-ov"));}catch(e){}(function(){const z=$("zv");document.addEventListener("click",e=>{if(e.target.closest("img[data-zoom]")&&!(history.state&&history.state.zv)){try{history.pushState({zv:1},"");}catch(_){}}});
+  const cb=$("zv-close"),nb=cb.cloneNode(true);cb.replaceWith(nb);nb.addEventListener("click",()=>{if(history.state&&history.state.zv)history.back();else z.hidden=true;});
+  window.addEventListener("popstate",()=>{if(!z.hidden)z.hidden=true;});
+  /* 그림 확대: 안드로이드 앱 안에서는 기본 두 손가락 확대가 꺼져 있어 직접 만듦 — 처음엔 화면 폭에 맞추고, 두 손가락으로 1~4배, 두 번 톡 치면 2.5배/원래대로 */
+  const im=$("zv-img");let zs=1,d0=0,s0=1,lastTap=0;
+  function zSet(ns,mx,my){ns=Math.min(4,Math.max(1,ns));const r=im.getBoundingClientRect(),cx=(mx-r.left)/r.width,cy=(my-r.top)/r.height;zs=ns;im.style.width=(ns*100)+"%";
+    const r2=im.getBoundingClientRect();z.scrollLeft+=r2.left+cx*r2.width-mx;z.scrollTop+=r2.top+cy*r2.height-my;}
+  new MutationObserver(()=>{if(!z.hidden){zs=1;im.style.width="100%";z.scrollTo(0,0);}}).observe(z,{attributes:true,attributeFilter:["hidden"]});
+  const dist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
+  z.addEventListener("touchstart",e=>{if(e.touches.length===2){d0=dist(e.touches);s0=zs;e.preventDefault();}
+    else if(e.touches.length===1&&e.target===im){const n=Date.now();if(n-lastTap<300){e.preventDefault();const t=e.touches[0];zSet(zs>1.2?1:2.5,t.clientX,t.clientY);lastTap=0;}else lastTap=n;}},{passive:false});
+  z.addEventListener("touchmove",e=>{if(e.touches.length===2&&d0){e.preventDefault();const t=e.touches;zSet(s0*dist(t)/d0,(t[0].clientX+t[1].clientX)/2,(t[0].clientY+t[1].clientY)/2);}},{passive:false});
+  z.addEventListener("touchend",e=>{if(e.touches.length<2)d0=0;});
+  z.addEventListener("dblclick",e=>{if(e.target===im)zSet(zs>1.2?1:2.5,e.clientX,e.clientY);});
+  const tip=z.querySelector("p");if(tip)tip.textContent="두 손가락으로 벌려 확대 · 두 번 톡 치면 크게";})();
+tmApply();homePaint();try{if(blData)blRender();}catch(e){}loadWeekly();loadTerms();
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"){loadWeekly();loadTerms();homePaint();if(location.hash==="#plan")calRender();}});
+setInterval(()=>{try{wkApply();}catch(e){}},60000);
+
 })();
 </script>
 
