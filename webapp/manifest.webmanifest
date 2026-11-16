@@ -1,6 +1,6 @@
 {
   "name": "우리동네 입시연구소",
-  "short_name": "우리동네 입시연구소",
+  "short_name": "입시연구소",
   "id": "/webapp/",
   "start_url": "/webapp/",
   "scope": "/webapp/",
