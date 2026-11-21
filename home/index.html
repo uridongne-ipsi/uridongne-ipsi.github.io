@@ -47,6 +47,9 @@
 .an-open{color:var(--accent);font-size:.86rem;font-weight:600;text-decoration:none;white-space:nowrap}
 .an-frame{display:block;width:100%;height:calc(100vh - 150px);min-height:640px;border:1px solid var(--line);border-radius:16px;background:#fff}
 
+/* ===== 안내 화면 사진: 넓은 화면에서 너무 커지지 않게(누르면 크게 보기는 그대로) ===== */
+@media (min-width:700px){.sub-screen .shot{max-width:400px;width:100%;margin-inline:auto}}
+
 /* ===== 유료 서비스 모음 화면 ===== */
 .pd-title{font-family:var(--f-title);font-size:1.35rem;color:var(--navy);margin:8px 0 4px}
 .pd-desc{color:var(--muted);margin:0 0 14px;font-size:.9rem}
@@ -85,7 +88,7 @@
 <header class="site-h" id="site-h">
  <div class="site-h-in">
   <a class="site-brand" href="#" aria-label="우리동네 입시연구소 홈"><svg class="mark" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg><span>우리동네 입시연구소</span></a>
-  <nav class="site-nav" id="site-nav" aria-label="메뉴"><a class="sn-i" href="#calc" data-sn="calc diag">내신 계산</a><a class="sn-i" href="#imosu" data-sn="imosu">이모수</a><a class="sn-i" href="#analyzer" data-sn="analyzer">정시 분석기</a><a class="sn-i" href="#info" data-sn="info terms">입시 정보</a><a class="sn-i" href="#math" data-sn="math">이번 주 수학</a><a class="sn-i" href="#jaryo" data-sn="jaryo">자료함</a><a class="sn-i" href="#paid" data-sn="paid shop ck jeongsi jsga jsbon jsapply mg season">유료 서비스</a><a class="sn-i" href="#ask" data-sn="ask">물어보기</a></nav>
+  <nav class="site-nav" id="site-nav" aria-label="메뉴"><a class="sn-i" href="#calc" data-sn="calc diag">내신 계산</a><a class="sn-i" href="#imosu" data-sn="imosu">이모수</a><a class="sn-i" href="#analyzer" data-sn="analyzer">정시분석기</a><a class="sn-i" href="#info" data-sn="info terms">입시 정보</a><a class="sn-i" href="#math" data-sn="math">이번 주 수학</a><a class="sn-i" href="#jaryo" data-sn="jaryo">자료함</a><a class="sn-i" href="#paid" data-sn="paid shop ck jeongsi jsga jsbon jsapply mg season">유료 서비스</a><a class="sn-i" href="#ask" data-sn="ask">물어보기</a></nav>
   <div class="site-tools" id="site-tools">
    <a class="site-app" href="https://uridongne-ipsi.co.kr/app/?utm_source=site" target="_blank" rel="noopener">앱 받기</a>
    <button class="theme-toggle" type="button" data-theme-toggle aria-label="어두운 화면으로 바꾸기"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.3M12 19.2v2.3M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button>
@@ -93,7 +96,7 @@
   </div>
  </div>
  <nav class="site-drawer" id="site-drawer" hidden aria-label="전체 메뉴">
-  <a class="sn-i" href="#" data-sn="">홈</a><a class="sn-i" href="#calc" data-sn="calc diag">내신 계산</a><a class="sn-i" href="#imosu" data-sn="imosu">이모수</a><a class="sn-i" href="#analyzer" data-sn="analyzer">정시 분석기</a><a class="sn-i" href="#info" data-sn="info terms">입시 정보</a><a class="sn-i" href="#math" data-sn="math">이번 주 수학</a><a class="sn-i" href="#jaryo" data-sn="jaryo">자료함</a><a class="sn-i" href="#paid" data-sn="paid shop ck jeongsi jsga jsbon jsapply mg season">유료 서비스</a><a class="sn-i" href="#ask" data-sn="ask">물어보기</a><a class="sn-i" href="#about" data-sn="about">운영자 소개</a>
+  <a class="sn-i" href="#" data-sn="">홈</a><a class="sn-i" href="#calc" data-sn="calc diag">내신 계산</a><a class="sn-i" href="#imosu" data-sn="imosu">이모수</a><a class="sn-i" href="#analyzer" data-sn="analyzer">정시분석기</a><a class="sn-i" href="#info" data-sn="info terms">입시 정보</a><a class="sn-i" href="#math" data-sn="math">이번 주 수학</a><a class="sn-i" href="#jaryo" data-sn="jaryo">자료함</a><a class="sn-i" href="#paid" data-sn="paid shop ck jeongsi jsga jsbon jsapply mg season">유료 서비스</a><a class="sn-i" href="#ask" data-sn="ask">물어보기</a><a class="sn-i" href="#about" data-sn="about">운영자 소개</a>
   <div class="sd-ext"><a href="https://uridongne-ipsi.co.kr/app/?utm_source=site" target="_blank" rel="noopener">앱 받기 ↗</a><a href="https://blog.naver.com/kwon_th" target="_blank" rel="noopener">블로그 ↗</a><a href="https://www.youtube.com/@uridongne_ipsi" target="_blank" rel="noopener">유튜브 ↗</a></div>
  </nav>
 </header>
@@ -1123,11 +1126,10 @@ window.imRun=run;window.imAddFlow=addFlow;
 
 <div class="wrap sub-screen site-wide" id="analyzer-screen" hidden>
  <div class="an-head">
-  <h1>우리동네 정시 분석기</h1>
+  <h1>정시분석기</h1>
   <p>수능 성적을 넣으면 대학별 환산점수와 작년 입결을 함께 견주어 봅니다.</p>
-  <a class="an-open" href="https://uridongne-jeongsi.pages.dev/" target="_blank" rel="noopener">새 창으로 크게 열기 ↗</a>
  </div>
- <iframe class="an-frame" id="an-frame" title="우리동네 정시 분석기" data-src="https://uridongne-jeongsi.pages.dev/" loading="lazy"></iframe>
+ <iframe class="an-frame" id="an-frame" title="정시분석기" data-src="https://uridongne-jeongsi.pages.dev/" loading="lazy"></iframe>
 </div>
 <div class="wrap sub-screen" id="paid-screen" hidden>
  <h1 class="pd-title">유료 서비스</h1>
@@ -2177,13 +2179,13 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   // 학년 버튼을 위쪽 메뉴로 옮김(기능은 그대로)
   const gb=$("grade-btn"),tools=$("site-tools");
   if(gb&&tools)tools.insertBefore(gb,tools.querySelector(".site-app"));
-  // 안쪽 화면의 「← 처음 화면」·밝기 버튼은 위쪽 메뉴(로고·밝기)와 겹치므로 숨김. 「← 계산기로」처럼 한 단계 위로 가는 버튼은 둠
-  document.querySelectorAll(".calculator-home").forEach(b=>{if(b.textContent.trim()==="← 처음 화면")b.hidden=true;});
+  // 안쪽 화면의 밝기 버튼은 위쪽 메뉴와 겹치므로 숨김. 「← 처음 화면」은 「← 홈으로」로 이름만 바꿔 둠
+  document.querySelectorAll(".calculator-home").forEach(b=>{if(b.textContent.trim()==="← 처음 화면")b.textContent="← 홈으로";});
   document.querySelectorAll("[data-theme-toggle]").forEach(b=>{if(!b.closest("#site-h"))b.hidden=true;});
   document.querySelectorAll(".calculator-topbar").forEach(t=>{if([...t.children].every(c=>c.hidden))t.hidden=true;});
   // 첫 화면 큰 칸(PC) 넣기
   const inner=document.querySelector("#home-screen .home-inner");
-  const tmp=document.createElement("div");tmp.innerHTML="<div class=\"site-hero\" id=\"site-hero\">\n <div class=\"hero-copy\"><h1>성적은 계산하고,<br>궁금한 건 물어보세요</h1><p>입시 수학 18년, 고등부터 N수까지.<br>필요한 도구와 자료를 한곳에 모았습니다.</p></div>\n <button class=\"hero-card\" type=\"button\" data-go=\"calc\"><small>내신</small><b>내신 계산하고<br>한 줄 진단 받기</b><span>누적 평균과 목표 등급</span></button>\n <button class=\"hero-card\" type=\"button\" data-go=\"imosu\"><small>모의고사</small><b>이 모의고사가<br>수능이었다면</b><span>작년 수능 기준 대학 라인</span></button>\n <button class=\"hero-card main\" type=\"button\" data-go=\"analyzer\"><small>정시</small><b>우리동네<br>정시 분석기</b><span>대학별 환산점수와 작년 입결</span></button>\n</div>";
+  const tmp=document.createElement("div");tmp.innerHTML="<div class=\"site-hero\" id=\"site-hero\">\n <div class=\"hero-copy\"><h1>성적은 계산하고,<br>궁금한 건 물어보세요</h1><p>입시 수학 18년, 고등부터 N수까지.<br>필요한 도구와 자료를 한곳에 모았습니다.</p></div>\n <button class=\"hero-card\" type=\"button\" data-go=\"calc\"><small>내신</small><b>내신 계산하고<br>한 줄 진단 받기</b><span>누적 평균과 목표 등급</span></button>\n <button class=\"hero-card\" type=\"button\" data-go=\"imosu\"><small>모의고사</small><b>이 모의고사가<br>수능이었다면</b><span>작년 수능 기준 대학 라인</span></button>\n <button class=\"hero-card main\" type=\"button\" data-go=\"analyzer\"><small>정시</small><b>정시분석기</b><span>대학별 환산점수와 작년 입결</span></button>\n</div>";
   const hero=tmp.firstElementChild;
   inner.insertBefore(hero,inner.querySelector(".me-row"));
   // 유료 서비스 모음 화면: 첫 화면의 유료 서비스 칸을 그대로 복사(누르면 같은 안내 화면)
@@ -2217,6 +2219,10 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
     drawer.hidden=true;mb.setAttribute("aria-expanded","false");
   }
   window.addEventListener("hashchange",mark);
+  // 블로그·카톡·유튜브·PDF처럼 홈페이지 밖으로 나가는 링크는 새 창(탭)으로 열어 홈페이지가 남아 있게 함
+  document.addEventListener("click",e=>{const a=e.target.closest("a[href]");if(!a)return;const h=a.getAttribute("href")||"";if(!/^https?:/.test(h))return;
+    try{const u=new URL(h);if(u.host===location.host&&u.pathname===location.pathname)return;}catch(_){return;}
+    a.target="_blank";a.rel="noopener";},true);
   mb.addEventListener("click",()=>{drawer.hidden=!drawer.hidden;mb.setAttribute("aria-expanded",String(!drawer.hidden));});
   document.querySelector(".site-brand").addEventListener("click",e=>{e.preventDefault();if(location.hash){location.hash="";}else{window.scrollTo(0,0);}});
   document.querySelectorAll('.site-drawer .sn-i[data-sn=""]').forEach(a=>a.addEventListener("click",e=>{e.preventDefault();location.hash="";mark();}));
