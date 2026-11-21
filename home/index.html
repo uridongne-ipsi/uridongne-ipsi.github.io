@@ -14,8 +14,6 @@
 .sn-i{padding:8px 11px;border-radius:999px;color:var(--ink);text-decoration:none;font-size:.92rem;white-space:nowrap}
 .sn-i:hover{background:var(--sunk)}
 .sn-i.on{background:var(--navy);color:var(--navy-ink);font-weight:600}
-.site-nav .sn-i[href="#analyzer"]{color:var(--accent);font-weight:700}
-.site-nav .sn-i[href="#analyzer"].on{background:var(--accent);color:var(--accent-ink)}
 .site-tools{display:flex;align-items:center;gap:8px;flex:none}
 .site-tools .grade-btn{height:38px}
 .site-app{padding:8px 13px;border:1.5px solid var(--accent);border-radius:999px;color:var(--accent);text-decoration:none;font-size:.86rem;font-weight:600;white-space:nowrap}
@@ -70,9 +68,6 @@
   .hero-card small{color:var(--accent);font-weight:700;font-size:.78rem;letter-spacing:.02em}
   .hero-card b{font-family:var(--f-title);font-size:1.22rem;line-height:1.35;color:var(--navy)}
   .hero-card span{color:var(--muted);font-size:.86rem;line-height:1.5;margin-top:auto}
-  .hero-card.main{background:var(--navy);border-color:var(--navy)}
-  .hero-card.main b,.hero-card.main span{color:var(--navy-ink)}
-  .hero-card.main small{color:#F0B48E}
   #home-screen .home-duo{display:none}
   .site-cols{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);grid-template-areas:"wkh ." "wk me" "info side";column-gap:18px;row-gap:12px;align-items:start;margin-top:6px}
   .site-cols>#wk-duo,.site-cols>.me-row,.site-cols>.hinfo,.site-cols>.site-col{align-self:stretch}
@@ -2188,7 +2183,7 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   document.querySelectorAll(".calculator-topbar").forEach(t=>{if([...t.children].every(c=>c.hidden))t.hidden=true;});
   // 첫 화면 큰 칸(PC) 넣기
   const inner=document.querySelector("#home-screen .home-inner");
-  const tmp=document.createElement("div");tmp.innerHTML="<div class=\"site-hero\" id=\"site-hero\">\n <div class=\"hero-copy\"><h1>성적은 계산하고,<br>궁금한 건 물어보세요</h1><p>입시 수학 18년, 고등부터 N수까지.<br>필요한 도구와 자료를 한곳에 모았습니다.</p></div>\n <button class=\"hero-card\" type=\"button\" data-go=\"calc\"><small>내신</small><b>내신 계산하고<br>한 줄 진단 받기</b><span>누적 평균과 목표 등급</span></button>\n <button class=\"hero-card\" type=\"button\" data-go=\"imosu\"><small>모의고사</small><b>이 모의고사가<br>수능이었다면</b><span>작년 수능 기준 대학 라인</span></button>\n <button class=\"hero-card main\" type=\"button\" data-go=\"analyzer\"><small>정시</small><b>정시분석기</b><span>대학별 환산점수와 작년 입결</span></button>\n</div>";
+  const tmp=document.createElement("div");tmp.innerHTML="<div class=\"site-hero\" id=\"site-hero\">\n <div class=\"hero-copy\"><h1>성적은 계산하고,<br>궁금한 건 물어보세요</h1><p>입시 수학 18년, 고등부터 N수까지.<br>필요한 도구와 자료를 한곳에 모았습니다.</p></div>\n <button class=\"hero-card\" type=\"button\" data-go=\"calc\"><small>내신</small><b>내신 계산하고<br>한 줄 진단 받기</b><span>누적 평균과 목표 등급</span></button>\n <button class=\"hero-card\" type=\"button\" data-go=\"imosu\"><small>모의고사</small><b>이 모의고사가<br>수능이었다면</b><span>작년 수능 기준 대학 라인</span></button>\n <button class=\"hero-card\" type=\"button\" data-go=\"analyzer\"><small>정시</small><b>정시분석기</b><span>대학별 환산점수와 작년 입결</span></button>\n</div>";
   const hero=tmp.firstElementChild;
   inner.insertBefore(hero,inner.querySelector(".me-row"));
   // 유료 서비스 모음 화면: 첫 화면의 유료 서비스 칸을 그대로 복사(누르면 같은 안내 화면)
