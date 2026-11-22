@@ -54,16 +54,20 @@
 .pd-desc{color:var(--muted);margin:0 0 14px;font-size:.9rem}
 #paid-slot .paid>h2,#paid-slot .paid>.paid-h{display:none}
 
+/* ===== 휴대폰: 첫 화면 정시분석기 칸(2026-11-22, PC는 큰 칸이 있어 숨김) ===== */
+a.m-an{text-decoration:none;border-color:var(--line);margin:0;box-sizing:border-box}
 /* ===== PC 넓은 화면: 첫 화면을 두 칸으로 ===== */
 .site-hero{display:none}
 @media (min-width:1080px){
   body{font-size:15px}
   #home-screen .home-inner{width:min(100%,1140px)}
+  a.m-an{display:none}
   .site-hero{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:14px;margin:14px 0 6px}
   .hero-copy{display:flex;flex-direction:column;justify-content:center;padding:6px 10px 6px 2px}
   .hero-copy h1{margin:0 0 8px;font-family:var(--f-title);font-size:1.75rem;line-height:1.35;color:var(--navy)}
   .hero-copy p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.6}
   .hero-card{display:flex;flex-direction:column;gap:8px;text-align:left;padding:20px 20px 18px;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;min-height:150px;transition:transform .15s,border-color .15s}
+  a.hero-card{text-decoration:none}
   .hero-card:hover{transform:translateY(-2px);border-color:var(--accent)}
   .hero-card small{color:var(--accent);font-weight:700;font-size:.78rem;letter-spacing:.02em}
   .hero-card b{font-family:var(--f-title);font-size:1.22rem;line-height:1.35;color:var(--navy)}
@@ -84,7 +88,7 @@
 <header class="site-h" id="site-h">
  <div class="site-h-in">
   <a class="site-brand" href="#" aria-label="우리동네 입시연구소 홈"><svg class="mark" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg><span>우리동네 입시연구소</span></a>
-  <nav class="site-nav" id="site-nav" aria-label="메뉴"><a class="sn-i" href="#calc" data-sn="calc diag">내신 계산</a><a class="sn-i" href="#imosu" data-sn="imosu">이모수</a><a class="sn-i" href="#analyzer" data-sn="analyzer">정시분석기</a><a class="sn-i" href="#info" data-sn="info terms">입시 정보</a><a class="sn-i" href="#math" data-sn="math">이번 주 수학</a><a class="sn-i" href="#jaryo" data-sn="jaryo">자료함</a><a class="sn-i" href="#paid" data-sn="paid shop ck jeongsi jsga jsbon jsapply mg season">유료 서비스</a><a class="sn-i" href="#ask" data-sn="ask">물어보기</a></nav>
+  <nav class="site-nav" id="site-nav" aria-label="메뉴"><a class="sn-i" href="#calc" data-sn="calc diag">내신 계산</a><a class="sn-i" href="#imosu" data-sn="imosu">이모수</a><a class="sn-i an-link" href="https://uridongne-jeongsi.pages.dev/" data-sn="analyzer">정시분석기</a><a class="sn-i" href="#info" data-sn="info terms">입시 정보</a><a class="sn-i" href="#math" data-sn="math">이번 주 수학</a><a class="sn-i" href="#jaryo" data-sn="jaryo">자료함</a><a class="sn-i" href="#paid" data-sn="paid shop ck jeongsi jsga jsbon jsapply mg season">유료 서비스</a><a class="sn-i" href="#ask" data-sn="ask">물어보기</a></nav>
   <div class="site-tools" id="site-tools">
    <a class="site-app" href="https://uridongne-ipsi.co.kr/app/?utm_source=site" target="_blank" rel="noopener">앱 받기</a>
    <button class="theme-toggle" type="button" data-theme-toggle aria-label="어두운 화면으로 바꾸기"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.3M12 19.2v2.3M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button>
@@ -92,7 +96,7 @@
   </div>
  </div>
  <nav class="site-drawer" id="site-drawer" hidden aria-label="전체 메뉴">
-  <a class="sn-i" href="#" data-sn="">홈</a><a class="sn-i" href="#calc" data-sn="calc diag">내신 계산</a><a class="sn-i" href="#imosu" data-sn="imosu">이모수</a><a class="sn-i" href="#analyzer" data-sn="analyzer">정시분석기</a><a class="sn-i" href="#info" data-sn="info terms">입시 정보</a><a class="sn-i" href="#math" data-sn="math">이번 주 수학</a><a class="sn-i" href="#jaryo" data-sn="jaryo">자료함</a><a class="sn-i" href="#paid" data-sn="paid shop ck jeongsi jsga jsbon jsapply mg season">유료 서비스</a><a class="sn-i" href="#ask" data-sn="ask">물어보기</a><a class="sn-i" href="#about" data-sn="about">운영자 소개</a>
+  <a class="sn-i" href="#" data-sn="">홈</a><a class="sn-i" href="#calc" data-sn="calc diag">내신 계산</a><a class="sn-i" href="#imosu" data-sn="imosu">이모수</a><a class="sn-i an-link" href="https://uridongne-jeongsi.pages.dev/" data-sn="analyzer">정시분석기</a><a class="sn-i" href="#info" data-sn="info terms">입시 정보</a><a class="sn-i" href="#math" data-sn="math">이번 주 수학</a><a class="sn-i" href="#jaryo" data-sn="jaryo">자료함</a><a class="sn-i" href="#paid" data-sn="paid shop ck jeongsi jsga jsbon jsapply mg season">유료 서비스</a><a class="sn-i" href="#ask" data-sn="ask">물어보기</a><a class="sn-i" href="#about" data-sn="about">운영자 소개</a>
   <div class="sd-ext"><a href="https://uridongne-ipsi.co.kr/app/?utm_source=site" target="_blank" rel="noopener">앱 받기 ↗</a><a href="https://blog.naver.com/kwon_th" target="_blank" rel="noopener">블로그 ↗</a><a href="https://www.youtube.com/@uridongne_ipsi" target="_blank" rel="noopener">유튜브 ↗</a></div>
  </nav>
 </header>
@@ -2183,9 +2187,13 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   document.querySelectorAll(".calculator-topbar").forEach(t=>{if([...t.children].every(c=>c.hidden))t.hidden=true;});
   // 첫 화면 큰 칸(PC) 넣기
   const inner=document.querySelector("#home-screen .home-inner");
-  const tmp=document.createElement("div");tmp.innerHTML="<div class=\"site-hero\" id=\"site-hero\">\n <div class=\"hero-copy\"><h1>성적은 계산하고,<br>궁금한 건 물어보세요</h1><p>입시 수학 18년, 고등부터 N수까지.<br>필요한 도구와 자료를 한곳에 모았습니다.</p></div>\n <button class=\"hero-card\" type=\"button\" data-go=\"calc\"><small>내신</small><b>내신 계산하고<br>한 줄 진단 받기</b><span>누적 평균과 목표 등급</span></button>\n <button class=\"hero-card\" type=\"button\" data-go=\"imosu\"><small>모의고사</small><b>이 모의고사가<br>수능이었다면</b><span>작년 수능 기준 대학 라인</span></button>\n <button class=\"hero-card\" type=\"button\" data-go=\"analyzer\"><small>정시</small><b>정시분석기</b><span>대학별 환산점수와 작년 입결</span></button>\n</div>";
+  const tmp=document.createElement("div");tmp.innerHTML="<div class=\"site-hero\" id=\"site-hero\">\n <div class=\"hero-copy\"><h1>성적은 계산하고,<br>궁금한 건 물어보세요</h1><p>입시 수학 18년, 고등부터 N수까지.<br>필요한 도구와 자료를 한곳에 모았습니다.</p></div>\n <button class=\"hero-card\" type=\"button\" data-go=\"calc\"><small>내신</small><b>내신 계산하고<br>한 줄 진단 받기</b><span>누적 평균과 목표 등급</span></button>\n <button class=\"hero-card\" type=\"button\" data-go=\"imosu\"><small>모의고사</small><b>이 모의고사가<br>수능이었다면</b><span>작년 수능 기준 대학 라인</span></button>\n <a class=\"hero-card an-link\" href=\"https://uridongne-jeongsi.pages.dev/\"><small>정시</small><b>정시분석기</b><span>대학별 환산점수와 작년 입결</span></a>\n</div>";
   const hero=tmp.firstElementChild;
   inner.insertBefore(hero,inner.querySelector(".me-row"));
+  // 휴대폰용 정시분석기 칸: 앱 안내와 「나의 정보」 사이
+  const man=document.createElement("a");man.className="season-card an-link m-an";man.href="https://uridongne-jeongsi.pages.dev/";
+  man.innerHTML='<span class="season-copy"><em>정시</em><b>정시분석기</b><small>대학별 환산점수와 작년 입결</small></span><span class="home-feature-arrow" aria-hidden="true">›</span>';
+  inner.insertBefore(man,inner.querySelector(".me-row"));
   // 유료 서비스 모음 화면: 첫 화면의 유료 서비스 칸을 그대로 복사(누르면 같은 안내 화면)
   const paid=inner.querySelector(".paid");
   if(paid)$("paid-slot").appendChild(paid.cloneNode(true));
@@ -2213,7 +2221,7 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   function mark(){
     const k=location.hash.replace(/^#/,"");
     document.querySelectorAll(".sn-i").forEach(a=>{const g=(a.dataset.sn||"").split(" ");a.classList.toggle("on",k===""?a.dataset.sn==="":g.includes(k));});
-    if(k==="analyzer"){location.replace(AN_URL+"?theme="+eff());return;}  // 2026-11-22: 상자(iframe) 대신 분석기를 그 페이지로 바로 엶(사용자 결정)
+    if(k==="analyzer"){location.replace(AN_URL+"?theme="+eff());return;}  // 예전 주소(#analyzer)로 들어온 경우만. 메뉴·큰 칸은 실제 링크(.an-link)
     drawer.hidden=true;mb.setAttribute("aria-expanded","false");
   }
   window.addEventListener("hashchange",mark);
@@ -2221,6 +2229,10 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   // 2026-11-22: 정시분석기 화면을 홈페이지와 한 몸처럼 — 홈페이지 밝기를 분석기에도 알림
   function eff(){const t=document.documentElement.dataset.theme;return t==="dark"||t==="light"?t:(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");}
   function tell(){const f=$("an-frame");if(f&&f.src&&f.contentWindow)f.contentWindow.postMessage({type:"ud-theme",theme:eff()},"*");}
+  // 실제 링크에 지금 밝기를 붙여 둠(분석기가 같은 밝기로 열리게)
+  function anHref(){document.querySelectorAll("a.an-link").forEach(a=>{a.href=AN_URL+"?theme="+eff();});}
+  anHref();new MutationObserver(anHref).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change",anHref);
   new MutationObserver(tell).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change",tell);
   $("an-frame").addEventListener("load",tell);
@@ -2229,15 +2241,15 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   let lastPv=location.hash;
   window.addEventListener("hashchange",()=>{if(location.hash===lastPv)return;lastPv=location.hash;const k=location.hash.slice(1);
     gtag("event","page_view",{page_location:location.href,page_title:"우리동네 입시연구소 - "+(NM[k]||k||"홈")});});
-  document.addEventListener("click",e=>{const a=e.target.closest(".sn-i,[data-go],.site-app");if(!a)return;
-    const where=a.closest("#site-nav")?"top_menu":a.closest("#site-drawer")?"drawer":a.closest("#site-hero")?"hero":"page";
-    gtag("event","site_click",{where:where,target:(a.dataset.go||a.getAttribute("href")||a.textContent||"").trim().slice(0,40)});},true);
+  document.addEventListener("click",e=>{const a=e.target.closest(".sn-i,[data-go],.site-app,.an-link");if(!a)return;
+    const where=a.closest("#site-nav")?"top_menu":a.closest("#site-drawer")?"drawer":a.closest("#site-hero")?"hero":a.classList.contains("m-an")?"home_mobile":"page";
+    gtag("event","site_click",{where:where,target:(a.classList.contains("an-link")?"analyzer":(a.dataset.go||a.getAttribute("href")||a.textContent||"")).trim().slice(0,40)});},true);
   window.addEventListener("message",e=>{if(!/^https:\/\/([a-z0-9-]+\.)?uridongne-jeongsi\.pages\.dev$/.test(e.origin))return;const d=e.data||{};
     if(d.type!=="ud-ev"||!/^js_[a-z_]{2,30}$/.test(d.name||""))return;const p=d.params||{},q={place:"site"};
     if(typeof p.univ==="string")q.univ=p.univ.slice(0,30);if(typeof p.tab==="string")q.tab=p.tab.slice(0,20);gtag("event",d.name,q);});
   document.querySelectorAll(".site-home-btn").forEach(b=>b.addEventListener("click",()=>{location.hash="";}));
   // 블로그·카톡·유튜브·PDF처럼 홈페이지 밖으로 나가는 링크는 새 창(탭)으로 열어 홈페이지가 남아 있게 함
-  document.addEventListener("click",e=>{const a=e.target.closest("a[href]");if(!a)return;const h=a.getAttribute("href")||"";if(!/^https?:/.test(h))return;
+  document.addEventListener("click",e=>{const a=e.target.closest("a[href]");if(!a)return;const h=a.getAttribute("href")||"";if(!/^https?:/.test(h)||a.classList.contains("an-link"))return;
     try{const u=new URL(h);if(u.host===location.host&&u.pathname===location.pathname)return;}catch(_){return;}
     a.target="_blank";a.rel="noopener";},true);
   mb.addEventListener("click",()=>{drawer.hidden=!drawer.hidden;mb.setAttribute("aria-expanded",String(!drawer.hidden));});
