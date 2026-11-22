@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uridongne-ipsi.co.kr/sitemap.xml
