@@ -2213,10 +2213,11 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   function mark(){
     const k=location.hash.replace(/^#/,"");
     document.querySelectorAll(".sn-i").forEach(a=>{const g=(a.dataset.sn||"").split(" ");a.classList.toggle("on",k===""?a.dataset.sn==="":g.includes(k));});
-    if(k==="analyzer"){const f=$("an-frame");if(f&&!f.src)f.src=f.dataset.src+"?theme="+eff();}
+    if(k==="analyzer"){location.replace(AN_URL+"?theme="+eff());return;}  // 2026-11-22: 상자(iframe) 대신 분석기를 그 페이지로 바로 엶(사용자 결정)
     drawer.hidden=true;mb.setAttribute("aria-expanded","false");
   }
   window.addEventListener("hashchange",mark);
+  const AN_URL="https://uridongne-jeongsi.pages.dev/";
   // 2026-11-22: 정시분석기 화면을 홈페이지와 한 몸처럼 — 홈페이지 밝기를 분석기에도 알림
   function eff(){const t=document.documentElement.dataset.theme;return t==="dark"||t==="light"?t:(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");}
   function tell(){const f=$("an-frame");if(f&&f.src&&f.contentWindow)f.contentWindow.postMessage({type:"ud-theme",theme:eff()},"*");}
