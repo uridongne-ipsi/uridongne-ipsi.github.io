@@ -2257,6 +2257,8 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   document.querySelectorAll('.site-drawer .sn-i[data-sn=""]').forEach(a=>a.addEventListener("click",e=>{e.preventDefault();location.hash="";mark();}));
   mark();
   if(location.hash&&typeof showScreen==="function")showScreen();
+  // 2026-11-23: 화면 코드는 웹앱 모듈 안에 있어 여기서 showScreen을 못 부름 → 로딩이 끝나면 hashchange를 한 번 보내 #shop 같은 주소로 바로 열리게 함
+  window.addEventListener("load",()=>{if(location.hash.length>1)window.dispatchEvent(new HashChangeEvent("hashchange"));});
 })();
 </script>
 </body></html>
