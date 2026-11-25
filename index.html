@@ -83,6 +83,73 @@ a.m-an{text-decoration:none;border-color:var(--line);margin:0;box-sizing:border-
   #home-screen .paid .paid-grid,#paid-slot .paid-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
   .sub-screen.wrap,#calculator-screen.wrap{max-width:880px}
 }
+
+/* ===== 2026-11-25 첫 화면(현관) 개편: 학년 선택·플래너 숨김, 새 첫 화면 ===== */
+#grade-btn,#grade-ov,[data-go="plan"]{display:none!important}
+#home-screen .home-inner>*:not(.pwa-bar):not(.ud):not(.hfoot){display:none!important}
+.ud{display:flex;flex-direction:column;gap:18px;padding-top:10px;word-break:keep-all}
+.ud a{color:inherit;text-decoration:none}
+.ud button{font:inherit;color:inherit;text-align:left;cursor:pointer}
+.ud .k{color:var(--accent);font-weight:700;font-size:.82rem}
+.ud h1{font-family:var(--f-title);font-size:1.5rem;line-height:1.35;margin:6px 0 8px;color:var(--navy)}
+.ud .face p{margin:0;color:var(--muted);line-height:1.6}
+.ud .proof{display:flex;gap:8px;margin-top:12px}
+.ud .proof div{flex:1;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:9px 10px}
+.ud .proof b{display:block;font-size:.88rem;color:var(--ink)}.ud .proof span{font-size:.75rem;color:var(--muted)}
+.ud .who{display:inline-block;margin-top:10px;font-size:.85rem;color:var(--accent);font-weight:700;background:none;border:0;padding:0}
+.ud .now-h{font-size:.85rem;font-weight:700;color:var(--muted);margin:0 0 -8px}
+.ud .now{display:flex;flex-direction:column;gap:12px}
+.ud .an{background:#16233F;color:#fff;border-radius:18px;padding:18px;display:flex;flex-direction:column}
+.ud .tag{align-self:flex-start;display:inline-block;font-size:.75rem;font-weight:700;border-radius:999px;padding:3px 10px;background:#A84D1F;color:#fff}
+.ud .an h2{font-family:var(--f-title);font-size:1.3rem;margin:9px 0 6px;line-height:1.35;color:#fff}
+.ud .an p{margin:0 0 12px;font-size:.88rem;color:rgba(255,255,255,.88);line-height:1.6}
+.ud .kans{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.ud .kans span{font-size:.78rem;font-weight:700;border-radius:999px;padding:4px 11px;color:#fff;background:#8A6A12}
+.ud .kans .k1{background:#2C6E5A}.ud .kans .k5{background:#9B2C2C}
+.ud .big{display:block;text-align:center;background:#fff;color:#16233F!important;font-weight:700;border-radius:12px;padding:12px;font-size:.97rem}
+.ud .an .lk{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:.82rem}
+.ud .an .lk a,.ud .an .lk button{color:rgba(255,255,255,.85);background:none;border:0;padding:0}
+.ud .ns{background:var(--surface);border:1.5px solid var(--accent);border-radius:18px;padding:16px}
+.ud .ns .tag{background:var(--accent-soft);color:var(--accent)}
+.ud .ns h2{font-family:var(--f-title);font-size:1.18rem;margin:9px 0 8px;line-height:1.4;color:var(--navy)}
+.ud .row{display:flex;width:100%;justify-content:space-between;align-items:center;gap:10px;border:0;border-top:1px solid var(--line);background:none;padding:10px 2px;font-size:.88rem}
+.ud .row b{display:block;color:var(--ink)}.ud .row small{color:var(--muted);font-size:.78rem}.ud .row i{font-style:normal;color:var(--accent);font-weight:700}
+.ud .foot{display:block;margin-top:6px;font-size:.82rem;color:var(--accent);font-weight:700;background:none;border:0;padding:0}
+.ud .sec-h{display:flex;align-items:baseline;gap:10px;margin:4px 0 -6px}
+.ud .sec-h b{font-size:1.06rem;color:var(--ink)}.ud .sec-h span{font-size:.8rem;color:var(--muted)}
+.ud .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ud .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:13px}
+.ud .card b{display:block;font-size:.94rem;color:var(--ink)}.ud .card small{color:var(--muted);font-size:.78rem}
+.ud .card em{display:block;font-style:normal;font-size:.72rem;color:var(--accent);margin-top:5px}
+.ud .lst{display:flex;flex-direction:column;gap:8px}
+.ud .line{display:flex;width:100%;justify-content:space-between;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:.88rem;color:var(--ink)}
+.ud .line small{display:block;color:var(--muted);font-size:.78rem}
+.ud .small{font-size:.78rem;color:var(--muted);margin:2px 2px 0}
+.ud .b2b{font-size:.8rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;margin:0}
+.ud .b2b button{color:var(--accent);font-weight:700;background:none;border:0;padding:0}
+.ud .two,.ud .three{display:flex;flex-direction:column;gap:18px}.ud .three{gap:8px}
+@media (min-width:1080px){
+ .ud .face{display:grid;grid-template-columns:7fr 5fr;gap:28px;align-items:center}
+ .ud h1{font-size:2.1rem}.ud .proof{flex-direction:column;margin:0}.ud .proof div{padding:12px 14px}.ud .proof b{font-size:1.05rem}
+ .ud .now{display:grid;grid-template-columns:7fr 5fr;align-items:stretch}
+ .ud .now.solo{grid-template-columns:1fr}
+ .ud .an{padding:28px 30px;justify-content:center}.ud .an h2{font-size:1.95rem;margin:14px 0 10px}.ud .an p{font-size:.97rem;margin-bottom:18px}
+ .ud .kans{margin-bottom:20px}.ud .kans span{font-size:.84rem;padding:5px 13px}.ud .big{padding:15px;font-size:1.03rem}
+ .ud .grid{grid-template-columns:repeat(4,1fr)}
+ .ud .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+ .ud .three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+}
+/* 학원·제휴 문의 화면 */
+.pt-box{background:var(--surface);border:1.5px solid var(--accent);border-radius:18px;padding:18px;margin-top:8px}
+.pt-box .pt-tag{display:inline-block;font-size:.75rem;font-weight:700;border-radius:999px;padding:3px 10px;background:var(--accent-soft);color:var(--accent);margin-bottom:8px}
+.pt-box h2{font-family:var(--f-title);font-size:1.25rem;margin:0 0 6px;color:var(--navy)}
+.pt-box p{margin:0 0 12px;font-size:.9rem;color:var(--muted)}
+.pt-tpl{background:var(--sunk);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:.88rem;line-height:1.8;white-space:pre-line;color:var(--ink)}
+.pt-btns{display:flex;gap:8px;margin-top:12px}
+.pt-btns>*{flex:1;text-align:center;border-radius:12px;padding:12px;font-weight:700;font-size:.95rem;font-family:inherit;cursor:pointer;text-decoration:none}
+.pt-copy{background:none;border:1.5px solid var(--accent);color:var(--accent)}
+[data-theme="dark"] .ud .an{border:1px solid var(--line)}
+.pt-open{background:var(--navy);color:var(--bg)!important;border:0}
 </style>
 </head><body>
 <header class="site-h" id="site-h">
@@ -629,6 +696,65 @@ try{
 <main class="home-screen" id="home-screen">
   <div class="home-inner">
     <div class="pwa-bar" id="pwa-bar" hidden></div>
+<div class="ud" id="ud-home">
+ <section class="face">
+  <div>
+   <small class="k">입시 수학 18년 · 수학·수리논술 강사가 만들고 직접 답합니다</small>
+   <h1>점수가 아니라,<br>붙을 가능성으로 보여 드립니다</h1>
+   <p>여러 해 입결과 흐름, 모집 인원 변화까지 따져 학과마다 안정·경합·부족으로 나누고, 왜 그 칸인지 근거를 함께 보여 드립니다. 재수학원 부원장·기숙학원 원장으로 학생들 원서를 함께 써 온 판단 기준을 그대로 담았습니다.</p>
+  </div>
+  <div>
+   <div class="proof"><div><b>여러 해 입결</b><span>2022~2026 흐름까지</span></div><div><b>학과마다 칸 + 판단 근거</b><span>안정부터 부족까지, 왜 그 칸인지</span></div><div><b>지난 네 해로 점검한 기준</b><span>실제 합격선에 대 보고 맞춤</span></div></div>
+   <button class="who" type="button" data-go="about">만드는 사람 보기 ›</button>
+  </div>
+ </section>
+ <p class="now-h">지금 — 수능 뒤부터 정시 원서 마감(1월 7일)까지</p>
+ <section class="now" id="ud-now">
+  <div class="an">
+   <span class="tag">정시 · 12월 10일까지 무료 범위가 넓습니다</span>
+   <h2>내 수능 점수로 어디가 될지 보기</h2>
+   <p>가채점 점수를 넣으면 대학별 환산점수와 학과마다 안정·경합·부족 같은 다섯 단계가 무료로 나옵니다. 작년 합격선 점수와 차이, 여러 해 흐름까지 보려면 유료 이용권.</p>
+   <div class="kans" aria-hidden="true"><span class="k1">안정</span><span>여유</span><span>경합</span><span class="k5">아슬아슬</span><span class="k5">부족</span></div>
+   <a class="big an-link" href="https://uridongne-jeongsi.pages.dev/">무료로 내 점수 넣어 보기</a>
+   <div class="lk"><a class="an-link" href="https://uridongne-jeongsi.pages.dev/">정시분석기 열기 ›</a><button type="button" data-go="jeongsi">직접 상담이 필요하면 — 정시 상담 ›</button></div>
+  </div>
+  <div class="ns" id="ud-ns">
+   <span class="tag">수리논술 · 시험이 남은 수험생</span>
+   <h2>풀 줄 아는 것과, 답안지에 점수가 되게 쓰는 것은 다릅니다</h2>
+   <a class="row" href="https://uridongne-ipsi.co.kr/try/"><span><b>이번 주 무료 첨삭 맛보기</b><small>한 문항 써서 보내면 첨삭 · 무료</small></span><i>›</i></a>
+   <a class="row" id="ud-mock" href="https://open.kakao.com/o/pTP7qoVi"><span><b>제3회 실전 모의고사 · 12/2(수) 18시</b><small>시험지·해설 무료 · 첨삭 + 모범 답안 유료</small></span><i>›</i></a>
+   <button class="row" type="button" data-go="shop"><span><b>대학별 기출 해설 PDF</b><small>6문항, 채점 기준에 맞춰 쓰는 법 · 유료</small></span><i>›</i></button>
+   <button class="row" type="button" data-go="ck"><span><b>내 답안 첨삭</b><small>줄마다 짚어 24시간 안 회신 · 유료</small></span><i>›</i></button>
+   <button class="foot" type="button" data-go="jaryo">대학별 기출 완성 답안(무료)은 자료함에 ›</button>
+  </div>
+ </section>
+ <div class="sec-h"><b>무료 도구</b><span>고1·고2라면 여기부터</span></div>
+ <section class="grid">
+  <button class="card" type="button" data-go="calc"><b>내신 계산기</b><small>누적 평균과 목표 등급, 한 줄 진단</small></button>
+  <button class="card" type="button" data-go="imosu"><b>모의고사 대학 라인</b><small>이 모의고사가 수능이었다면(이모수)</small><em>수능 성적은 정시분석기가 더 정확합니다</em></button>
+  <button class="card" type="button" data-go="terms"><b>입시 용어 사전</b><small>들은 말이 무슨 뜻인지</small></button>
+  <button class="card" type="button" data-go="math"><b>이번 주 수학 한 문제</b><small>일주일 동안 고민해 보기</small></button>
+ </section>
+ <div class="two">
+  <section class="lst">
+   <div class="sec-h"><b>자료와 글</b></div>
+   <button class="line" type="button" data-go="jaryo"><span>자료함<small>대학별 기출 풀이 · 면접 답안 · 입시·수학 자료 PDF</small></span>›</button>
+   <button class="line" type="button" data-go="info"><span>입시 정보<small>블로그 새 글 · 입시 일정 · 정시·수능 · 수리논술 · 학종</small></span>›</button>
+  </section>
+  <section class="lst">
+   <div class="sec-h"><b>상담·관리</b><span>유료</span></div>
+   <button class="line" type="button" data-go="jeongsi"><span>정시 상담<small>가채점 상담 · 본 상담, 원서 마감까지 이어서 정리 · 유료</small></span>›</button>
+   <button class="line" type="button" data-go="mg"><span>월 관리<small>매달 정기 상담과 학년별 계획 · 유료</small></span>›</button>
+  </section>
+ </div>
+ <div class="three">
+  <button class="line" type="button" data-go="about"><span>만드는 사람<small>과외 8년 → 재수학원 부원장 7년 → 기숙학원 원장 → 지금 혼자 운영합니다. 답하는 사람과 만드는 사람이 같습니다.</small></span>›</button>
+  <button class="line" type="button" data-go="ask"><span>물어보기<small>일정·전형·자료 쓰는 법은 무료로 답해 드립니다</small></span>›</button>
+  <button class="line" type="button" data-go="partner"><span>학원·제휴 문의<small>학원 공급·제휴·협업 문의는 카카오톡 1:1로 받습니다</small></span>›</button>
+ </div>
+ <p class="small">내 점수로 어디를 쓸지는 정시분석기·정시 상담에서 다룹니다.</p>
+ <p class="b2b">학원·기관 관계자분께 — 수리논술 해설·첨삭과 정시 상담 자료를 학원 이름으로 공급합니다. <button type="button" data-go="partner">문의하기 ›</button></p>
+</div>
     <div class="home-top">
       <div class="home-brand"><svg class="mark" viewBox="0 0 96 96" fill="none" aria-hidden="true"><rect class="frame" x="2" y="2" width="92" height="92" rx="20" stroke-width="3"/><path class="gl" d="M33.33 2V94M62.67 2V94M2 33.33H94M2 62.67H94" stroke-width="1.5"/><path class="cv" d="M20 74C34 72 44 60 52 45C59 32 68 25 75 21" stroke-width="6" stroke-linecap="round"/><circle class="dot" cx="75" cy="21" r="7.4"/></svg><span>우리동네 입시연구소</span></div>
       <div class="home-tools"><button class="grade-btn" id="grade-btn" type="button" aria-label="학년 바꾸기"><span id="grade-lab">학년</span> ▾</button>
@@ -1132,6 +1258,20 @@ window.imRun=run;window.imAddFlow=addFlow;
  </div>
  <iframe class="an-frame" id="an-frame" title="정시분석기" data-src="https://uridongne-jeongsi.pages.dev/" loading="lazy"></iframe>
 </div>
+<div class="wrap sub-screen" id="partner-screen" hidden>
+ <button class="btn calculator-home" type="button" data-back>← 처음 화면</button>
+ <h1 class="sub-title">학원·제휴 문의</h1>
+ <p class="pd-desc">학원 공급, 제휴·협업 문의는 카카오톡 1:1로 받습니다.</p>
+ <div class="pt-box">
+  <span class="pt-tag">문의</span>
+  <h2>카카오톡 1:1로 문의하기</h2>
+  <p>아래 내용을 함께 보내 주시면 빠르게 답을 드릴 수 있습니다.</p>
+  <div class="pt-tpl" id="pt-tpl">소속(학원·기관 이름) :
+문의 내용 :
+연락받으실 방법 :</div>
+  <div class="pt-btns"><button class="pt-copy" type="button" id="pt-copy">내용 틀 복사</button><a class="pt-open" href="https://open.kakao.com/o/sMOPxKTi">카카오톡 1:1 열기</a></div>
+ </div>
+</div>
 <div class="wrap sub-screen" id="paid-screen" hidden>
  <button class="btn calculator-home site-home-btn" type="button">← 홈으로</button>
  <h1 class="pd-title">유료 서비스</h1>
@@ -1288,7 +1428,7 @@ const $=id=>document.getElementById(id);
  themeToggles.forEach(b=>b.addEventListener("click",()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark",true)));
  applyTheme(activeTheme,false);
 /* 1.7: 화면 이동을 주소 #으로 — 휴대폰 뒤로가기가 이전 화면으로 돌아가게 함 */
-const SCREENS={"":"home-screen",calc:"calculator-screen",info:"info-screen",about:"about-screen",diag:"diag-screen",jaryo:"jaryo-screen",shop:"shop-screen",jeongsi:"jeongsi-screen",jsga:"jsga-screen",jsbon:"jsbon-screen",jsapply:"jsapply-screen",ck:"ck-screen",season:"season-screen",mg:"mg-screen",ask:"ask-screen",imosu:"imosu-screen",me:"me-screen",plan:"plan-screen",planday:"planday-screen",math:"math-screen",terms:"terms-screen",analyzer:"analyzer-screen",paid:"paid-screen"};
+const SCREENS={"":"home-screen",calc:"calculator-screen",info:"info-screen",about:"about-screen",diag:"diag-screen",jaryo:"jaryo-screen",shop:"shop-screen",jeongsi:"jeongsi-screen",jsga:"jsga-screen",jsbon:"jsbon-screen",jsapply:"jsapply-screen",ck:"ck-screen",season:"season-screen",mg:"mg-screen",ask:"ask-screen",imosu:"imosu-screen",me:"me-screen",plan:"plan-screen",planday:"planday-screen",math:"math-screen",terms:"terms-screen",analyzer:"analyzer-screen",paid:"paid-screen",partner:"partner-screen"};
 function showScreen(){const k=location.hash.replace(/^#/,"");const id=SCREENS[k]||"home-screen";if(id==="jaryo-screen")loadJaryo();if(id==="shop-screen")loadShop();if(id==="info-screen")blSeen();if(id==="ask-screen")loadLinks();
   Object.values(SCREENS).forEach(x=>{$(x).hidden=(x!==id);});if(typeof nOnScreen==="function")nOnScreen();
   $("img-ov").hidden=true;$("zv").hidden=true;window.scrollTo(0,0);if(typeof v114Screen==="function")v114Screen(k);}
@@ -1959,7 +2099,7 @@ $("grade-pick").addEventListener("click",e=>{const b=e.target.closest("button");
 $("grade-ok").addEventListener("click",()=>gradeSave(gPick));
 $("grade-skip").addEventListener("click",()=>gradeSave(gradeNow()));
 $("grade-btn").addEventListener("click",()=>gradeOpen(gradeNow()));
-(function(){const r=gradeRec();
+(function(){return;/* 2026-11-25 학년 선택을 쓰지 않음 */const r=gradeRec();
   if(!r){gradeOpen("");return;}                                   // 처음(기존 이용자 포함)
   if(!GRADES.includes(r.g)&&/중/.test(String(r.g||""))){gradeOpen("고1");return;}   // 혹시 중학생으로 저장된 경우
   if((r.ay||0)<acadYear())gradeOpen(r.g?bump(r.g):"");})();     // 새 학년도(3월) 첫 실행
@@ -2175,6 +2315,19 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
 })();
 </script>
 
+<script>
+/* 2026-11-25 첫 화면: 학원·제휴 문의 틀 복사, 수리논술 칸 날짜에 따라 바꿈 */
+(function(){
+  const c=document.getElementById("pt-copy");
+  if(c)c.addEventListener("click",async()=>{const t=document.getElementById("pt-tpl").textContent;try{await navigator.clipboard.writeText(t);c.textContent="복사됨 · 1:1 대화방에 붙여 넣기";}catch(e){prompt("내용을 길게 눌러 복사하세요",t);}});
+  const now=Date.now(),KST=d=>Date.parse(d+"+09:00");
+  const m=document.getElementById("ud-mock");
+  if(m&&now>=KST("2026-12-03T00:00:00")){m.removeAttribute("href");m.setAttribute("role","button");m.dataset.go="jaryo";
+    m.querySelector("b").textContent="지난 실전 모의고사 시험지·해설";m.querySelector("small").textContent="자료함에서 무료로 받기";}
+  const ns=document.getElementById("ud-ns");
+  if(ns&&now>=KST("2026-12-07T00:00:00")){ns.hidden=true;ns.style.display="none";document.getElementById("ud-now").classList.add("solo");}
+})();
+</script>
 <script id="site-js">
 (function(){
   const $=id=>document.getElementById(id);
@@ -2198,7 +2351,7 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   const paid=inner.querySelector(".paid");
   if(paid)$("paid-slot").appendChild(paid.cloneNode(true));
   // PC 두 칸 배치(넓을 때만 옮기고, 좁아지면 원래 자리로)
-  const ORDER=[".wk-h","#wk-duo",".me-row",".hinfo",".home-ask",'button[data-go="jaryo"]','button[data-go="about"]'];
+  const ORDER=[".wk-h","#wk-duo",".me-row",".hinfo",".home-ask",'.home-card[data-go="jaryo"]','.home-card[data-go="about"]'];
   const AREA={".wk-h":"wkh","#wk-duo":"wk",".me-row":"me",".hinfo":"info"};
   const marks=new Map();
   ORDER.forEach(q=>{const el=inner.querySelector(q);if(el){const m=document.createComment("site:"+q);el.parentNode.insertBefore(m,el);marks.set(q,{el,m});}});

@@ -2,6 +2,7 @@
 
 .home-ask{display:flex;align-items:center;gap:10px;width:100%;margin-top:10px;padding:10px 14px;border:1.5px solid var(--accent);border-radius:14px;background:var(--surface);color:inherit;font:inherit;text-align:left;cursor:pointer}
 .home-ask-copy{display:grid;gap:2px;flex:1;min-width:0}.home-ask-copy b{font-family:var(--f-title);font-size:.98rem;color:var(--navy)}.home-ask-copy small{font-size:.76rem;color:var(--muted)}
+#grade-btn,#grade-ov,[data-go="plan"]{display:none!important}
 </style>  <script type="module" crossorigin src="./assets/index-GTNcBRle.js"></script>
 </head><body>
 <title>우리동네 입시연구소 | 내신성적 계산기</title>
@@ -1847,7 +1848,7 @@ $("grade-pick").addEventListener("click",e=>{const b=e.target.closest("button");
 $("grade-ok").addEventListener("click",()=>gradeSave(gPick));
 $("grade-skip").addEventListener("click",()=>gradeSave(gradeNow()));
 $("grade-btn").addEventListener("click",()=>gradeOpen(gradeNow()));
-(function(){const r=gradeRec();
+(function(){return;/* 2026-11-25 학년 선택을 쓰지 않음 */const r=gradeRec();
   if(!r){gradeOpen("");return;}                                   // 처음(기존 이용자 포함)
   if(!GRADES.includes(r.g)&&/중/.test(String(r.g||""))){gradeOpen("고1");return;}   // 혹시 중학생으로 저장된 경우
   if((r.ay||0)<acadYear())gradeOpen(r.g?bump(r.g):"");})();     // 새 학년도(3월) 첫 실행
