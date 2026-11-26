@@ -2371,16 +2371,20 @@ setInterval(()=>{try{wkApply();}catch(e){}},60000);
   function mark(){
     const k=location.hash.replace(/^#/,"");
     document.querySelectorAll(".sn-i").forEach(a=>{const g=(a.dataset.sn||"").split(" ");a.classList.toggle("on",k===""?a.dataset.sn==="":g.includes(k));});
-    if(k==="analyzer"){location.replace(AN_URL+"?theme="+eff());return;}  // 예전 주소(#analyzer)로 들어온 경우만. 메뉴·큰 칸은 실제 링크(.an-link)
+    if(k==="analyzer"){location.replace(AN_URL+"?theme="+eff()+RFQ);return;}  // 예전 주소(#analyzer)로 들어온 경우만. 메뉴·큰 칸은 실제 링크(.an-link)
     drawer.hidden=true;mb.setAttribute("aria-expanded","false");
   }
   window.addEventListener("hashchange",mark);
   const AN_URL="https://uridongne-jeongsi.pages.dev/";
+  // 2026-11-27 유입 표시(사용자 결정): 주소의 ?ref=(없으면 utm_source — 인스타가 붙이는 ig는 insta)를 30일 기억(마지막에 온 곳), 하루 한 번 방문을 정시분석기 서버에 알리고(관리 페이지 「들어온 곳」), 분석기 링크에 붙여 넘김
+  const RF=(()=>{try{const q=new URLSearchParams(location.search);let r=q.get("ref")||q.get("utm_source")||"";if(/^(ig|instagram)$/i.test(r))r="insta";r=r.toLowerCase().replace(/[^a-z0-9_\-가-힣]/g,"").slice(0,30);if(r)localStorage.setItem("ud_ref",JSON.stringify({r,t:Date.now()}));const o=JSON.parse(localStorage.getItem("ud_ref")||"null");return o&&Date.now()-o.t<30*864e5?o.r:"";}catch(_){return"";}})();
+  const RFQ=RF?"&ref="+encodeURIComponent(RF):"";
+  try{const d=new Date(Date.now()+9*36e5).toISOString().slice(0,10)+"|"+RF;if(localStorage.getItem("ud_ref_day")!==d){localStorage.setItem("ud_ref_day",d);navigator.sendBeacon(AN_URL+"api/ref",new Blob([JSON.stringify({rf:RF,kind:"home"})],{type:"text/plain"}));}}catch(_){}
   // 2026-11-22: 정시분석기 화면을 홈페이지와 한 몸처럼 — 홈페이지 밝기를 분석기에도 알림
   function eff(){const t=document.documentElement.dataset.theme;return t==="dark"||t==="light"?t:(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");}
   function tell(){const f=$("an-frame");if(f&&f.src&&f.contentWindow)f.contentWindow.postMessage({type:"ud-theme",theme:eff()},"*");}
   // 실제 링크에 지금 밝기를 붙여 둠(분석기가 같은 밝기로 열리게)
-  function anHref(){document.querySelectorAll("a.an-link").forEach(a=>{a.href=AN_URL+"?theme="+eff();});}
+  function anHref(){document.querySelectorAll("a.an-link").forEach(a=>{a.href=AN_URL+"?theme="+eff()+RFQ;});}
   anHref();new MutationObserver(anHref).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change",anHref);
   new MutationObserver(tell).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
